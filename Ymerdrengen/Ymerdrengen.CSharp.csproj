@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\AudioScript.cs" />
     <Compile Include="Assets\Scripts\GyroScript.cs" />
     <Compile Include="Assets\Scripts\MoveScript.cs" />
+    <Compile Include="Assets\Scripts\MovieManager_TestScript.cs" />
     <Compile Include="Assets\Scripts\ParticleGenerator.cs" />
     <Compile Include="Assets\Scripts\YoghurtDetection.cs" />
     <Compile Include="Assets\SplineSystem\Bezier.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Assets\SplineSystem\TEST_SCRIPT.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\StreamingAssets\README.txt" />
     <None Include="Assets\celShading\Internal-DeferredShading.shader" />
     <None Include="Assets\celShading\Internal-PrePassLighting.shader" />
     <None Include="Assets\celShading\celShader.shader" />

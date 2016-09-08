@@ -107,6 +107,7 @@
     <Compile Include="Assets\SplineSystem\Editor\BezierSplineView.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\StreamingAssets\README.txt" />
     <None Include="Assets\celShading\Internal-DeferredShading.shader" />
     <None Include="Assets\celShading\Internal-PrePassLighting.shader" />
     <None Include="Assets\celShading\celShader.shader" />
