@@ -126,7 +126,7 @@ public class GyroScript : MonoBehaviour
 
         /// stuff for shaking
         acceleration = Input.acceleration;
-        lowPassValue = Vector3.Lerp(lowPassValue, acceleration, lowPassFilterFactor);
+        lowPassValue = Vector3.Lerp(lowPassValue, acceleration, lowPassFilterFactor); // interpolation by 1:60
         deltaAcceleration = acceleration - lowPassValue;
         if (deltaAcceleration.sqrMagnitude >= shakeDetectionThreshold)
         {
