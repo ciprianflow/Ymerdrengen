@@ -73,7 +73,7 @@ public class MoveScript : MonoBehaviour
             float t = (timeTravelled * Speed) / trackLength;
             transform.position = Path.GetPoint(t);
             transform.root.LookAt(transform.position + Path.GetDirection(t));
-            transform.Rotate(0, 90, 0);
+            transform.Rotate(0, 0, 0);
             //transform.position = Vector3.Lerp(actualStartPos, actualEndPos, (timeTravelled * Speed) / trackLength);
         }
     }

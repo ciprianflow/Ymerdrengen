@@ -28,14 +28,14 @@ public class MovieManager_TestScript : MonoBehaviour
     /// </summary>
     public void Start() 
     {
-        this.StartCoroutine(this.PlayStreamingVideo("raindropsTest_movie.mp4"));
+        this.StartCoroutine(this.PlayStreamingVideo("Video__0004_Layer-Comp-5.mp4"));
     }
 
     /// <summary>
     /// Plays the video described by the <paramref name="url"/> parameter.
     /// </summary>
     /// <param name="url">A path (including file extension) to the location of a video file. The video should be stored within the StreamingAssets folder.</param>
-    /// <returns>Nothing. This method is a coroutine.</returns>
+    /// <returns>Nothing. This method is a coroutine.</returns> 
     private IEnumerator PlayStreamingVideo(string url) 
     {
         Debug.Log("Starting Movie");
