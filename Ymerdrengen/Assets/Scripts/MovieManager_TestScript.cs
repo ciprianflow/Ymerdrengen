@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/// <copyright file="MovieManager_TestScript.cs" company="DADIU">
+/// Copyright (c) 2016 All Rights Reserved
+/// </copyright>
+/// <author>Alexander Kirk Jørgensen</author>
+/// <date>09/08/2016 11:15 AM</date>
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -21,8 +26,9 @@ public class MovieManager_TestScript : MonoBehaviour
     /// <summary>
     /// As soon as the manager starts, it will try and play the video referenced as argument.
     /// </summary>
-    void Start() {
-        StartCoroutine(PlayStreamingVideo("spaceTest_movie.mov"));
+    public void Start() 
+    {
+        this.StartCoroutine(this.PlayStreamingVideo("spaceTest_movie.mov"));
     }
 
     /// <summary>
@@ -30,7 +36,8 @@ public class MovieManager_TestScript : MonoBehaviour
     /// </summary>
     /// <param name="url">A path (including file extension) to the location of a video file. The video should be stored within the StreamingAssets folder.</param>
     /// <returns>Nothing. This method is a coroutine.</returns>
-    IEnumerator PlayStreamingVideo(string url) {
+    private IEnumerator PlayStreamingVideo(string url) 
+    {
         Debug.Log("Starting Movie");
         Handheld.PlayFullScreenMovie(url, Color.green, FullScreenMovieControlMode.Full, FullScreenMovieScalingMode.AspectFit);
         yield return new WaitForEndOfFrame();
