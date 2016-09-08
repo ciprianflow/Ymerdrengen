@@ -51,14 +51,30 @@ public class BezierSplineView : Editor
     /// How many steps per curve is shown
     /// </summary>
     private int stepsPerCurve = 10;
-   
+
+    /// <summary>
+    /// The three modes have a color assigned each
+    /// </summary>
+    private static Color[] modeColors =
+    {
+        Color.white,
+        Color.blue,
+        Color.cyan
+    };
+
     /// <summary>
     /// This overrides the onInspectorGUI which modifies the inspector of the class bezierSpline
     /// </summary>
     public override void OnInspectorGUI()
     {
-        DrawDefaultInspector();
+        //DrawDefaultInspector();
         spline = target as BezierSpline;
+        Debug.Log(selectedIndex);
+        if (selectedIndex >= 0 && selectedIndex < spline.ControlPointCount)
+        {
+            DrawSelectedPointInspector();
+        }
+
         if (GUILayout.Button("Add Curve"))
         {
             Undo.RecordObject(spline, "Add Curve");
@@ -101,6 +117,32 @@ public class BezierSplineView : Editor
     }
 
     /// <summary>
+    /// This draws a point in the inspector view when it is selected
+    /// </summary>
+    private void DrawSelectedPointInspector()
+    {
+        GUILayout.Label("Selected Point");
+        EditorGUI.BeginChangeCheck();
+        Vector3 point = EditorGUILayout.Vector3Field("Position", spline.GetControlPoint(selectedIndex));
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(spline, "Move Point");
+            EditorUtility.SetDirty(spline);
+            spline.SetControlPoint(selectedIndex, point);
+        }
+
+        EditorGUI.BeginChangeCheck();
+        BezierControlPointMode mode = (BezierControlPointMode)
+            EditorGUILayout.EnumPopup("Mode", spline.GetControlPointMode(selectedIndex));
+        if (EditorGUI.EndChangeCheck())
+        {
+            Undo.RecordObject(spline, "Change Point Mode");
+            spline.SetControlPointMode(selectedIndex, mode);
+            EditorUtility.SetDirty(spline);
+        }
+    }
+
+    /// <summary>
     /// Show point shows a button point in the editor
     /// </summary>
     /// <param name="index">Index of the point</param>
@@ -109,7 +151,7 @@ public class BezierSplineView : Editor
     {
         Vector3 point = handleTransform.TransformPoint(spline.GetControlPoint(index));
         float size = HandleUtility.GetHandleSize(point);
-        Handles.color = Color.white;
+        Handles.color = modeColors[(int)spline.GetControlPointMode(index)];
         if (Handles.Button(point, handleRotation, size * HandleSize, size * PickSize, Handles.DotCap))
         {
             selectedIndex = index;
@@ -124,7 +166,7 @@ public class BezierSplineView : Editor
             {
                 Undo.RecordObject(spline, "Move Point");
                 EditorUtility.SetDirty(spline);
-                spline.SetControlPoint(index, handleTransform.InverseTransformPoint(point));
+                spline.SetControlPoint(index, handleTransform.InverseTransformPoint(new Vector3(point.x,0,point.z)));
             }
         }
 
@@ -143,7 +185,7 @@ public class BezierSplineView : Editor
         for (int i = 1; i <= steps; i++)
         {
             point = spline.GetPoint(i / (float)steps);
-            Handles.DrawLine(point, point + (spline.GetDirection(i / (float)stepsPerCurve) * DirectionScale));
+            Handles.DrawLine(point, point + (spline.GetDirection(i / (float)steps) * DirectionScale));
         }
     }
 }

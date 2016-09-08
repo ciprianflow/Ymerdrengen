@@ -5,6 +5,13 @@
 using System.Collections;
 using UnityEngine;
 
+public enum BezierControlPointMode
+{
+    Free,
+    Aligned,
+    Mirrored
+}
+
 /// <summary>
 /// This class handles the calculation of bezier curves
 /// </summary>
