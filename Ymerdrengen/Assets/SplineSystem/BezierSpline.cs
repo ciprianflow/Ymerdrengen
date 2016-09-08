@@ -12,6 +12,12 @@ using UnityEngine;
 public class BezierSpline : MonoBehaviour
 {
     /// <summary>
+    /// This holds the different modes of the bezier points, these modes are used for better control when creating a curve
+    /// </summary>
+    [SerializeField]
+    private BezierControlPointMode[] modes;
+
+    /// <summary>
     /// This is the spline points, these points determine the spline layout
     /// </summary>
     [SerializeField]
@@ -73,7 +79,33 @@ public class BezierSpline : MonoBehaviour
     /// <param name="p">V3 Point</param>
     public void SetControlPoint(int i, Vector3 p)
     {
+        if (i % 3 == 0)
+        {
+            Vector3 delta = p - Points[i];
+            if (i > 0)
+            {
+                Points[i - 1] += delta;
+            }
+
+            if (i + 1 < Points.Length)
+            {
+                Points[i + 1] += delta;
+            }
+        }
+
         Points[i] = p;
+        EnforceMode(i);
+    }
+
+    public BezierControlPointMode GetControlPointMode(int index)
+    {
+        return modes[(index + 1) / 3];
+    }
+
+    public void SetControlPointMode(int index, BezierControlPointMode mode)
+    {
+        modes[(index + 1) / 3] = mode;
+        EnforceMode(index);
     }
 
     /// <summary>
@@ -148,6 +180,10 @@ public class BezierSpline : MonoBehaviour
         Points[Points.Length - 2] = point;
         point.x += 1f;
         Points[Points.Length - 1] = point;
+
+        Array.Resize(ref modes, modes.Length + 1);
+        modes[modes.Length - 1] = modes[modes.Length - 2];
+        EnforceMode(Points.Length - 4);
     }
 
     /// <summary>
@@ -162,5 +198,43 @@ public class BezierSpline : MonoBehaviour
             new Vector3(3, 0, 0),
             new Vector3(4, 0, 0)
         };
+
+        modes = new BezierControlPointMode[] 
+        {
+            BezierControlPointMode.Free,
+            BezierControlPointMode.Free
+        };
+    }
+
+    private void EnforceMode(int index)
+    {
+        int modeIndex = (index + 1) / 3;
+        BezierControlPointMode mode = modes[modeIndex];
+        if (mode == BezierControlPointMode.Free || modeIndex == 0 || modeIndex == modes.Length - 1)
+        {
+            return;
+        }
+
+        int middleIndex = modeIndex * 3;
+        int fixedIndex, enforcedIndex;
+        if (index <= middleIndex)
+        {
+            fixedIndex = middleIndex - 1;
+            enforcedIndex = middleIndex + 1;
+        }
+        else
+        {
+            fixedIndex = middleIndex + 1;
+            enforcedIndex = middleIndex - 1;
+        }
+
+        Vector3 middle = Points[middleIndex];
+        Vector3 enforcedTangent = middle - Points[fixedIndex];
+        if (mode == BezierControlPointMode.Aligned)
+        {
+            enforcedTangent = enforcedTangent.normalized * Vector3.Distance(middle, Points[enforcedIndex]);
+        }
+
+        Points[enforcedIndex] = middle + enforcedTangent;
     }
 }

@@ -5,33 +5,70 @@
 using System.Collections;
 using UnityEngine;
 
-public class MoveScript : MonoBehaviour {
+/// <summary>
+/// This script controls the movement of the player. When a
+/// specific sound is played, only then will the player move
+/// </summary>
+public class MoveScript : MonoBehaviour
+{
+    /// <summary>
+    /// Speed of the movement
+    /// </summary>
+    public float Speed = 5;
 
-    public float speed = 5;
+    /// <summary>
+    /// The path for the player
+    /// </summary>
+    public BezierSpline Path;
 
-    public Transform startPos, endPos;
+    /// <summary>
+    /// Start and end positions
+    /// </summary>
+    private Transform StartPos, EndPos;
+
+    /// <summary>
+    /// The actual start and end positions
+    /// </summary>
     private Vector3 actualStartPos, actualEndPos;
 
-    private Rigidbody rb;
+    /// <summary>
+    /// GameObject girl component
+    /// </summary>
     private GameObject girl;
+
+    /// <summary>
+    /// Length of the track
+    /// </summary>
     private float trackLength;
+
+    /// <summary>
+    /// How far we are along the track
+    /// </summary>
     private float timeTravelled;
 
-
-    void Start ()
+    /// <summary>
+    /// Getting the components and initialize start and end positions
+    /// </summary>
+    void Start()
     {
-        rb = GetComponent<Rigidbody>();
         girl = GameObject.FindGameObjectWithTag("Girl");
         PlayerTracking();
-        
     }
 
-    void FixedUpdate ()
+    /// <summary>
+    /// Checks if the specific audio is being played, if yes 
+    /// then the player moves along the track
+    /// </summary>
+    void FixedUpdate()
     {
         if (girl.GetComponent<AudioSource>().isPlaying)
         {
             timeTravelled += Time.deltaTime;
-            transform.position = Vector3.Lerp(actualStartPos, actualEndPos, (timeTravelled*speed)/trackLength);
+            float t = (timeTravelled * Speed) / trackLength;
+            transform.position = Path.GetPoint(t);
+            transform.root.LookAt(transform.position + Path.GetDirection(t));
+            transform.Rotate(0, 90, 0);
+            //transform.position = Vector3.Lerp(actualStartPos, actualEndPos, (timeTravelled * Speed) / trackLength);
         }
     }
 
@@ -40,8 +77,11 @@ public class MoveScript : MonoBehaviour {
     /// </summary>
     void PlayerTracking()
     {
-        actualStartPos = startPos.position;
-        actualEndPos = endPos.position;
-        trackLength = ((actualEndPos - actualStartPos).magnitude);
+        //actualStartPos = StartPos.position;
+        actualStartPos = Path.GetPoint(0f);
+        //actualEndPos = EndPos.position;
+        actualEndPos = Path.GetPoint(1f);
+        //trackLength = ((actualEndPos - actualStartPos).magnitude);
+        trackLength = Path.GetSplineLength();
     }
 }
