@@ -1,0 +1,181 @@
+fileFormatVersion: 2
+guid: f1a2f27066798c840bcaf4acfb493051
+timeCreated: 1473325417
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ymerdrengen_rig:anim_chest_01
+    100004: ymerdrengen_rig:anim_head_01
+    100006: ymerdrengen_rig:anim_l_clavicle_01
+    100008: ymerdrengen_rig:anim_l_elbow_01
+    100010: ymerdrengen_rig:anim_l_foot_01
+    100012: ymerdrengen_rig:anim_l_hand_01
+    100014: ymerdrengen_rig:anim_l_knee_01
+    100016: ymerdrengen_rig:anim_l_shoulder_01
+    100018: ymerdrengen_rig:anim_l_wrist_01
+    100020: ymerdrengen_rig:anim_pelvis_01
+    100022: ymerdrengen_rig:anim_r_clavicle_01
+    100024: ymerdrengen_rig:anim_r_elbow_01
+    100026: ymerdrengen_rig:anim_r_foot_01
+    100028: ymerdrengen_rig:anim_r_hand_01
+    100030: ymerdrengen_rig:anim_r_knee_01
+    100032: ymerdrengen_rig:anim_r_shoulder_01
+    100034: ymerdrengen_rig:anim_r_wrist_01
+    100036: ymerdrengen_rig:anim_spine_01
+    100038: ymerdrengen_rig:be_l_shoulder_01
+    100040: ymerdrengen_rig:be_r_shoulder_01
+    100042: ymerdrengen_rig:bind_chest_01
+    100044: ymerdrengen_rig:bind_l_ankle_01
+    100046: ymerdrengen_rig:bind_l_clavicle_01
+    100048: ymerdrengen_rig:bind_l_elbow_01
+    100050: ymerdrengen_rig:bind_l_knee_01
+    100052: ymerdrengen_rig:bind_l_shoulder_01
+    100054: ymerdrengen_rig:bind_l_thigh_01
+    100056: ymerdrengen_rig:bind_l_wrist_01
+    100058: ymerdrengen_rig:bind_pelvis_01
+    100060: ymerdrengen_rig:bind_r_ankle_01
+    100062: ymerdrengen_rig:bind_r_clavicle_01
+    100064: ymerdrengen_rig:bind_r_elbow_01
+    100066: ymerdrengen_rig:bind_r_knee_01
+    100068: ymerdrengen_rig:bind_r_shoulder_01
+    100070: ymerdrengen_rig:bind_r_thigh_01
+    100072: ymerdrengen_rig:bind_r_wrist_01
+    100074: ymerdrengen_rig:bind_spine_01
+    100076: ymerdrengen_rig:grp_anim_l_clavicle_01
+    100078: ymerdrengen_rig:grp_anim_l_elbow_01
+    100080: ymerdrengen_rig:grp_anim_l_hand_01
+    100082: ymerdrengen_rig:grp_anim_l_shoulder_01
+    100084: ymerdrengen_rig:grp_anim_l_wrist_01
+    100086: ymerdrengen_rig:grp_anim_r_clavicle_01
+    100088: ymerdrengen_rig:grp_anim_r_elbow_01
+    100090: ymerdrengen_rig:grp_anim_r_hand_01
+    100092: ymerdrengen_rig:grp_anim_r_shoulder_01
+    100094: ymerdrengen_rig:grp_anim_r_wrist_01
+    100096: ymerdrengen_rig:grp_controls_01
+    100098: ymerdrengen_rig:grp_rig_01
+    100100: ymerdrengen_rig:ik_rp_l_leg_01
+    100102: ymerdrengen_rig:ik_rp_r_leg_01
+    100104: ymerdrengen_rig:ik_sc_l_foot_01
+    100106: ymerdrengen_rig:ik_sc_r_foot_01
+    400000: //RootNode
+    400002: ymerdrengen_rig:anim_chest_01
+    400004: ymerdrengen_rig:anim_head_01
+    400006: ymerdrengen_rig:anim_l_clavicle_01
+    400008: ymerdrengen_rig:anim_l_elbow_01
+    400010: ymerdrengen_rig:anim_l_foot_01
+    400012: ymerdrengen_rig:anim_l_hand_01
+    400014: ymerdrengen_rig:anim_l_knee_01
+    400016: ymerdrengen_rig:anim_l_shoulder_01
+    400018: ymerdrengen_rig:anim_l_wrist_01
+    400020: ymerdrengen_rig:anim_pelvis_01
+    400022: ymerdrengen_rig:anim_r_clavicle_01
+    400024: ymerdrengen_rig:anim_r_elbow_01
+    400026: ymerdrengen_rig:anim_r_foot_01
+    400028: ymerdrengen_rig:anim_r_hand_01
+    400030: ymerdrengen_rig:anim_r_knee_01
+    400032: ymerdrengen_rig:anim_r_shoulder_01
+    400034: ymerdrengen_rig:anim_r_wrist_01
+    400036: ymerdrengen_rig:anim_spine_01
+    400038: ymerdrengen_rig:be_l_shoulder_01
+    400040: ymerdrengen_rig:be_r_shoulder_01
+    400042: ymerdrengen_rig:bind_chest_01
+    400044: ymerdrengen_rig:bind_l_ankle_01
+    400046: ymerdrengen_rig:bind_l_clavicle_01
+    400048: ymerdrengen_rig:bind_l_elbow_01
+    400050: ymerdrengen_rig:bind_l_knee_01
+    400052: ymerdrengen_rig:bind_l_shoulder_01
+    400054: ymerdrengen_rig:bind_l_thigh_01
+    400056: ymerdrengen_rig:bind_l_wrist_01
+    400058: ymerdrengen_rig:bind_pelvis_01
+    400060: ymerdrengen_rig:bind_r_ankle_01
+    400062: ymerdrengen_rig:bind_r_clavicle_01
+    400064: ymerdrengen_rig:bind_r_elbow_01
+    400066: ymerdrengen_rig:bind_r_knee_01
+    400068: ymerdrengen_rig:bind_r_shoulder_01
+    400070: ymerdrengen_rig:bind_r_thigh_01
+    400072: ymerdrengen_rig:bind_r_wrist_01
+    400074: ymerdrengen_rig:bind_spine_01
+    400076: ymerdrengen_rig:grp_anim_l_clavicle_01
+    400078: ymerdrengen_rig:grp_anim_l_elbow_01
+    400080: ymerdrengen_rig:grp_anim_l_hand_01
+    400082: ymerdrengen_rig:grp_anim_l_shoulder_01
+    400084: ymerdrengen_rig:grp_anim_l_wrist_01
+    400086: ymerdrengen_rig:grp_anim_r_clavicle_01
+    400088: ymerdrengen_rig:grp_anim_r_elbow_01
+    400090: ymerdrengen_rig:grp_anim_r_hand_01
+    400092: ymerdrengen_rig:grp_anim_r_shoulder_01
+    400094: ymerdrengen_rig:grp_anim_r_wrist_01
+    400096: ymerdrengen_rig:grp_controls_01
+    400098: ymerdrengen_rig:grp_rig_01
+    400100: ymerdrengen_rig:ik_rp_l_leg_01
+    400102: ymerdrengen_rig:ik_rp_r_leg_01
+    400104: ymerdrengen_rig:ik_sc_l_foot_01
+    400106: ymerdrengen_rig:ik_sc_r_foot_01
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
