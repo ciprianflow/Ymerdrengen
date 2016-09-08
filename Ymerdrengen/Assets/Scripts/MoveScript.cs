@@ -47,11 +47,17 @@ public class MoveScript : MonoBehaviour
     private float timeTravelled;
 
     /// <summary>
+    /// Yoghurt detection script
+    /// </summary>
+    private YoghurtDetection yoghurtDetection;
+
+    /// <summary>
     /// Getting the components and initialize start and end positions
     /// </summary>
     void Start()
     {
         girl = GameObject.FindGameObjectWithTag("Girl");
+        yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
         PlayerTracking();
     }
 
@@ -61,13 +67,13 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     void FixedUpdate()
     {
-        if (girl.GetComponent<AudioSource>().isPlaying)
+        if (girl.GetComponent<AudioSource>().isPlaying && yoghurtDetection.CanMove)
         {
             timeTravelled += Time.deltaTime;
             float t = (timeTravelled * Speed) / trackLength;
             transform.position = Path.GetPoint(t);
             transform.root.LookAt(transform.position + Path.GetDirection(t));
-            transform.Rotate(0, 90, 0);
+            transform.Rotate(0, 0, 0);
             //transform.position = Vector3.Lerp(actualStartPos, actualEndPos, (timeTravelled * Speed) / trackLength);
         }
     }

@@ -57,7 +57,7 @@ public class GyroScript : MonoBehaviour
     /// </summary>
     void Start () {
         //Only for Philip's Scene
-        //text = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
+        text = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
         //ball = GameObject.Find("Sphere").gameObject;
 
         Input.gyro.enabled = true;
@@ -68,7 +68,6 @@ public class GyroScript : MonoBehaviour
         Xdir = 0;
         Zdir = 0;
         GravityForce = 200f;
-        text.text = "ahudi";
         calibrationTime = 2;
         timer = 0;
         calibTimer = 0;
@@ -153,7 +152,7 @@ public class GyroScript : MonoBehaviour
     {
         if(isCalibrating)
         {
-            //text.text = "Please hold the Tablet still";
+            text.text = "Please hold the tablet still. It is Calibrating";
             float tempxCal = Input.gyro.attitude.x;
             float tempzCal = Input.gyro.attitude.y;
             if(checkCalib(tempxCal, xCalib) && checkCalib(tempzCal,zCalib))
@@ -163,7 +162,7 @@ public class GyroScript : MonoBehaviour
                 {
                     isCalibrating = false;
                     isCalibrated = true;
-                    //text.text = "calibrated";
+                    text.text = "";
                     calibTimer = 0;
                     
                 }
