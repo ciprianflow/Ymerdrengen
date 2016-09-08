@@ -68,7 +68,6 @@ public class GyroScript : MonoBehaviour
         Xdir = 0;
         Zdir = 0;
         GravityForce = 200f;
-        text.text = "ahudi";
         calibrationTime = 2;
         timer = 0;
         calibTimer = 0;
