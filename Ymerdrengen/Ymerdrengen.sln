@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ymerdrengen.CSharp", "Ymerdrengen.CSharp.csproj", "{0EF787C6-373D-8C42-D20A-E5635EFAD721}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ymerdrengen.CSharp.Editor", "Ymerdrengen.CSharp.Editor.csproj", "{390DCB02-3D1C-D60D-CB7F-CCBC2D07EA8B}"

@@ -42,7 +42,10 @@ public class GyroScript : MonoBehaviour
     float zCalib;
     float timer;
 
+    bool isCalibrating;
     bool isCalibrated;
+    float calibTimer;
+
 
     GameObject ball;
     Text text;
@@ -61,8 +64,10 @@ public class GyroScript : MonoBehaviour
         Xdir = 0;
         Zdir = 0;
         GravityForce = 100f;
+        text.text = "ahudi";
 
         timer = 0;
+        calibTimer = 0;
 
         isCalibrated = false;
         isShaked = false;
@@ -81,15 +86,15 @@ public class GyroScript : MonoBehaviour
         timer += Time.deltaTime;
         if(timer > 0.5 && !isCalibrated)
         {
-            xCalib = Input.gyro.gravity.x;
-            zCalib = Input.gyro.gravity.y;
+            calibrate();
             isCalibrated = true;
         }
 
         // gravity stuff
         float moveHorizontal = Input.gyro.gravity.x;
         float moveVertical = Input.gyro.gravity.y;
-   
+
+
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         Quaternion direction = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         movement = direction * movement;
@@ -98,7 +103,13 @@ public class GyroScript : MonoBehaviour
         Xdir = (movement.x - xCalib) * GravityForce;
         Zdir = (movement.z - zCalib) * GravityForce;
 
-        //text.text = "x: " + Xdir + "z: " + Zdir;
+
+
+        if (Input.deviceOrientation == DeviceOrientation.FaceDown)
+        {
+            Zdir *= -1;
+        }
+        text.text = "x: " + Xdir + "z: " + Zdir;
 
 
         if (Mathf.Abs(Xdir) < tiltThreshold)
@@ -108,6 +119,8 @@ public class GyroScript : MonoBehaviour
 
         if(isCalibrated)
             ball.GetComponent<Rigidbody>().AddForce(new Vector3(Xdir,0,Zdir) * Time.deltaTime);
+        else
+            ball.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
 
         /// stuff for shaking
         acceleration = Input.acceleration;
@@ -117,8 +130,55 @@ public class GyroScript : MonoBehaviour
         {
             // Perform your "shaking actions" here, with suitable guards in the if check above, if necessary to not, to not fire again if they're already being performed.
             isShaked = true;
-            text.text = "shaked!";
+            //text.text = "shaked!";
             //Debug.Log("Shake event detected at time " + Time.time);
         }
+    }
+
+    public void calibrate()
+    {
+        xCalib = Input.gyro.gravity.x;
+        zCalib = Input.gyro.gravity.y;
+        isCalibrated = false;
+        isCalibrating = true;
+
+
+    }
+
+    void Update()
+    {
+        if(isCalibrating)
+        {
+            //text.text = "calibrating";
+            float tempxCal = Input.gyro.gravity.x;
+            float tempzCal = Input.gyro.gravity.y;
+            if(checkCalib(tempxCal, xCalib) && checkCalib(tempzCal,zCalib))
+            {
+                calibTimer += Time.deltaTime;
+                if(calibTimer > 2)
+                {
+                    isCalibrating = false;
+                    isCalibrated = true;
+                    //text.text = "calibrated";
+                    calibTimer = 0;
+                }
+            }
+            else
+            {
+                xCalib = Input.gyro.gravity.x;
+                zCalib = Input.gyro.gravity.y;
+                calibTimer = 0;
+            }
+
+        }
+    }
+
+    public bool checkCalib(float cal1, float cal2)
+    {
+        if (Mathf.Abs(cal1 - cal2) < 0.03)
+        {
+            return true;
+        }
+        else return false;
     }
 }
