@@ -18,7 +18,6 @@
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.4.0f3</UnityVersion>
     <RootNamespace></RootNamespace>
-    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,17 +46,21 @@
     <Reference Include="System.Core" />
     <Reference Include="Boo.Lang" />
     <Reference Include="UnityScript.Lang" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
       <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
+<<<<<<< HEAD
     <Reference Include="UnityEngine.Analytics">
       <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
     </Reference>
@@ -70,6 +73,8 @@
     <Reference Include="UnityEditor.iOS.Extensions.Common">
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
+=======
+>>>>>>> 0445c320b51387f6ddf272e73882b252239bcad6
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\AudioScript.cs" />
@@ -77,6 +82,7 @@
     <Compile Include="Assets\Scripts\MoveScript.cs" />
     <Compile Include="Assets\Scripts\MovieManager_TestScript.cs" />
     <Compile Include="Assets\Scripts\ParticleGenerator.cs" />
+    <Compile Include="Assets\Scripts\YoghurtDetection.cs" />
     <Compile Include="Assets\SplineSystem\Bezier.cs" />
     <Compile Include="Assets\SplineSystem\BezierSpline.cs" />
     <Compile Include="Assets\SplineSystem\TEST_SCRIPT.cs" />
@@ -87,5 +93,5 @@
     <None Include="Assets\celShading\Internal-PrePassLighting.shader" />
     <None Include="Assets\celShading\celShader.shader" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2013\UnityVS.CSharp.targets" />
 </Project>
