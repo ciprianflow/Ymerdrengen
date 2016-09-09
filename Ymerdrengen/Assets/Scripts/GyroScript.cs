@@ -27,22 +27,27 @@ public class GyroScript : MonoBehaviour
     /// <summary>
     /// variables for the shaking
     /// </summary>
-    float accelerometerUpdateInterval = 0.016f/*1.0 / 60.0*/;
+    float accelerometerUpdateInterval = 0.0167f; //60Hz
     // The greater the value of LowPassKernelWidthInSeconds, the slower the filtered value will converge towards current input sample (and vice versa).
     float lowPassKernelWidthInSeconds = 1.0f;
-    // This next parameter is initialized to 2.0 per Apple's recommendation, or at least according to Brady! ;)
     public float shakeDetectionThreshold = 2.0f;
     private float lowPassFilterFactor;
     private Vector3 lowPassValue = Vector3.zero;
     private Vector3 acceleration;
     private Vector3 deltaAcceleration;
-    bool isShaked;
+    public bool isShaked;
 
     float xCalib;
     float zCalib;
     float timer;
 
-    bool isCalibrated;
+    public float calibrationTime;
+
+
+    public bool isCalibrating;
+    public bool isCalibrated;
+    float calibTimer;
+
 
     GameObject ball;
     Text text;
@@ -51,18 +56,21 @@ public class GyroScript : MonoBehaviour
     /// Initialization function
     /// </summary>
     void Start () {
-        Input.gyro.enabled = true;
+        //Only for Philip's Scene
         text = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
-        Screen.orientation = ScreenOrientation.LandscapeLeft;
-        ball = GameObject.Find("Sphere").gameObject;
+        //ball = GameObject.Find("Sphere").gameObject;
+
+        Input.gyro.enabled = true;
+        Screen.orientation = ScreenOrientation.LandscapeRight;
         xCalib = 0;
         zCalib = 0;
         tiltThreshold = 1.5f;
         Xdir = 0;
         Zdir = 0;
-        GravityForce = 100f;
-
+        GravityForce = 200f;
+        calibrationTime = 2;
         timer = 0;
+        calibTimer = 0;
 
         isCalibrated = false;
         isShaked = false;
@@ -81,24 +89,25 @@ public class GyroScript : MonoBehaviour
         timer += Time.deltaTime;
         if(timer > 0.5 && !isCalibrated)
         {
-            xCalib = Input.gyro.gravity.x;
-            zCalib = Input.gyro.gravity.y;
+            calibrate();
             isCalibrated = true;
         }
 
         // gravity stuff
-        float moveHorizontal = Input.gyro.gravity.x;
-        float moveVertical = Input.gyro.gravity.y;
-   
+        float moveHorizontal = Input.gyro.attitude.x;
+        float moveVertical = Input.gyro.attitude.y;
+
+
+
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         Quaternion direction = Quaternion.Euler(0, transform.eulerAngles.y, 0);
         movement = direction * movement;
 
         
-        Xdir = (movement.x - xCalib) * GravityForce;
-        Zdir = (movement.z - zCalib) * GravityForce;
+        Xdir = -(movement.x - xCalib) * GravityForce;
+        Zdir = -(movement.z - zCalib) * GravityForce;
 
-        //text.text = "x: " + Xdir + "z: " + Zdir;
+        // text.text = "x: " + Input.gyro.attitude.x + "z: " + Input.gyro.attitude.y;
 
 
         if (Mathf.Abs(Xdir) < tiltThreshold)
@@ -106,19 +115,72 @@ public class GyroScript : MonoBehaviour
         if (Mathf.Abs(Zdir) < tiltThreshold)
             Zdir = 0;
 
+        //Only for Philip's Scene
+        /*
         if(isCalibrated)
             ball.GetComponent<Rigidbody>().AddForce(new Vector3(Xdir,0,Zdir) * Time.deltaTime);
+        else
+            ball.GetComponent<Rigidbody>().velocity = new Vector3(0,0,0);
+        */
 
         /// stuff for shaking
         acceleration = Input.acceleration;
-        lowPassValue = Vector3.Lerp(lowPassValue, acceleration, lowPassFilterFactor);
+        lowPassValue = Vector3.Lerp(lowPassValue, acceleration, lowPassFilterFactor); // interpolation by 1:60
         deltaAcceleration = acceleration - lowPassValue;
         if (deltaAcceleration.sqrMagnitude >= shakeDetectionThreshold)
         {
             // Perform your "shaking actions" here, with suitable guards in the if check above, if necessary to not, to not fire again if they're already being performed.
             isShaked = true;
-            text.text = "shaked!";
+            //text.text = "shaked!";
             //Debug.Log("Shake event detected at time " + Time.time);
         }
+    }
+
+    public void calibrate()
+    {
+        xCalib = Input.gyro.attitude.x;
+        zCalib = Input.gyro.attitude.y;
+        isCalibrated = false;
+        isCalibrating = true;
+
+
+    }
+
+
+
+    void Update()
+    {
+        if(isCalibrating)
+        {
+            text.text = "Please hold the tablet still. It is Calibrating";
+            float tempxCal = Input.gyro.attitude.x;
+            float tempzCal = Input.gyro.attitude.y;
+            if(checkCalib(tempxCal, xCalib) && checkCalib(tempzCal,zCalib))
+            {
+                calibTimer += Time.deltaTime;
+                if(calibTimer > calibrationTime)
+                {
+                    isCalibrating = false;
+                    isCalibrated = true;
+                    text.text = "";
+                    calibTimer = 0;
+                    
+                }
+            }
+            else
+            {
+                xCalib = Input.gyro.attitude.x;
+                zCalib = Input.gyro.attitude.y;
+                calibTimer = 0;
+            }
+
+        }
+    }
+
+    public bool checkCalib(float cal1, float cal2)
+    {
+        if (Mathf.Abs(cal1 - cal2) < 0.06)
+            return true;
+        else return false;
     }
 }
