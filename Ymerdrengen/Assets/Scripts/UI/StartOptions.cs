@@ -55,7 +55,7 @@ public class StartOptions : MonoBehaviour
     {
         showPanels.HideMenutitle();
         showPanels.ShowMenuPanel();
-        music.PlaylevelMusic();
+        music.PlayMenuMusic();
     }
 
     /// <summary>
@@ -64,10 +64,10 @@ public class StartOptions : MonoBehaviour
     public void StartButtonClicked()
     {
         showPanels.HideMenuPanel();
-
         //if change scence is true
         if (ChangeScenes)
         {
+            music.StopPlayMusic();
             LoadGame();
         }
 
@@ -82,19 +82,7 @@ public class StartOptions : MonoBehaviour
     {
         //disable main menu after starting the game
         InMainMenu = false;
-
         SceneManager.LoadScene(SceneToStart);
         
-    }
-
-    /// <summary>
-    /// change music according to level
-    /// </summary>
-    public void OnLevelWasLoaded()
-    {
-        if (ChangeMusicOnStart)
-        {
-            music.PlaylevelMusic();
-        }
     }
 }
