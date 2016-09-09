@@ -35,7 +35,7 @@ public class YoghurtDetection : MonoBehaviour
     /// On trigger enter function.
     /// </summary>
     /// <param name="collision">Collision with the object</param>
-    public void OnTriggerEnter(Collision collision)
+    public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.layer == 29)
         {
