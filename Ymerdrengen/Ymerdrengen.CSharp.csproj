@@ -73,6 +73,7 @@
     <Compile Include="Assets\Scripts\BoxScript.cs" />
     <Compile Include="Assets\Scripts\FramerateMonitor.cs" />
     <Compile Include="Assets\Scripts\GyroScript.cs" />
+    <Compile Include="Assets\Scripts\LoadnewLevel.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
     <Compile Include="Assets\Scripts\MoveScript.cs" />
     <Compile Include="Assets\Scripts\MovieManager_TestScript.cs" />
