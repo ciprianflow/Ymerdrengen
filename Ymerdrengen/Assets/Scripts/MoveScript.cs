@@ -70,6 +70,8 @@ public class MoveScript : MonoBehaviour
 
     private bool wasBlocked = false;
 
+    private bool endOfPath = false;
+
     private BezierSpline currentSpline;
 
     private float turningThreshold = 15f;
@@ -110,19 +112,19 @@ public class MoveScript : MonoBehaviour
         switch (characterState)
         {
             case States.MovingForward:
-                //Debug.Log("moving forward");
+                Debug.Log("moving forward");
                 MoveForward();
                 break;
             case States.Turning:
-                //Debug.Log("turning");
+                Debug.Log("turning");
                 Rotate(nextDirection, wasBlocked);
                 break;
             case States.MovingBack:
-                //Debug.Log("moving back");
+                Debug.Log("moving back");
                 MoveBack();
                 break;
             case States.StandingStill:
-                //Debug.Log("standing still");
+                Debug.Log("standing still");
                 StandStill();
                 break;
         }
@@ -166,10 +168,11 @@ public class MoveScript : MonoBehaviour
                 timeTravelled = 0;
                 if (Path.Count == 0)
                 {
+                    endOfPath = true;
                     characterState = States.StandingStill;
                     return;
                 }
-                    currentSpline = Path.Pop();     
+                currentSpline = Path.Pop();
             }
         }
         else if (girlAudio.isPlaying && !yoghurtDetection.CanMove)
@@ -199,7 +202,7 @@ public class MoveScript : MonoBehaviour
             transform.root.LookAt(transform.position + nextDirection);
             transform.Rotate(0, 0, 0);
             //transform.position = Vector3.Lerp(actualStartPos, actualEndPos, (timeTravelled * Speed) / trackLength);
-            if (t  <= 0)
+            if (t <= 0)
             {
                 timeTravelled = 0;
                 characterState = States.StandingStill;
@@ -213,25 +216,15 @@ public class MoveScript : MonoBehaviour
 
     private void StandStill()
     {
-        if(Path.Count == 0)
+        if (endOfPath)
         {
+            Debug.Log("DEAD");
             return;
         }
-        if (girlAudio.isPlaying && !yoghurtDetection.CanMove)
-        {
-            wasBlocked = true;
-            float t = (timeTravelled * Speed) / trackLength;
-            nextDirection = -currentSpline.GetDirection(t);
-            characterState = States.Turning;
-        }
-        else if (girlAudio.isPlaying && yoghurtDetection.CanMove)
-        {
-            wasBlocked = true;
-            float t = (timeTravelled * Speed) / trackLength;
-            nextDirection = -currentSpline.GetDirection(t);
-            characterState = States.Turning;
-        }
-        
+        wasBlocked = true;
+        float t = (timeTravelled * Speed) / trackLength;
+        nextDirection = -currentSpline.GetDirection(t);
+        characterState = States.Turning;
     }
 
     private float? GetAngle(Vector3 currentPos, Vector3 nextPosition)
@@ -246,7 +239,7 @@ public class MoveScript : MonoBehaviour
 
     private void Rotate(Vector3 finalRotation, bool wasBlocked)
     {
-        if (GetAngle(transform.forward,finalRotation) > internalThreshold)
+        if (GetAngle(transform.forward, finalRotation) > internalThreshold)
         {
             Turn(RotationSpeed);
         }
@@ -272,7 +265,7 @@ public class MoveScript : MonoBehaviour
 
     private void Turn(float angle)
     {
-        transform.Rotate(new Vector3(0,angle,0)*Time.deltaTime);
+        transform.Rotate(new Vector3(0, angle, 0) * Time.deltaTime);
     }
 
     private bool ShouldITurn(Vector3 nextDirection)
