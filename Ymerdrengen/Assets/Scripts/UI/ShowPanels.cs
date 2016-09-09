@@ -45,6 +45,11 @@ public class ShowPanels : MonoBehaviour
     public GameObject MenuTitle;
 
     /// <summary>
+    /// Level Title
+    /// </summary>
+    public GameObject LevelTitle;
+
+    /// <summary>
     /// Hide Title 
     /// </summary>
     public void HideMenutitle()
@@ -121,4 +126,11 @@ public class ShowPanels : MonoBehaviour
         RestartLevelButton.SetActive(false);
         PauseGameButton.SetActive(false);
     }
+
+    public void ToggleLevelTitle(bool value)
+    {
+        LevelTitle.SetActive(value);
+    }
+
+
 }
