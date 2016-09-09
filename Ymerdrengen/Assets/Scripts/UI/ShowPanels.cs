@@ -30,6 +30,29 @@ public class ShowPanels : MonoBehaviour
     public GameObject PausePanel;
 
     /// <summary>
+    /// Restart level button
+    /// </summary>
+    public GameObject RestartLevelButton;
+
+    /// <summary>
+    /// Pause game button
+    /// </summary>
+    public GameObject PauseGameButton;
+
+    /// <summary>
+    /// Menu title
+    /// </summary>
+    public GameObject MenuTitle;
+
+    /// <summary>
+    /// Hide Title 
+    /// </summary>
+    public void HideMenutitle()
+    {
+        MenuTitle.SetActive(false);
+    }
+
+    /// <summary>
     /// show menu
     /// </summary>
     public void ShowMenuPanel()
@@ -79,5 +102,23 @@ public class ShowPanels : MonoBehaviour
     {
         OptionsTint.SetActive(false);
         PausePanel.SetActive(false);
+    }
+
+    /// <summary>
+    /// show game buttons 
+    /// </summary>
+    public void ShowGameButtons()
+    {
+        RestartLevelButton.SetActive(true);
+        PauseGameButton.SetActive(true);
+    }
+
+    /// <summary>
+    /// hide game buttons
+    /// </summary>
+    public void HideGameButtons()
+    {
+        RestartLevelButton.SetActive(false);
+        PauseGameButton.SetActive(false);
     }
 }

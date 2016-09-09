@@ -3,6 +3,7 @@
 // </copyright>
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// This script handles the pause during the game
@@ -60,11 +61,13 @@ public class Pause : MonoBehaviour
     public void PauseGame()
     {
         isPaused = true;
-        //pause music too
+
+        // pause music too
         music.PauseMusicToggle(true);
         Time.timeScale = 0;
 
         showPanels.ShowPausePanel();
+        showPanels.HideGameButtons();
     }
 
     /// <summary>
@@ -73,10 +76,21 @@ public class Pause : MonoBehaviour
     public void UnPauseGame()
     {
         isPaused = false;
+
         // release music
         music.PauseMusicToggle(false);
         Time.timeScale = 1;
 
         showPanels.HidePausePanel();
+        showPanels.ShowGameButtons();
+    }
+
+    /// <summary>
+    /// restart level
+    /// </summary>
+    public void RestartLevelOnClick()
+    {
+        UnPauseGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

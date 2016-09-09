@@ -35,7 +35,7 @@ public class GyroScript : MonoBehaviour
     private Vector3 lowPassValue = Vector3.zero;
     private Vector3 acceleration;
     private Vector3 deltaAcceleration;
-    public bool isShaked;
+    public static bool isShaked;
 
     float xCalib;
     float zCalib;
