@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿// <copyright file="MoveScript.cs" company="Team4">
+// Company copyright tag.
+// </copyright>
+
 using System.Collections;
+using UnityEngine;
 
-public class BoxDetection : MonoBehaviour {
-
-
+public class BoxDetection : MonoBehaviour
+{
     private Vector3 center;
     public float radius;
     public static bool isFalling;
@@ -11,36 +14,65 @@ public class BoxDetection : MonoBehaviour {
     /// <summary>
     /// GameObject ymerdrengen component
     /// </summary>
-    private GameObject ydreng;
+    private GameObject[] cereal;
 
-    // Use this for initialization
-    void Start () {
-        ydreng = GameObject.FindGameObjectWithTag("Ymerdrengen");
+    /// <summary>
+    /// 
+    /// </summary>
+    void Start()
+    {
+        cereal = GameObject.FindGameObjectsWithTag("CerealBox");
 
         center = this.transform.position;
         radius = 2.0f;
         isFalling = false;
     }
 
-    // Update is called once per frame
-    void Update () {
-	
-	}
-
-    public void OnTriggerEnter(Collider collision)
+    /// <summary>
+    /// 
+    /// </summary>
+    void FixedUpdate()
     {
-        if(collision == ydreng)
+        for (int i = 0; i <= cereal.Length; i++)
         {
-            Collider[] hitColliders = Physics.OverlapSphere(center, radius);
-            int i = 0;
-            while (i < hitColliders.Length)
+            if (Vector3.Distance(this.transform.position, cereal[i].transform.position) < radius)
             {
+                Debug.Log("fall");
                 isFalling = true;
-                hitColliders[i].SendMessage("Box falls");
-                i++;
             }
-
         }
-    }
 
+            //    Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+            //int i = 0;
+            //while (i < hitColliders.Length)
+            //{
+            //Debug.Log(hitColliders[i].gameObject);
+            //if (hitColliders[i].gameObject == cereal)
+            //{
+            //    isFalling = true;
+            //    //hitColliders[i].SendMessage("Box falls");
+            //    Debug.Log("hello");
+            //}
+                
+            //    i++;
+            //}
+
+        //public void OnTriggerEnter(Collider collision)
+        //{
+        //    if(collision.gameObject.layer == 26)
+        //    {
+        //        Collider[] hitColliders = Physics.OverlapSphere(center, radius);
+        //        int i = 0;
+        //        while (i < hitColliders.Length)
+        //        {
+        //            isFalling = true;
+        //            //hitColliders[i].SendMessage("Box falls");
+        //            Debug.Log("hello");
+        //            i++;
+        //        }
+
+        //    }
+        //}
+
+    }
 }

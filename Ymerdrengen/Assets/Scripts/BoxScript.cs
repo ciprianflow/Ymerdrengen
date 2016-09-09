@@ -12,23 +12,33 @@ using UnityEngine;
 public class BoxScript : MonoBehaviour {
 
     /// <summary>
-    /// Yoghurt detection script
+    /// 
     /// </summary>
-    private YoghurtDetection yoghurtDetection;
+    public GameObject box;
 
     /// <summary>
-    /// Box detection script
+    /// 
     /// </summary>
-    private BoxDetection boxDetection;
+    public GameObject endPoint;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public float FallSpeed = 1f;
+    public float RotateSpeed = 1f;
+
+
+    Vector3 stopRotating = new Vector3(0, 0, 90);
+
 
     /// <summary>
     /// 
     /// </summary>
     void Start()
     {
-        yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
-        boxDetection = transform.FindChild("BoxDetection").GetComponent<BoxDetection>();
+
     }
+
 
     /// <summary>
     /// 
@@ -38,6 +48,23 @@ public class BoxScript : MonoBehaviour {
         if (GyroScript.isShaked && BoxDetection.isFalling)
         {
 
+            if (box.transform.eulerAngles.z < 90)
+            {
+
+                Debug.Log(box.transform.eulerAngles.z);
+                box.transform.Rotate(0, 0, Time.deltaTime * RotateSpeed);
+            }
+            // if (Vector3.Distance(transform.eulerAngles, stopRotating) > 0.01f)
+            // {
+            //     transform.eulerAngles = Vector3.Lerp(transform.rotation.eulerAngles, stopRotating, Time.deltaTime);
+
+            // }
+            //else
+            //{
+            //     transform.eulerAngles = stopRotating;
+            // }
+
+            box.transform.position = Vector3.Lerp(box.transform.position, endPoint.transform.position, FallSpeed * Time.deltaTime);
         }
     }
 }
