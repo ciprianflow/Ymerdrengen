@@ -62,8 +62,8 @@ public class Pause : MonoBehaviour
     {
         isPaused = true;
 
-        // pause music too
-        music.PauseMusicToggle(true);
+        AudioListener.pause = true;
+
         Time.timeScale = 0;
 
         showPanels.ShowPausePanel();
@@ -78,7 +78,7 @@ public class Pause : MonoBehaviour
         isPaused = false;
 
         // release music
-        music.PauseMusicToggle(false);
+        AudioListener.pause = false;
         Time.timeScale = 1;
 
         showPanels.HidePausePanel();

@@ -55,7 +55,7 @@ public class StartOptions : MonoBehaviour
     {
         showPanels.HideMenutitle();
         showPanels.ShowMenuPanel();
-        music.PlaylevelMusic();
+        music.PlayMenuMusic();
     }
 
     /// <summary>
@@ -64,7 +64,6 @@ public class StartOptions : MonoBehaviour
     public void StartButtonClicked()
     {
         showPanels.HideMenuPanel();
-
         //if change scence is true
         if (ChangeScenes)
         {

@@ -77,12 +77,11 @@ public class PlayMusic : MonoBehaviour
     /// <summary>
     /// play music based on the level, main menu music otherwise
     /// </summary>
-    public void PlaylevelMusic()
+    public void PlayMenuMusic()
     {
 
-        audioSource.clip = SceneMusic[SceneManager.GetActiveScene().buildIndex - 1];
+        audioSource.clip = MenuMusic;
         audioSource.loop = true;
-
 
         //fade
         FadeUp(resetTime);
