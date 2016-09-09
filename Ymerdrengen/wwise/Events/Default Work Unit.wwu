@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{900DA3EB-5C16-4FED-9B5D-6059CDC6562F}" SchemaVersion="72">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{900DA3EB-5C16-4FED-9B5D-6059CDC6562F}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="pigeSangStart" ID="{F2409C39-22B3-4992-850B-2D9D9D04AB8B}">
+					<ChildrenList>
+						<Action Name="Play" ID="{B11F50A0-6F91-4E3A-A665-1EBFCCBA373A}" ShortID="990457074" Type="Play" Scope="One" Global="false">
+							<ExcludedPlatformList>
+								<Platform>Android</Platform>
+							</ExcludedPlatformList>
+							<ElementList>
+								<Element ID="{CEC112D2-4077-4496-BDCA-85E5378D4470}" Global="false">
+									<ObjectRef Name="rømmen" ID="{29323D7E-0886-4C8E-9113-F0AA8C39C14B}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{71483484-976A-4CFF-BAD3-AACBA6F490F2}" ShortID="814121821" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{137260F4-AE07-4F1A-9D07-24A6AF7AB854}" Global="false">
+									<ObjectRef Name="sang" ID="{5EDB881C-308B-4B0F-BA2E-0E3516637505}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="start" ID="{FE476259-3ACE-4445-AD83-84EC684348FD}">
+					<ChildrenList>
+						<Action Name="Play" ID="{E863E0B2-1965-4BF6-91EA-1B4EDD605954}" ShortID="775996034" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{7C629C18-DF57-4376-82A5-C3191F2E3BA7}" Global="false">
+									<ObjectRef Name="supermarked_1" ID="{FB7A2ACB-A19A-41F6-9714-D8A882FF8769}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{36D41953-C751-4EF4-B5FE-5D6C78FA2284}" ShortID="847838208" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{E78C99E0-813E-4737-AA5B-41C1E8EA3B26}" Global="false">
+									<ObjectRef Name="startLyd" ID="{99E31EA2-A2C5-4BA6-A920-48996778CE19}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="footstep" ID="{9D108E6A-9A3D-44EB-AE85-DEA491AEC9B0}">
+					<ChildrenList>
+						<Action Name="Play" ID="{60B08302-4633-4269-82AC-17F51A877C4A}" ShortID="831243606" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{0F1708DD-2D73-46AE-89F9-C3FE196EF813}" Global="false">
+									<ObjectRef Name="footsteps" ID="{C7EA79EC-E16D-44BD-B2E9-8D2356BF7D1C}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pigeSangStop" ID="{294F8575-64E6-4489-B090-908A73E13790}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{FCFFA685-AEA2-4E88-AB65-97CF4053B1E0}" ShortID="54325801" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{A5938C5C-F8A5-4FAB-B2ED-949E11F6DF46}" Global="false">
+									<ObjectRef Name="sang" ID="{5EDB881C-308B-4B0F-BA2E-0E3516637505}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pigeSangCue" ID="{4F51313C-26DC-4D94-8231-51B03D00D251}">
+					<ChildrenList>
+						<Action Name="Play" ID="{D294184F-9643-423D-A1A7-C95F9E6097DB}" ShortID="742632439" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{A2885EA1-C165-4D03-831C-A634336AD651}" Global="false">
+									<ObjectRef Name="rømmen" ID="{29323D7E-0886-4C8E-9113-F0AA8C39C14B}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Jublen" ID="{38B9E88F-DFFE-43EB-967D-DF19FFE445CB}">
+					<ChildrenList>
+						<Action Name="Play" ID="{EB46BD47-1794-48B2-9ACF-7D45A6690C9C}" ShortID="934719509" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{0EA53322-21C6-41CF-8347-76623468202D}" Global="false">
+									<ObjectRef Name="jublen" ID="{2F36208B-1172-4E62-A8C7-733B7F3FE21F}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{64E98EF5-D191-4C59-9772-9E77FBB4DAE8}" ShortID="1006596515" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{D78CFDFC-8ED7-47E7-A85C-9A678E8BEF9A}" Global="false">
+									<ObjectRef Name="jublen" ID="{F9287A72-5DC6-402A-A08C-B1ACD062A557}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="bvadr" ID="{4BBB41E0-11AC-4B65-A23C-51D6F5A40B43}">
+					<ChildrenList>
+						<Action Name="Play" ID="{C5A837D1-C3AD-4C7E-838A-DF0EED9E672A}" ShortID="1023810905" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{86B8826E-A6E1-4CDC-A527-0E61353A5F52}" Global="false">
+									<ObjectRef Name="ymerAd" ID="{595AF63A-4E45-428D-BB68-6BBF69D6BFB4}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pause" ID="{9F217B6C-ECCD-4A6D-AC22-8BCBE8A3E168}">
+					<ChildrenList>
+						<Action Name="Pause All" ID="{E189DCA7-9499-406C-A5E7-E81A6EEC5714}" ShortID="689850686" Type="Pause" Scope="All" Global="false"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="ymer" ID="{32D24638-F02E-4D73-85D6-5AE63A63F893}">
+					<ChildrenList>
+						<Action Name="Set Voice Volume" ID="{ED8A0386-9EBE-4F17-80B8-51CB6B7BC189}" ShortID="9988771" Type="ChangeVolume" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{6BE2A653-58D5-41C2-93B4-ABDB47F98561}" Global="false">
+									<ObjectRef Name="ymermix" ID="{9EB32914-15F1-45D5-81B4-662C1E9E9746}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{479282F7-5394-47AB-8489-CAECBFCFFFB2}" ShortID="864285555" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{24826736-255A-47F0-894C-F5BC765799F3}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{35026E49-6118-4D4A-BCCC-06D04BB777F2}" Global="false">
+									<ObjectRef Name="ymer anden resonans" ID="{44B10A4F-CC58-4A1B-BF46-4CA6D9FAE4C1}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{D72F5FC9-13F2-4B22-A0E0-028877874BC3}" ShortID="365887951" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.1">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{DCAE68E7-9D8A-4F48-8ED5-33E4814F21DE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.3"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{805D53F0-920B-4D83-94F4-69E22901EA86}" Global="false">
+									<ObjectRef Name="ymerdråbe" ID="{635520D5-7290-4B96-918E-B6E6A1CB0EFF}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{40A196C0-3520-4E75-A8BC-1FE4E710A732}" ShortID="1014817620" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.3">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5170E131-8C10-4EB4-8943-515F28559E7C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.3"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{1F5D419D-9415-4209-AB58-6C2A92D5DDB5}" Global="false">
+									<ObjectRef Name="ymerPlasj" ID="{C4F8CB5C-8453-4CE8-80B2-467F7FEFCFEB}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{2C49D1AF-63FE-4E0F-B554-3807A5FA5B36}" ShortID="937983073" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.6"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{DAFACBE2-F4F9-4DD2-AE2C-35CA47288802}" Global="false">
+									<ObjectRef Name="ymerSkvulp1" ID="{7812C547-5B30-49C8-B2DE-179AF965AC7F}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{D3B1B462-7538-444B-9199-E0B7D81E46FA}" ShortID="196015551" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.9"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{E72E87A4-1AA7-437E-8D8F-2B33209E0953}" Global="false">
+									<ObjectRef Name="ymerSkvulp2" ID="{F22FE689-87E2-4EFA-9E35-6BDC5A4CE84F}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{A9E1B403-23E4-4165-8EFF-B613BD383598}" ShortID="795198852" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{6BAD1A4B-F3E0-4C36-975C-91F2C49E3F57}" Global="false">
+									<ObjectRef Name="ymerskvulp lang" ID="{5E7FEAFA-DAAD-409D-9E26-DE10126F5303}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{F09ABD2F-7C16-4A5F-9FF4-EC4EE1FE2AE8}" ShortID="342057704" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1.2">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{F5296AEF-D685-4A92-A62D-C4FD8347BBBC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+													<Property Name="Min" Type="Real64" Value="-0.1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{B26A1946-18EE-4D28-B073-FE61F0F12F10}" Global="false">
+									<ObjectRef Name="ymer anden resonans" ID="{44B10A4F-CC58-4A1B-BF46-4CA6D9FAE4C1}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{D2B0E5C8-4197-45E7-AD3A-1DA6B99D231B}" ShortID="877860615" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1.5">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9CC014EE-8E77-48FD-B24D-A172C3BB783E}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+													<Property Name="Min" Type="Real64" Value="-0.1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{547078C9-F349-4F23-BBD0-D76779B3AEF3}" Global="false">
+									<ObjectRef Name="ymerdråbe" ID="{635520D5-7290-4B96-918E-B6E6A1CB0EFF}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Set Voice Volume" ID="{45AA6B75-E907-4ABB-B5DA-B087DFB8EEAD}" ShortID="924955559" Type="ChangeVolume" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+								<Property Name="Volume" Type="Real64" Value="-96"/>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{695C89D7-02A0-49B9-B9CA-C58B91F36679}" Global="false">
+									<ObjectRef Name="ymermix" ID="{9EB32914-15F1-45D5-81B4-662C1E9E9746}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{907A3B87-F2A8-413B-BB4E-C85E09840F02}" ShortID="585520646" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1.8">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1B75D266-B991-439D-B63F-5CF9306D3F9F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+													<Property Name="Min" Type="Real64" Value="-0.1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{7D610869-964F-4693-A0E2-C36D92BDF09A}" Global="false">
+									<ObjectRef Name="ymerPlasj" ID="{C4F8CB5C-8453-4CE8-80B2-467F7FEFCFEB}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{803BF893-C6AE-46CB-AC06-9AC28E91AC8E}" ShortID="47693879" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.1">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{1EE5F470-22CA-4498-887D-BFDCC59A1A4F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{08602ACD-68F6-4E9D-A37A-CDAD96DF5686}" Global="false">
+									<ObjectRef Name="ymerSkvulp1" ID="{7812C547-5B30-49C8-B2DE-179AF965AC7F}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{84AB153E-E783-42A4-92F2-15F8C4E5053F}" ShortID="54936394" Type="Play" Scope="One" Global="false">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.4">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A76EE954-A780-46CC-B38E-34D2ECF68C31}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="0.1"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ElementList>
+								<Element ID="{7FAC67E2-2204-4CC3-84F8-DEABF0B94F52}" Global="false">
+									<ObjectRef Name="ymerSkvulp2" ID="{F22FE689-87E2-4EFA-9E35-6BDC5A4CE84F}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+						<Action Name="Play" ID="{B852E1F5-1E36-4FFA-B59F-9B62DA76BBEF}" ShortID="976879551" Type="Play" Scope="One" Global="false"/>
+					</ChildrenList>
+				</Event>
+				<Event Name="ymerStop" ID="{D01FFF95-2C71-436F-9AC7-644057B57BE9}">
+					<ChildrenList>
+						<Action Name="Stop" ID="{35EBFA9C-38D7-409A-BC96-D3D2033419E0}" ShortID="605777551" Type="Stop" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{BA7697E3-3EFE-48BD-BBE7-B022D3AAAFF8}" Global="false">
+									<ObjectRef Name="ymermix" ID="{9EB32914-15F1-45D5-81B4-662C1E9E9746}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
