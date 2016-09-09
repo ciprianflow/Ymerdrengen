@@ -6,6 +6,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public enum States
+{
+    MovingForward,
+    MovingBack,
+    Turning,
+    StandingStill,
+    Idle,
+}
+
 /// <summary>
 /// This script controls the movement of the player. When a
 /// specific sound is played, only then will the player move
@@ -56,15 +66,14 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     private YoghurtDetection yoghurtDetection;
 
-    private enum States
-    {
-        MovingForward,
-        MovingBack,
-        Turning,
-        StandingStill,
-    }
+
 
     private States characterState;
+    public States CharacterState
+    {
+        get { return characterState; }
+        set { characterState = value; }
+    }
 
     private States lastMovementDirection;
 
@@ -98,7 +107,7 @@ public class MoveScript : MonoBehaviour
         transform.position = currentSpline.GetPoint(0);
         transform.root.LookAt(transform.position + currentSpline.GetDirection(0));
 
-        characterState = States.MovingForward;
+        characterState = States.Idle;
         PlayerTracking();
     }
 
@@ -112,20 +121,22 @@ public class MoveScript : MonoBehaviour
         switch (characterState)
         {
             case States.MovingForward:
-                Debug.Log("moving forward");
+                //Debug.Log("moving forward");
                 MoveForward();
                 break;
             case States.Turning:
-                Debug.Log("turning");
+                //Debug.Log("turning");
                 Rotate(nextDirection, wasBlocked);
                 break;
             case States.MovingBack:
-                Debug.Log("moving back");
+                //Debug.Log("moving back");
                 MoveBack();
                 break;
             case States.StandingStill:
-                Debug.Log("standing still");
+                //Debug.Log("standing still");
                 StandStill();
+                break;
+            default:
                 break;
         }
     }
@@ -227,21 +238,23 @@ public class MoveScript : MonoBehaviour
         characterState = States.Turning;
     }
 
-    private float? GetAngle(Vector3 currentPos, Vector3 nextPosition)
+    private float GetAngle(Vector3 currentPos, Vector3 nextPosition)
     {
         float angle = Vector3.Angle(currentPos, nextPosition);
         if (angle >= (characterState == States.Turning ? internalThreshold : turningThreshold))
         {
             return angle;
         }
-        return null;
+        return 0;
     }
 
     private void Rotate(Vector3 finalRotation, bool wasBlocked)
     {
-        if (GetAngle(transform.forward, finalRotation) > internalThreshold)
+        float angle = GetAngle(transform.forward, finalRotation);
+        Debug.Log(DetermineDirection(transform.forward, finalRotation));
+        if (angle > internalThreshold)
         {
-            Turn(RotationSpeed);
+            Turn(RotationSpeed * DetermineDirection(transform.forward,finalRotation));
         }
         else
         {
@@ -275,5 +288,12 @@ public class MoveScript : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    private float DetermineDirection(Vector3 referenceForward, Vector3 newDirection)
+    {
+         Vector3 referenceRight = Vector3.Cross(Vector3.up, referenceForward);
+         float sign = Mathf.Sign(Vector3.Dot(newDirection, referenceRight));
+         return sign;
     }
 }

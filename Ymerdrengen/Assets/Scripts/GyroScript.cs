@@ -165,7 +165,8 @@ public class GyroScript : MonoBehaviour
                     isCalibrated = true;
                     text.text = "";
                     calibTimer = 0;
-                    
+                    MoveScript moveScript = GameObject.FindWithTag("Ymerdrengen").GetComponent<MoveScript>();
+                    moveScript.CharacterState = States.MovingForward;
                 }
             }
             else
