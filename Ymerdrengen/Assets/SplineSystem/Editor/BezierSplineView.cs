@@ -69,7 +69,9 @@ public class BezierSplineView : Editor
     {
         //DrawDefaultInspector();
         spline = target as BezierSpline;
-        Debug.Log(selectedIndex);
+
+        spline.endPoint = GUILayout.Toggle(spline.endPoint, "Final Path");
+
         if (selectedIndex >= 0 && selectedIndex < spline.ControlPointCount)
         {
             DrawSelectedPointInspector();
@@ -82,9 +84,29 @@ public class BezierSplineView : Editor
             EditorUtility.SetDirty(spline);
         }
 
+        if (spline.transform.parent.GetComponent<pathSystem>() != null)
+        {
+            if (GUILayout.Button("Split Curve"))
+            {
+                Undo.RecordObject(spline, "Split Curve");
+                spline.SplitCurve();
+                EditorUtility.SetDirty(spline);
+            }
+        }
+
+        if (spline.transform.parent.GetComponent<pathSystem>() != null)
+        {
+            if (GUILayout.Button("Join Curve (Ends must meet)"))
+            {
+                Undo.RecordObject(spline, "Join Spline");
+                spline.joinSpline();
+                EditorUtility.SetDirty(spline);
+            }
+        }
+
         if (GUILayout.Button("Reset Curve"))
         {
-            spline.Reset();
+            spline.Reset(0);
             EditorUtility.SetDirty(spline);
         }
     }

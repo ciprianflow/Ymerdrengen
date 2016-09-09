@@ -3,6 +3,7 @@
 // </copyright>
 
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -19,7 +20,9 @@ public class MoveScript : MonoBehaviour
     /// <summary>
     /// The path for the player
     /// </summary>
-    public BezierSpline Path;
+    public BezierSpline currentSpline;
+    public pathSystem pathSystem;
+    Stack<BezierSpline> path;
 
     /// <summary>
     /// Start and end positions
@@ -52,7 +55,15 @@ public class MoveScript : MonoBehaviour
     void Start()
     {
         girl = GameObject.FindGameObjectWithTag("Girl");
+        
+        BFS bfs = new BFS();
+
+        path = bfs.findNearestFinalDestination(pathSystem.bezierSplines[0]);
+
+        Debug.Log("ok");
+        currentSpline = path.Pop();
         PlayerTracking();
+
     }
 
     /// <summary>
@@ -65,9 +76,15 @@ public class MoveScript : MonoBehaviour
         {
             timeTravelled += Time.deltaTime;
             float t = (timeTravelled * Speed) / trackLength;
-            transform.position = Path.GetPoint(t);
-            transform.root.LookAt(transform.position + Path.GetDirection(t));
+            transform.position = currentSpline.GetPoint(t);
+            transform.root.LookAt(transform.position + currentSpline.GetDirection(t));
             transform.Rotate(0, 90, 0);
+            if (t >= 1)
+            {
+                currentSpline = path.Pop();
+                PlayerTracking();
+                timeTravelled = 0;
+            }
             //transform.position = Vector3.Lerp(actualStartPos, actualEndPos, (timeTravelled * Speed) / trackLength);
         }
     }
@@ -78,10 +95,10 @@ public class MoveScript : MonoBehaviour
     void PlayerTracking()
     {
         //actualStartPos = StartPos.position;
-        actualStartPos = Path.GetPoint(0f);
+        actualStartPos = currentSpline.GetPoint(0f);
         //actualEndPos = EndPos.position;
-        actualEndPos = Path.GetPoint(1f);
+        actualEndPos = currentSpline.GetPoint(1f);
         //trackLength = ((actualEndPos - actualStartPos).magnitude);
-        trackLength = Path.GetSplineLength();
+        trackLength = currentSpline.GetSplineLength();
     }
 }
