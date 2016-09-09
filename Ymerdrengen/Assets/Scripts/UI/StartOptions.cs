@@ -18,12 +18,12 @@ public class StartOptions : MonoBehaviour
     /// <summary>
     /// change scenes after pressing start
     /// </summary>
-    public bool ChangeScenes;
+    public bool ChangeScenes = true;
 
     /// <summary>
     /// change music at start
     /// </summary>
-    public bool ChangeMusicOnStart;
+    public bool ChangeMusicOnStart = true;
 
     /// <summary>
     /// check if in main menu or not
@@ -51,6 +51,13 @@ public class StartOptions : MonoBehaviour
         
     }
 
+    public void OpenMainMenuOnclick()
+    {
+        showPanels.HideMenutitle();
+        showPanels.ShowMenuPanel();
+        music.PlaylevelMusic();
+    }
+
     /// <summary>
     /// start button clicked -> load scene
     /// </summary>
@@ -63,6 +70,9 @@ public class StartOptions : MonoBehaviour
         {
             LoadGame();
         }
+
+        // show buttons on game UI
+        showPanels.ShowGameButtons();
     }
 
     /// <summary>
@@ -80,7 +90,7 @@ public class StartOptions : MonoBehaviour
     /// <summary>
     /// change music according to level
     /// </summary>
-    void OnLevelWasLoaded()
+    public void OnLevelWasLoaded()
     {
         if (ChangeMusicOnStart)
         {

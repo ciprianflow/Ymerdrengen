@@ -4,6 +4,7 @@
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 /// <summary>
 /// This script handles the music during the menu and game
@@ -26,8 +27,8 @@ public class PlayMusic : MonoBehaviour
     /// </summary>
     public AudioClip[] SceneMusic;
 
-    // public AudioMixerSnapshot volumeDown;
-    // public AudioMixerSnapshot volumeUp;
+    public AudioMixerSnapshot volumeDown;
+    public AudioMixerSnapshot volumeUp;
 
     /// <summary>
     /// audio source
@@ -37,7 +38,7 @@ public class PlayMusic : MonoBehaviour
     /// <summary>
     /// delay to start playing music
     /// </summary>
-    private float resetTime = .01f;
+    private float resetTime = 1.01f;
 
     /// <summary>
     /// init audio source
@@ -63,10 +64,12 @@ public class PlayMusic : MonoBehaviour
     {
         if (val)
         {
+            FadeDown(resetTime);
             audioSource.Pause();
         } 
         else
         {
+            FadeUp(resetTime);
             audioSource.UnPause();
         }
     }
@@ -90,7 +93,7 @@ public class PlayMusic : MonoBehaviour
         }
 
         //fade
-        //FadeUp(resetTime);
+        FadeUp(resetTime);
         audioSource.Play();
     }
 
@@ -101,11 +104,31 @@ public class PlayMusic : MonoBehaviour
     {
         if (!val)
         {
+            FadeDown(resetTime);
             audioSource.mute = true;
         }
         else
         {
+            FadeUp(resetTime);
             audioSource.mute = false;
         } 
+    }
+
+    /// <summary>
+    /// fade volumes
+    /// </summary>
+    /// <param name="resetTime"></param>
+    public void FadeUp(float resetTime)
+    {
+        volumeUp.TransitionTo(resetTime);
+    }
+
+    /// <summary>
+    /// fade down volume
+    /// </summary>
+    /// <param name="resetTime"></param>
+    public void FadeDown(float resetTime)
+    {
+        volumeDown.TransitionTo(resetTime);
     }
 }
