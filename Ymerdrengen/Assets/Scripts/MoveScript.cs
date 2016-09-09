@@ -78,12 +78,15 @@ public class MoveScript : MonoBehaviour
 
     private Vector3 nextDirection;
 
+    private AudioSource girlAudio;
+
     /// <summary>
     /// Getting the components and initialize start and end positions
     /// </summary>
     void Start()
     {
         girl = GameObject.FindGameObjectWithTag("Girl");
+        girlAudio = girl.GetComponent<AudioSource>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
         BFS bfs = new BFS();
         Path = new Stack<BezierSpline>();
@@ -142,7 +145,7 @@ public class MoveScript : MonoBehaviour
     {
         wasBlocked = false;
         lastMovementDirection = States.MovingForward;
-        if (girl.GetComponent<AudioSource>().isPlaying && yoghurtDetection.CanMove)
+        if (girlAudio.isPlaying && yoghurtDetection.CanMove)
         {
             timeTravelled += Time.deltaTime;
             float t = (timeTravelled * Speed) / trackLength;
@@ -169,7 +172,7 @@ public class MoveScript : MonoBehaviour
                     currentSpline = Path.Pop();     
             }
         }
-        else if (girl.GetComponent<AudioSource>().isPlaying && !yoghurtDetection.CanMove)
+        else if (girlAudio.isPlaying && !yoghurtDetection.CanMove)
         {
             //Debug.Log("MOVING BACK NOW");
             characterState = States.StandingStill;
@@ -180,7 +183,7 @@ public class MoveScript : MonoBehaviour
     {
         wasBlocked = false;
         lastMovementDirection = States.MovingBack;
-        if (girl.GetComponent<AudioSource>().isPlaying && yoghurtDetection.CanMove)
+        if (girlAudio.isPlaying && yoghurtDetection.CanMove)
         {
             timeTravelled -= Time.deltaTime;
             float t = (timeTravelled * Speed) / trackLength;
@@ -202,7 +205,7 @@ public class MoveScript : MonoBehaviour
                 characterState = States.StandingStill;
             }
         }
-        else if (girl.GetComponent<AudioSource>().isPlaying && !yoghurtDetection.CanMove)
+        else if (girlAudio.isPlaying && !yoghurtDetection.CanMove)
         {
             characterState = States.StandingStill;
         }
@@ -214,14 +217,14 @@ public class MoveScript : MonoBehaviour
         {
             return;
         }
-        if (girl.GetComponent<AudioSource>().isPlaying && !yoghurtDetection.CanMove)
+        if (girlAudio.isPlaying && !yoghurtDetection.CanMove)
         {
             wasBlocked = true;
             float t = (timeTravelled * Speed) / trackLength;
             nextDirection = -currentSpline.GetDirection(t);
             characterState = States.Turning;
         }
-        else if (girl.GetComponent<AudioSource>().isPlaying && yoghurtDetection.CanMove)
+        else if (girlAudio.isPlaying && yoghurtDetection.CanMove)
         {
             wasBlocked = true;
             float t = (timeTravelled * Speed) / trackLength;
