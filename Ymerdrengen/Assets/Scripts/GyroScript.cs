@@ -56,6 +56,7 @@ public class GyroScript : MonoBehaviour
     /// Initialization function
     /// </summary>
     void Start () {
+        DontDestroyOnLoad(transform.gameObject);
         //Only for Philip's Scene
         text = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
         //ball = GameObject.Find("Sphere").gameObject;
