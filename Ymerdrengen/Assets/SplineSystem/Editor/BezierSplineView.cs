@@ -57,7 +57,7 @@ public class BezierSplineView : Editor
     /// </summary>
     private static Color[] modeColors =
     {
-        Color.white,
+        Color.red,
         Color.blue,
         Color.cyan
     };
