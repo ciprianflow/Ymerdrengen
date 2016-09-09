@@ -80,22 +80,19 @@ public class PlayMusic : MonoBehaviour
     public void PlaylevelMusic()
     {
 
-        //play music according to the current scene
-        if (SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            audioSource.Stop();
-        }
-        else
-        {
-            audioSource.clip = SceneMusic[SceneManager.GetActiveScene().buildIndex - 1];
-            audioSource.loop = true;
+        audioSource.clip = SceneMusic[SceneManager.GetActiveScene().buildIndex - 1];
+        audioSource.loop = true;
 
 
-            //fade
-            FadeUp(resetTime);
-            audioSource.Play();
-        }
+        //fade
+        FadeUp(resetTime);
+        audioSource.Play();
 
+    }
+
+    public void StopPlayMusic()
+    {
+        audioSource.Stop();
     }
 
     /// <summary>

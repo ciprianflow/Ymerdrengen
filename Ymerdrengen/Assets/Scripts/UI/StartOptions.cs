@@ -68,6 +68,7 @@ public class StartOptions : MonoBehaviour
         //if change scence is true
         if (ChangeScenes)
         {
+            music.StopPlayMusic();
             LoadGame();
         }
 
@@ -82,19 +83,7 @@ public class StartOptions : MonoBehaviour
     {
         //disable main menu after starting the game
         InMainMenu = false;
-
         SceneManager.LoadScene(SceneToStart);
         
-    }
-
-    /// <summary>
-    /// change music according to level
-    /// </summary>
-    public void OnLevelWasLoaded()
-    {
-        if (ChangeMusicOnStart)
-        {
-            music.PlaylevelMusic();
-        }
     }
 }
