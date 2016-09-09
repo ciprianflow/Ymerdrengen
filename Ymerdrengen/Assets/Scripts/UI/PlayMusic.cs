@@ -83,18 +83,19 @@ public class PlayMusic : MonoBehaviour
         //play music according to the current scene
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-            audioSource.clip = MenuMusic;
-            audioSource.loop = true;       
+            audioSource.Stop();
         }
         else
         {
             audioSource.clip = SceneMusic[SceneManager.GetActiveScene().buildIndex - 1];
             audioSource.loop = true;
+
+
+            //fade
+            FadeUp(resetTime);
+            audioSource.Play();
         }
 
-        //fade
-        FadeUp(resetTime);
-        audioSource.Play();
     }
 
     /// <summary>
