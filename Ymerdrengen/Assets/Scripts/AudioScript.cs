@@ -1,7 +1,6 @@
 ﻿// <copyright file="AudioScript.cs" company="Team4">
 // Company copyright tag.
 // </copyright>
-
 using System.Collections;
 using UnityEngine;
 
