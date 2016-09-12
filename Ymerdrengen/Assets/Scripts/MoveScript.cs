@@ -89,7 +89,7 @@ public class MoveScript : MonoBehaviour
 
     private Vector3 nextDirection;
 
-    private AudioSource girlAudio;
+    private WwiseAudioScript girlAudio;
 
     /// <summary>
     /// Getting the components and initialize start and end positions
@@ -97,7 +97,7 @@ public class MoveScript : MonoBehaviour
     void Start()
     {
         girl = GameObject.FindGameObjectWithTag("Girl");
-        girlAudio = girl.GetComponent<AudioSource>();
+        girlAudio = girl.GetComponent<WwiseAudioScript>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
         BFS bfs = new BFS();
         Path = new Stack<BezierSpline>();
@@ -153,7 +153,7 @@ public class MoveScript : MonoBehaviour
         //trackLength = ((actualEndPos - actualStartPos).magnitude);
         trackLength = currentSpline.GetSplineLength();
     }
-
+    
     private void MoveForward()
     {
         wasBlocked = false;
@@ -295,5 +295,13 @@ public class MoveScript : MonoBehaviour
          Vector3 referenceRight = Vector3.Cross(Vector3.up, referenceForward);
          float sign = Mathf.Sign(Vector3.Dot(newDirection, referenceRight));
          return sign;
+    }
+
+    private IEnumerator CoFootsteps()
+    {
+        while (true) {
+            AkSoundEngine.PostEvent("footstep", gameObject);
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }

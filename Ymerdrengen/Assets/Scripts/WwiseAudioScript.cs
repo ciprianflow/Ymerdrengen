@@ -43,7 +43,7 @@ public class WwiseAudioScript : MonoBehaviour
     /// <summary>
     /// Describes whether music is playing or not.
     /// </summary>
-    private bool isPlaying = false;
+    public bool isPlaying = false;
 
     /// <summary>
     /// Starts the background sounds and plays the boy and girl cue noises.
