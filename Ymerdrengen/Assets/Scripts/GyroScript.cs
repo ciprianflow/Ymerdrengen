@@ -61,7 +61,10 @@ public class GyroScript : MonoBehaviour
         //ball = GameObject.Find("Sphere").gameObject;
 
         Input.gyro.enabled = true;
+        // force landscape view
         Screen.orientation = ScreenOrientation.LandscapeRight;
+        // prevent tablet from going to sleep while playing
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         xCalib = 0;
         zCalib = 0;
         tiltThreshold = 1.5f;
@@ -164,7 +167,8 @@ public class GyroScript : MonoBehaviour
                     isCalibrated = true;
                     text.text = "";
                     calibTimer = 0;
-                    
+                    MoveScript moveScript = GameObject.FindWithTag("Ymerdrengen").GetComponent<MoveScript>();
+                    moveScript.CharacterState = States.MovingForward;
                 }
             }
             else

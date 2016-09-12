@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.4.0f3</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -79,6 +77,7 @@
     <Compile Include="Assets\Scripts\AudioScript.cs" />
     <Compile Include="Assets\Scripts\BoxDetection.cs" />
     <Compile Include="Assets\Scripts\BoxScript.cs" />
+    <Compile Include="Assets\Scripts\DebugCameraController.cs" />
     <Compile Include="Assets\Scripts\DesignerEditorExtensions.cs" />
     <Compile Include="Assets\Scripts\FramerateMonitor.cs" />
     <Compile Include="Assets\Scripts\GyroScript.cs" />
@@ -93,6 +92,7 @@
     <Compile Include="Assets\Scripts\UI\QuitApplication.cs" />
     <Compile Include="Assets\Scripts\UI\ShowPanels.cs" />
     <Compile Include="Assets\Scripts\UI\StartOptions.cs" />
+    <Compile Include="Assets\Scripts\WwiseAssistantScript.cs" />
     <Compile Include="Assets\Scripts\WwiseAudioEditor.cs" />
     <Compile Include="Assets\Scripts\WwiseAudioScript.cs" />
     <Compile Include="Assets\Scripts\YoghurtDetection.cs" />
@@ -207,12 +207,12 @@
     <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerMouseUp.cs" />
     <Compile Include="Assets\Wwise\Deployment\Components\AkUnityEventHandler.cs" />
     <Compile Include="Assets\Wwise\Deployment\Components\AkUtilities.cs" />
-    <Compile Include="Assets\Scripts\WwiseAssistantScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mini Profiler\CHANGELOG.txt" />
     <None Include="Assets\Mini Profiler\README.txt" />
     <None Include="Assets\StreamingAssets\README.txt" />
+    <None Include="Assets\StreamingAssets\desc.txt" />
     <None Include="Assets\Wwise\Readme.txt" />
     <None Include="Assets\Wwise\Version.txt" />
     <None Include="Assets\WwiseSettings.xml" />
