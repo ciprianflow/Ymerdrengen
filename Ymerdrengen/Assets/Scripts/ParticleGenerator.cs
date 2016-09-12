@@ -19,18 +19,18 @@ public class ParticleGenerator : MonoBehaviour
     /// <summary>
     /// Minimal mass variable
     /// </summary>
-    [Range(1f, 50f)]
+    [Range(1f, 250f)]
     public float MinMass = 1f;
 
     /// <summary>
     /// Max mass variable
     /// </summary>
-    [Range(1f, 50f)] public float MaxMass = 50f;
+    [Range(1f, 250f)] public float MaxMass = 50f;
 
     /// <summary>
     /// Drag multiplier for particles
     /// </summary>
-    [Range(1f, 10f)] public float DragMultiplier = 3f;
+    [Range(1f, 50f)] public float DragMultiplier = 3f;
 
     /// <summary>
     /// Minimum scale multiplier.
