@@ -18,16 +18,6 @@ public class StartOptions : MonoBehaviour
     public int SceneToStart = 1;
 
     /// <summary>
-    /// change scenes after pressing start
-    /// </summary>
-    public bool ChangeScenes = true;
-
-    /// <summary>
-    /// change music at start
-    /// </summary>
-    public bool ChangeMusicOnStart = true;
-
-    /// <summary>
     /// Main menu delay
     /// </summary>
     public float MainMenuDelay = 3f;
@@ -77,6 +67,7 @@ public class StartOptions : MonoBehaviour
     /// </summary>
     public void Start()
     {
+        // open main menu after MainMenuDelay delay
         StartCoroutine(OpenMainMenu());
     }
 
@@ -99,12 +90,9 @@ public class StartOptions : MonoBehaviour
     public void StartButtonClicked()
     {
         showPanels.HideMenuPanel();
-        //if change scence is true
-        if (ChangeScenes)
-        {
-            music.StopPlayMusic();
-            LoadGame();
-        }
+
+        music.StopPlayMusic();
+        LoadGame();
 
         // show buttons on game UI
         showPanels.ShowGameButtons();
@@ -122,10 +110,11 @@ public class StartOptions : MonoBehaviour
     }
 
     /// <summary>
-    /// show current level text and init coroutine to hide it after delay
+    /// show current level text and init coroutine to hide it after LevelDelay
     /// </summary>
     public void OnLevelWasLoaded()
     {
+        // set text to label from the level array
         TextLevel.text = LevelStartText[SceneManager.GetActiveScene().buildIndex - 1];
         showPanels.ToggleLevelTitle(true);
 
