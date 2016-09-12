@@ -55,6 +55,7 @@ public class AudioScript : MonoBehaviour
     private void Start()
     {
         AudioSource audio = GetComponent<AudioSource>();
+        audio.Pause();
         SetRandomMusicTime();
         SetRandomPauseTime();
     }

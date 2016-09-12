@@ -45,21 +45,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\GravityManager.cs" />
      <Compile Include="Assets\Prefabs\calibrationscript.cs" />
      <Compile Include="Assets\Scripts\AudioScript.cs" />
      <Compile Include="Assets\Scripts\BoxDetection.cs" />
      <Compile Include="Assets\Scripts\BoxScript.cs" />
      <Compile Include="Assets\Scripts\FramerateMonitor.cs" />
+     <Compile Include="Assets\Scripts\GravityManager.cs" />
      <Compile Include="Assets\Scripts\GyroScript.cs" />
+     <Compile Include="Assets\Scripts\LoadnewLevel.cs" />
+     <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\MoveScript.cs" />
      <Compile Include="Assets\Scripts\MovieManager_TestScript.cs" />
      <Compile Include="Assets\Scripts\ParticleGenerator.cs" />
+     <Compile Include="Assets\Scripts\SpawnYoghurt.cs" />
      <Compile Include="Assets\Scripts\UI\DontDestroy.cs" />
      <Compile Include="Assets\Scripts\UI\Pause.cs" />
      <Compile Include="Assets\Scripts\UI\PlayMusic.cs" />
      <Compile Include="Assets\Scripts\UI\QuitApplication.cs" />
-     <Compile Include="Assets\Scripts\UI\ShowMenu.cs" />
      <Compile Include="Assets\Scripts\UI\ShowPanels.cs" />
      <Compile Include="Assets\Scripts\UI\StartOptions.cs" />
      <Compile Include="Assets\Scripts\YoghurtDetection.cs" />

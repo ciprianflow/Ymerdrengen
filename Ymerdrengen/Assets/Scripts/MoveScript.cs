@@ -91,11 +91,22 @@ public class MoveScript : MonoBehaviour
 
     private WwiseAudioScript girlAudio;
 
+    private float pauseStart;
+
+    private float pauseDuration = 2f;
+
+    private bool pauseStarted = false;
+
     /// <summary>
     /// Getting the components and initialize start and end positions
     /// </summary>
     void Start()
     {
+        if(GameObject.Find("GravityManager") == null)
+        {
+            characterState = States.MovingForward;
+        }
+
         girl = GameObject.FindGameObjectWithTag("Girl");
         girlAudio = girl.GetComponent<WwiseAudioScript>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
@@ -117,7 +128,6 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     void LateUpdate()
     {
-
         switch (characterState)
         {
             case States.MovingForward:
@@ -190,6 +200,8 @@ public class MoveScript : MonoBehaviour
         {
             //Debug.Log("MOVING BACK NOW");
             characterState = States.StandingStill;
+            pauseStart = Time.time;
+            pauseStarted = true;
         }
     }
 
@@ -232,10 +244,23 @@ public class MoveScript : MonoBehaviour
             Debug.Log("DEAD");
             return;
         }
+        if (pauseStarted)
+        {
+            Debug.Log("pause");
+            if (pauseStart + pauseDuration < Time.time)
+            {
+                Debug.Log("switching to moving");
+                characterState = States.MovingForward;
+                pauseStarted = false;
+            }
+        }
+        else
+        {
         wasBlocked = true;
         float t = (timeTravelled * Speed) / trackLength;
         nextDirection = -currentSpline.GetDirection(t);
         characterState = States.Turning;
+        }
     }
 
     private float GetAngle(Vector3 currentPos, Vector3 nextPosition)

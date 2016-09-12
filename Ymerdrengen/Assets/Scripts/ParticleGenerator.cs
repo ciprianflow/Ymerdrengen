@@ -19,18 +19,18 @@ public class ParticleGenerator : MonoBehaviour
     /// <summary>
     /// Minimal mass variable
     /// </summary>
-    [Range(1f, 50f)]
+    [Range(1f, 250f)]
     public float MinMass = 1f;
 
     /// <summary>
     /// Max mass variable
     /// </summary>
-    [Range(1f, 50f)] public float MaxMass = 50f;
+    [Range(1f, 250f)] public float MaxMass = 50f;
 
     /// <summary>
     /// Drag multiplier for particles
     /// </summary>
-    [Range(1f, 10f)] public float DragMultiplier = 3f;
+    [Range(1f, 50f)] public float DragMultiplier = 3f;
 
     /// <summary>
     /// Minimum scale multiplier.
@@ -82,7 +82,7 @@ public class ParticleGenerator : MonoBehaviour
     {
         for (int i = 0; i < ammount; i++)
         {
-            currentParticle = Instantiate(Particle, this.transform.position, Quaternion.Euler(90, 0, 0)) as Transform;
+            currentParticle = Instantiate(Particle, this.transform.position + new Vector3(Random.Range(-1f, +1f), 0, Random.Range(-1f, +1f)), Quaternion.Euler(90, 0, 0)) as Transform;
             currentRB = currentParticle.GetComponent<Rigidbody>();
             currentParticle.transform.localScale *= Random.Range(MinScaleMultiplier, MaxScaleMultiplier);
             currentRB.mass = Random.Range(MinMass, MaxMass);
