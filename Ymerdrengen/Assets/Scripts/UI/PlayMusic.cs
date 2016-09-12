@@ -22,11 +22,6 @@ public class PlayMusic : MonoBehaviour
     /// </summary>
     public AudioClip MenuMusic;
 
-    /// <summary>
-    /// scene music array 
-    /// </summary>
-    public AudioClip[] SceneMusic;
-
     public AudioMixerSnapshot volumeDown;
     public AudioMixerSnapshot volumeUp;
 
@@ -54,6 +49,7 @@ public class PlayMusic : MonoBehaviour
     public void Start()
     {
         audioSource.clip = TitleMusic;
+        FadeUp(resetTime);
         audioSource.Play();
     }
 

@@ -96,6 +96,11 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     void Start()
     {
+        if(GameObject.Find("GravityManager") == null)
+        {
+            characterState = States.MovingForward;
+        }
+
         girl = GameObject.FindGameObjectWithTag("Girl");
         girlAudio = girl.GetComponent<AudioSource>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
@@ -117,7 +122,6 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     void LateUpdate()
     {
-
         switch (characterState)
         {
             case States.MovingForward:
