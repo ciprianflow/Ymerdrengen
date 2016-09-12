@@ -54,7 +54,7 @@ public class ShowPanels : MonoBehaviour
     /// <summary>
     /// Hide Title 
     /// </summary>
-    public void HideMenutitle()
+    public void HideMenuTitle()
     {
         MenuTitle.SetActive(false);
     }

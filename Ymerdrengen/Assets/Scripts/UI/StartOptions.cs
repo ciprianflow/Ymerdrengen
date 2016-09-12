@@ -80,7 +80,6 @@ public class StartOptions : MonoBehaviour
     /// </summary>
     public void Start()
     {
-        showPanels.ToggleBackground(true);
         // open main menu after MainMenuDelay delay
         StartCoroutine(OpenMainMenu());
     }
@@ -101,7 +100,11 @@ public class StartOptions : MonoBehaviour
     /// </summary>
     private void showMainMenu()
     {
-        showPanels.HideMenutitle();
+        showPanels.HideMenuTitle();
+
+        // maybe fade in..
+        showPanels.ToggleBackground(true);
+
         showPanels.ShowMenuPanel();
         music.PlayMenuMusic();
     }
@@ -140,8 +143,8 @@ public class StartOptions : MonoBehaviour
         InMainMenu = true;
 
         showPanels.HidePausePanel();
-        showPanels.HideMenutitle();
         showPanels.ShowMenuPanel();
+        showPanels.ToggleBackground(true);
         showPanels.HideGameButtons();
         music.PlayMenuMusic();
 
