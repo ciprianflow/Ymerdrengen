@@ -14,7 +14,7 @@ public class DesignerEditorExtensions : Editor
     {
         GameObject gameObj = new GameObject();
         Camera debugCamera = gameObj.AddComponent<Camera>();
-        // gObj.AddComponent<DebugCameraController>();
+        gameObj.AddComponent<DebugCameraController>();
 
         gameObj.transform.eulerAngles = Camera.main.transform.eulerAngles;
 
