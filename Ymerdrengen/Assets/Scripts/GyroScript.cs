@@ -179,13 +179,13 @@ public class GyroScript : MonoBehaviour
                 xCalib = Input.gyro.attitude.x;
                 zCalib = Input.gyro.attitude.y;
                 calibTimer = 0;
-                moveScript.CharacterState = States.MovingForward;
+                //moveScript.CharacterState = States.MovingForward;
             }
 
         }
         if (isCalibrated)
         {
-            moveScript.CharacterState = States.MovingForward;
+            //moveScript.CharacterState = States.MovingForward;
         }
     }
 

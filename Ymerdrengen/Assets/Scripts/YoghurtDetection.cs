@@ -31,6 +31,7 @@ public class YoghurtDetection : MonoBehaviour
         }
     }
 
+    /*
     /// <summary>
     /// On trigger enter function.
     /// </summary>
@@ -42,4 +43,5 @@ public class YoghurtDetection : MonoBehaviour
             //AkSoundEngine.PostEvent("bvadr", gameObject);
         }
     }
+    */
 }
