@@ -56,6 +56,7 @@ public class AudioScript : MonoBehaviour
     private void Start()
     {
         AudioSource audio = GetComponent<AudioSource>();
+        audio.Pause();
         SetRandomMusicTime();
         SetRandomPauseTime();
     }
@@ -68,9 +69,11 @@ public class AudioScript : MonoBehaviour
     {
         time += Time.deltaTime;
 
+        /*
         Debug.Log("time " + time);
         Debug.Log("music " + musicTime);
         Debug.Log("pause " + pauseTime);
+         */
 
         if (audio.isPlaying && time >= musicTime)
         {

@@ -103,8 +103,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SplineSystem\Editor\BezierSplineView.cs" />
+    <Compile Include="Assets\SplineSystem\Editor\pathView.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Mini Profiler\CHANGELOG.txt" />
+    <None Include="Assets\Mini Profiler\README.txt" />
     <None Include="Assets\StreamingAssets\README.txt" />
     <None Include="Assets\celShading\Internal-DeferredShading.shader" />
     <None Include="Assets\celShading\Internal-PrePassLighting.shader" />

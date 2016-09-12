@@ -35,7 +35,7 @@ public class GyroScript : MonoBehaviour
     private Vector3 lowPassValue = Vector3.zero;
     private Vector3 acceleration;
     private Vector3 deltaAcceleration;
-    public bool isShaked;
+    public static bool isShaked;
 
     float xCalib;
     float zCalib;
@@ -48,6 +48,8 @@ public class GyroScript : MonoBehaviour
     public bool isCalibrated;
     float calibTimer;
 
+    private MoveScript moveScript;
+
 
     GameObject ball;
     Text text;
@@ -56,12 +58,17 @@ public class GyroScript : MonoBehaviour
     /// Initialization function
     /// </summary>
     void Start () {
+        DontDestroyOnLoad(transform.gameObject);
         //Only for Philip's Scene
         text = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
+        moveScript = GameObject.FindWithTag("Ymerdrengen").GetComponent<MoveScript>();
         //ball = GameObject.Find("Sphere").gameObject;
 
         Input.gyro.enabled = true;
+        // force landscape view
         Screen.orientation = ScreenOrientation.LandscapeRight;
+        // prevent tablet from going to sleep while playing
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         xCalib = 0;
         zCalib = 0;
         tiltThreshold = 1.5f;
@@ -125,7 +132,7 @@ public class GyroScript : MonoBehaviour
 
         /// stuff for shaking
         acceleration = Input.acceleration;
-        lowPassValue = Vector3.Lerp(lowPassValue, acceleration, lowPassFilterFactor);
+        lowPassValue = Vector3.Lerp(lowPassValue, acceleration, lowPassFilterFactor); // interpolation by 1:60
         deltaAcceleration = acceleration - lowPassValue;
         if (deltaAcceleration.sqrMagnitude >= shakeDetectionThreshold)
         {
@@ -164,7 +171,7 @@ public class GyroScript : MonoBehaviour
                     isCalibrated = true;
                     text.text = "";
                     calibTimer = 0;
-                    
+                    moveScript.CharacterState = States.MovingForward;
                 }
             }
             else
@@ -172,8 +179,13 @@ public class GyroScript : MonoBehaviour
                 xCalib = Input.gyro.attitude.x;
                 zCalib = Input.gyro.attitude.y;
                 calibTimer = 0;
+                moveScript.CharacterState = States.MovingForward;
             }
 
+        }
+        if (isCalibrated)
+        {
+            moveScript.CharacterState = States.MovingForward;
         }
     }
 

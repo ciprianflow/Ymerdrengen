@@ -15,6 +15,35 @@ public class ParticleGenerator : MonoBehaviour
     [SerializeField]
     public int MaxParticles = 250;
 
+
+    /// <summary>
+    /// Minimal mass variable
+    /// </summary>
+    [Range(1f, 250f)]
+    public float MinMass = 1f;
+
+    /// <summary>
+    /// Max mass variable
+    /// </summary>
+    [Range(1f, 250f)] public float MaxMass = 50f;
+
+    /// <summary>
+    /// Drag multiplier for particles
+    /// </summary>
+    [Range(1f, 50f)] public float DragMultiplier = 3f;
+
+    /// <summary>
+    /// Minimum scale multiplier.
+    /// </summary>
+    [Range(0.1f, 3f)]
+    public float MinScaleMultiplier = 0.5f;
+
+    /// <summary>
+    /// Maximal scale multiplier.
+    /// </summary>
+    [Range(0.1f, 3f)]
+    public float MaxScaleMultiplier = 1.3f;
+
     /// <summary>
     /// Prefab for the particle object.
     /// </summary>
@@ -53,11 +82,11 @@ public class ParticleGenerator : MonoBehaviour
     {
         for (int i = 0; i < ammount; i++)
         {
-            currentParticle = Instantiate(Particle, this.transform.position, Quaternion.Euler(90, 0, 0)) as Transform;
+            currentParticle = Instantiate(Particle, this.transform.position + new Vector3(Random.Range(-1f, +1f), 0, Random.Range(-1f, +1f)), Quaternion.Euler(90, 0, 0)) as Transform;
             currentRB = currentParticle.GetComponent<Rigidbody>();
-            currentParticle.transform.localScale *= Random.Range(0.5f, 1.3f);
-            currentRB.mass = Random.Range(1f, 50f);
-            currentRB.drag = currentParticle.transform.localScale.sqrMagnitude * 3f;
+            currentParticle.transform.localScale *= Random.Range(MinScaleMultiplier, MaxScaleMultiplier);
+            currentRB.mass = Random.Range(MinMass, MaxMass);
+            currentRB.drag = currentParticle.transform.localScale.sqrMagnitude * DragMultiplier;
             currentParticle.parent = this.transform;
             yield return waitForEndOfFrame;
         }
