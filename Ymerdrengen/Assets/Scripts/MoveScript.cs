@@ -117,7 +117,6 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     void LateUpdate()
     {
-
         switch (characterState)
         {
             case States.MovingForward:
