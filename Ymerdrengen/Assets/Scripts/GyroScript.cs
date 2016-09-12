@@ -6,6 +6,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEditor;
 
 /// <summary>
 /// Gyro script
@@ -57,8 +58,25 @@ public class GyroScript : MonoBehaviour
     /// <summary>
     /// Initialization function
     /// </summary>
+    public static GyroScript Instance;
+
+    void Awake()
+    {
+        if (Instance)
+        {
+            DestroyImmediate(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+    }
     void Start () {
-        DontDestroyOnLoad(transform.gameObject);
+        
+
+
+
         //Only for Philip's Scene
         text = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
         moveScript = GameObject.FindWithTag("Ymerdrengen").GetComponent<MoveScript>();
