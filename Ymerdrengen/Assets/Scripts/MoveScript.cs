@@ -29,6 +29,8 @@ public class MoveScript : MonoBehaviour
 
     public float RotationSpeed = 0.5f;
 
+    public Animator BoyAnim;
+
     /// <summary>
     /// The path for the player
     /// </summary>
@@ -167,6 +169,7 @@ public class MoveScript : MonoBehaviour
     private void MoveForward()
     {
         wasBlocked = false;
+        BoyAnim.SetTrigger("isMoving"); // start walking animation when moving
         lastMovementDirection = States.MovingForward;
         if (girlAudio.isPlaying && yoghurtDetection.CanMove)
         {
@@ -208,6 +211,7 @@ public class MoveScript : MonoBehaviour
     private void MoveBack()
     {
         wasBlocked = false;
+        BoyAnim.SetTrigger("isMoving"); // start walking animation when moving
         lastMovementDirection = States.MovingBack;
         if (girlAudio.isPlaying && yoghurtDetection.CanMove)
         {
@@ -256,10 +260,11 @@ public class MoveScript : MonoBehaviour
         }
         else
         {
-        wasBlocked = true;
-        float t = (timeTravelled * Speed) / trackLength;
-        nextDirection = -currentSpline.GetDirection(t);
-        characterState = States.Turning;
+            wasBlocked = true;
+            BoyAnim.SetTrigger("isNotMoving"); // stop walking animation when not moving
+            float t = (timeTravelled * Speed) / trackLength;
+            nextDirection = -currentSpline.GetDirection(t);
+            characterState = States.Turning;
         }
     }
 
