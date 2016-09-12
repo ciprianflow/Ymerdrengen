@@ -1,0 +1,2320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}" SchemaVersion="72">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="pige" ID="{941AD2B5-37AC-44DB-89ED-47EECF200B1B}" ShortID="546574359">
+					<ChildrenList>
+						<RandomSequenceContainer Name="sang" ID="{5EDB881C-308B-4B0F-BA2E-0E3516637505}" ShortID="983631180">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="pige sang2" ID="{3156E10E-2563-46EB-A767-73A16D606F6E}" ShortID="879402687" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige sang2" ID="{012C1995-5A6D-438D-9FC2-18E3C66E5522}" ShortID="74475403">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.111122880196936"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.04981163384391"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige sang2.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="375048996"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige sang2" ID="{012C1995-5A6D-438D-9FC2-18E3C66E5522}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige sang1" ID="{DDE7A1DC-3E71-414B-BC70-92DEFFF67097}" ShortID="1008566691" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige sang1" ID="{AE0BC7AA-2CE1-475D-832F-61818A8BE7CF}" ShortID="416648765">
+											<Language>SFX</Language>
+											<AudioFile>pige sang1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige sang1" ID="{AE0BC7AA-2CE1-475D-832F-61818A8BE7CF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige sang1_01" ID="{62620B3C-2CD3-48E9-B0F0-DF182C5668D5}" ShortID="445986549" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige sang1" ID="{899924E3-248D-489F-968E-AC3C01265F2E}" ShortID="841455779">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0543267915754924"/>
+												<Property Name="TrimBegin" Type="Real64" Value="4.21938081236324"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige sang1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige sang1" ID="{899924E3-248D-489F-968E-AC3C01265F2E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige sang1_02 (msåke ud)" ID="{F0EDE7BD-9638-48CC-898D-1D558B231FC0}" ShortID="247069257" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige sang1" ID="{E0DBD7ED-AE61-4893-9CAA-AF349AB64680}" ShortID="722682349">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.162980374726478"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="9.85125820568927"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige sang1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige sang1" ID="{E0DBD7ED-AE61-4893-9CAA-AF349AB64680}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige sang2_01" ID="{97158099-950B-4A15-B294-BF7FB95A3CE0}" ShortID="780059383" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige sang2" ID="{AA33F69C-66DF-4650-8E22-8D51407BD4E1}" ShortID="375048996">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.049387946754194"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.432144534099198"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige sang2.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="74475403"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige sang2" ID="{AA33F69C-66DF-4650-8E22-8D51407BD4E1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="rømmen" ID="{29323D7E-0886-4C8E-9113-F0AA8C39C14B}" ShortID="481762547">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="pige rømmen6" ID="{E6FC276E-37A5-4942-80F1-059E56D60682}" ShortID="731826138" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige rømmen6" ID="{6094B819-E6D0-40D4-A694-45F05DEB60CE}" ShortID="695885446">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00432154905178701"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0660579640773158"/>
+												<Property Name="FadeOutShape" Type="int16" Value="6"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.130263835703866"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.372270582603939"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige rømmen6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige rømmen6" ID="{6094B819-E6D0-40D4-A694-45F05DEB60CE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige rømmen5" ID="{AC60055F-DDE2-4A4D-B23F-640BF8CB1BD0}" ShortID="482501467" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige rømmen5" ID="{B3566DD6-28BF-4BF2-96A8-8E361D9AC500}" ShortID="41533393">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0111124179431072"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0629703683442742"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0713046818016048"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.71026871353027"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige rømmen5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige rømmen5" ID="{B3566DD6-28BF-4BF2-96A8-8E361D9AC500}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige rømmen2" ID="{5A1CCF98-25FC-47E2-ACAB-D70B91ADEA85}" ShortID="917877297" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige rømmen2" ID="{BAA788F1-3E0C-4D98-A1EF-5DBBF2C69661}" ShortID="923999391">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0129645787746171"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.200230716630197"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige rømmen2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige rømmen2" ID="{BAA788F1-3E0C-4D98-A1EF-5DBBF2C69661}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige rømmen3" ID="{43B04827-34BC-41DF-93A8-FD5DA16E5589}" ShortID="122948820" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige rømmen3" ID="{3C280088-CEE7-4182-B35E-2923456CD93E}" ShortID="24393306">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0148163977024069"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.796792943107221"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige rømmen3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige rømmen3" ID="{3C280088-CEE7-4182-B35E-2923456CD93E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige rømmen4" ID="{F8CD9C62-F331-4997-975A-8905667744EE}" ShortID="708843219" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige rømmen4" ID="{B55EB550-4AB9-49B6-82E0-4E6CFF7E7B9B}" ShortID="459670826">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00514473924142961"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0951776759664478"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige rømmen4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige rømmen4" ID="{B55EB550-4AB9-49B6-82E0-4E6CFF7E7B9B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige rømmen1" ID="{F6AC557D-7F15-434E-B3B3-A8792CE8D2F7}" ShortID="660266472" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige rømmen1" ID="{3FCF7E8C-C535-4EF5-B237-F9EE228B4546}" ShortID="360259078">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00370409372720643"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0833421088621444"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.212985389314369"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.59276030269876"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige rømmen1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige rømmen1" ID="{3FCF7E8C-C535-4EF5-B237-F9EE228B4546}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="jublen" ID="{2F36208B-1172-4E62-A8C7-733B7F3FE21F}" ShortID="492676166">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="pige jublen4" ID="{22B6DACD-0000-4F81-99A5-5D3CAEF03B0F}" ShortID="1065707924" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige jublen4" ID="{8ED2F38C-92F0-405D-AE4B-C18F9C9241ED}" ShortID="260247963">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0203727662290299"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0870472738876732"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.288922866520788"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.16865595368344"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige jublen4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige jublen4" ID="{8ED2F38C-92F0-405D-AE4B-C18F9C9241ED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige jublen3" ID="{5CDA2BDC-520B-4249-B906-797829C0B284}" ShortID="281053956" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige jublen3" ID="{B358A7E1-F21A-43D7-B644-71EC7CEBBA2D}" ShortID="652786697">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0222245623632384"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.10371462436178"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.620435699307075"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige jublen3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige jublen3" ID="{B358A7E1-F21A-43D7-B644-71EC7CEBBA2D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige jublen2" ID="{266FC992-38BB-430A-A1E4-C1D61B87D503}" ShortID="127749719" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige jublen2" ID="{0A6F9EBF-6B0A-4E82-B8D1-05F1D0CF27A2}" ShortID="843127878">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0259291575492341"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0950735776805252"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.191587664113786"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige jublen2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige jublen2" ID="{0A6F9EBF-6B0A-4E82-B8D1-05F1D0CF27A2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige jublen1" ID="{AA1E552D-CC69-45FB-9CF1-C35EB66AC54F}" ShortID="585832625" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige jublen1" ID="{225A7A5F-60E8-4314-984C-5162C5AC7C08}" ShortID="890136231">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0246939277899344"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0884865745805981"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.823130926331145"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.87468068471918"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige jublen1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige jublen1" ID="{225A7A5F-60E8-4314-984C-5162C5AC7C08}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="tudseIHalsen" ID="{38391F09-EE2D-4681-8B8A-D148017D1BB9}" ShortID="927366314">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="pige tudse i halsen7" ID="{15085E76-0A63-4DDA-B7D1-A8695AB3B27A}" ShortID="947818149" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige tudse i halsen7" ID="{A43E3DEA-4019-4909-913E-FB42DA0A9111}" ShortID="612208742">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0142919173960613"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.422087960430343"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige tudse i halsen7.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige tudse i halsen7" ID="{A43E3DEA-4019-4909-913E-FB42DA0A9111}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige tudse i halsen6" ID="{5FC8B7B6-BC58-4894-BD76-33CADF4CB686}" ShortID="1000532496" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige tudse i halsen6" ID="{ED38E550-8C95-4710-B6AB-6BB93B3449B9}" ShortID="128134872">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0120049234135667"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.40988238512035"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige tudse i halsen6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige tudse i halsen6" ID="{ED38E550-8C95-4710-B6AB-6BB93B3449B9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige tudse i halsen5" ID="{E735866E-1967-44D9-B26D-5ECA17A5FA92}" ShortID="649730521" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige tudse i halsen5" ID="{F21B386C-0725-41DC-AC7B-AC96C2408620}" ShortID="407101066">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00457339533187451"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.54423404449307"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige tudse i halsen5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige tudse i halsen5" ID="{F21B386C-0725-41DC-AC7B-AC96C2408620}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige tudse i halsen4" ID="{6AC0A328-8A2A-4BF9-A8BC-BA276598ED2B}" ShortID="836555110" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige tudse i halsen4" ID="{F3DBD6F7-A012-4C05-9B3C-5E82737B8B34}" ShortID="768628151">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00457344091903722"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.230958766411379"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige tudse i halsen4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige tudse i halsen4" ID="{F3DBD6F7-A012-4C05-9B3C-5E82737B8B34}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige tudse i halsen3" ID="{5494018E-CD85-491B-89BE-9EF7B0723735}" ShortID="817366092" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige tudse i halsen3" ID="{5252B70E-C994-475E-8FAD-E85A96124832}" ShortID="1028139790">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00743175601750551"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.362917418854851"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige tudse i halsen3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige tudse i halsen3" ID="{5252B70E-C994-475E-8FAD-E85A96124832}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige tudse i halsen2" ID="{D146F5C5-E531-4681-ABAD-512BEC89EEBE}" ShortID="9116434" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige tudse i halsen2" ID="{D359AB75-CB58-4A04-89DA-1723651025D7}" ShortID="580026357">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00419228665207882"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.325950287199125"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige tudse i halsen2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige tudse i halsen2" ID="{D359AB75-CB58-4A04-89DA-1723651025D7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="pige tudse i halsen1" ID="{255F5BEC-A202-48E4-A028-3CF353AEE3A1}" ShortID="829363416" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="pige tudse i halsen1" ID="{BF57A473-C507-450C-906C-8A026751A56F}" ShortID="575305897">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00520217906637491"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0613857129832239"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>pige tudse i halsen1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="pige tudse i halsen1" ID="{BF57A473-C507-450C-906C-8A026751A56F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="dreng" ID="{FDDC774A-B5CB-4368-AF68-DCE2760A0CF6}" ShortID="938323655">
+					<ChildrenList>
+						<RandomSequenceContainer Name="ymerAd" ID="{595AF63A-4E45-428D-BB68-6BBF69D6BFB4}" ShortID="962966438">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="dreng ymer ad1" ID="{E0E98AE8-3D89-4C2B-948D-410C1DE5B5C8}" ShortID="486767584" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng ymer ad1" ID="{3F3644B1-9DB8-49F1-9385-A5FDD6BD43A4}" ShortID="351530559">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0521745076586434"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0709573304157549"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.932880196936543"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.76975929978118"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng ymer ad1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng ymer ad1" ID="{3F3644B1-9DB8-49F1-9385-A5FDD6BD43A4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng ymer ad2" ID="{337C1FB2-FDB1-445E-8629-E6DB2E58C0C9}" ShortID="847178480" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng ymer ad2" ID="{0DDDDFA1-C247-4AD5-B4B9-52085C1ACD21}" ShortID="186002934">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0459135667396061"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0542614879649891"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.285916301969365"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.778443654266958"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng ymer ad2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng ymer ad2" ID="{0DDDDFA1-C247-4AD5-B4B9-52085C1ACD21}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng ymer ad3" ID="{1C5B2EE6-080E-4583-AFD2-AC3FCCD20A66}" ShortID="840111998" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng ymer ad3" ID="{B4E6D1F9-07DB-4AAA-987E-7CB8B0F01D39}" ShortID="581869100">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.046957056892779"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0626094091903719"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.224350382932166"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.707486323851203"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng ymer ad3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng ymer ad3" ID="{B4E6D1F9-07DB-4AAA-987E-7CB8B0F01D39}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng ymer ad4" ID="{0BE03C44-2480-4D68-807E-EE250D9F69CF}" ShortID="532917292" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng ymer ad4" ID="{F9A52824-E477-4254-8490-F9AB286B45A5}" ShortID="759583078">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0503794447483589"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0541112554704595"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.612016958424508"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.54310373358862"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng ymer ad4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng ymer ad4" ID="{F9A52824-E477-4254-8490-F9AB286B45A5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng ymer ad5" ID="{48E3B9E3-F2F2-469A-8CD6-176ABFE8A972}" ShortID="124956828" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng ymer ad5" ID="{AA729769-637D-49BE-B7D9-5FE04581EE4F}" ShortID="259437615">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0863646745076587"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.134345049234136"/>
+												<Property Name="TrimBegin" Type="Real64" Value="1.00119048595915"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.91601629741065"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng ymer ad5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng ymer ad5" ID="{AA729769-637D-49BE-B7D9-5FE04581EE4F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng ymer ad6" ID="{4AE1F35B-A97E-4698-8D62-16866592DF3A}" ShortID="112991072" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng ymer ad6" ID="{E1AD9B2C-C389-44AC-8B47-EDF412F285D5}" ShortID="704364183">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.015159805798687"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0454794173960611"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.855446184354486"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.19762465809628"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng ymer ad6.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng ymer ad6" ID="{E1AD9B2C-C389-44AC-8B47-EDF412F285D5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng ymer ad7" ID="{43346137-5200-4572-A396-76A1D0640088}" ShortID="165805872" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng ymer ad7" ID="{AAD09D0E-D034-40F7-840A-74157712A358}" ShortID="410662667">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0129941648431802"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.040606765134938"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.415813274981765"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.695187819110138"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng ymer ad7.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng ymer ad7" ID="{AAD09D0E-D034-40F7-840A-74157712A358}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng ymer ad8" ID="{E43E9EE0-027F-452B-9B74-80DA63A081DD}" ShortID="768439786" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng ymer ad8" ID="{E655FE0F-D55D-4105-9058-50AF7486674C}" ShortID="145305433">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0102891365791393"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0411565463165573"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.668793877644056"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.903386191648432"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng ymer ad8.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng ymer ad8" ID="{E655FE0F-D55D-4105-9058-50AF7486674C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng ymer ad9" ID="{67F6ECDB-7ECA-40EB-9E3C-2A6C560E9DD1}" ShortID="277897006" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng ymer ad9" ID="{D32AEE46-BC97-48D5-BC09-3DF0EA0C3141}" ShortID="478365640">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.014816466083151"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0469188092633115"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.503759846827134"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.790211524434719"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng ymer ad9.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng ymer ad9" ID="{D32AEE46-BC97-48D5-BC09-3DF0EA0C3141}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="jublen" ID="{F9287A72-5DC6-402A-A08C-B1ACD062A557}" ShortID="502584855">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="dreng jublen1" ID="{0FE87011-25E5-4979-8178-71881F130F3D}" ShortID="563971009" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng jublen1" ID="{E3EBFEC3-1D18-4BB3-A1AF-252B7B5AD7F8}" ShortID="569940089">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0370411652078775"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.234594046316557"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.407452817286652"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.41991133296864"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng jublen1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng jublen1" ID="{E3EBFEC3-1D18-4BB3-A1AF-252B7B5AD7F8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng jublen2" ID="{FA3B0E46-14DD-4BBA-85A9-D0B6C2B0FEEF}" ShortID="781406704" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng jublen2" ID="{B9779A6F-5F4C-481E-B6D8-036764239233}" ShortID="400730508">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0493882202771699"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.227185813274982"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.77292564733771"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.67919948942378"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng jublen2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng jublen2" ID="{B9779A6F-5F4C-481E-B6D8-036764239233}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng jublen3" ID="{E37D8FF1-6693-4A81-AAE2-52B4A72009B3}" ShortID="812399398" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng jublen3" ID="{320FA7A3-7604-4564-8103-C12B8E8E13B0}" ShortID="891233606">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.044449193107221"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.189320637308534"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.418151668490153"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.1589715536105"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng jublen3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng jublen3" ID="{320FA7A3-7604-4564-8103-C12B8E8E13B0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="startLyd" ID="{99E31EA2-A2C5-4BA6-A920-48996778CE19}" ShortID="1060394486">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="dreng startlyd1" ID="{DF56F15D-B1BA-41B2-BACE-B8E03ED76C47}" ShortID="307780764" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng startlyd1" ID="{A2D17BBF-A135-48D5-AF9B-FA5C8C1537F0}" ShortID="928979874">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.016971188913202"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.171409008023341"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.341120897155361"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.07936761487965"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng startlyd1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng startlyd1" ID="{A2D17BBF-A135-48D5-AF9B-FA5C8C1537F0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng startlyd2" ID="{E50F9884-FF3F-4C54-AF90-B122CBE655D1}" ShortID="413952760" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng startlyd2" ID="{382CB40E-8142-468A-9DE1-BC278A9E658A}" ShortID="196018585">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0261093636032094"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.433415435813275"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.869441807986871"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.98692257020423"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng startlyd2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng startlyd2" ID="{382CB40E-8142-468A-9DE1-BC278A9E658A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="dreng startlyd3" ID="{F896B5EE-44AC-4D93-AA25-06F859491031}" ShortID="39417800" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="dreng startlyd3" ID="{86AF2D8F-D74B-42B4-ABA8-C24ABB38DAED}" ShortID="211347025">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0396859728300511"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.177542510029176"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.43863443654267"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.30545963256747"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>dreng startlyd3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="dreng startlyd3" ID="{86AF2D8F-D74B-42B4-ABA8-C24ABB38DAED}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="ambiens" ID="{6692A010-1E1C-4818-887D-13761CB48238}" ShortID="925515695">
+					<ChildrenList>
+						<Sound Name="supermarked_1" ID="{FB7A2ACB-A19A-41F6-9714-D8A882FF8769}" ShortID="518273271" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{AF7F25AC-78EE-401B-80E7-30C626250335}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<RTPCList>
+										<RTPC Name="" ID="{D8F54DBF-5544-47F2-8247-4A2B3EF0273A}" ShortID="392468198">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="ambiensHiPass" ID="{74DA9855-9FD3-4102-BA56-34205B22B715}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{04380AD6-203C-4287-A400-AF96FCCC9AA8}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Exp1</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>100</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="supermarked_1" ID="{1B7D0DE9-052C-428A-8F0B-4C79CE6D5608}" ShortID="223363171">
+									<Language>SFX</Language>
+									<AudioFile>supermarked_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="supermarked_1" ID="{1B7D0DE9-052C-428A-8F0B-4C79CE6D5608}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="footsteps" ID="{82B4883A-57C4-4A45-B451-18DBA78CD45B}" ShortID="894773520">
+					<ChildrenList>
+						<SwitchContainer Name="footstepSurface" ID="{8E19B905-BEE5-407D-B83C-3BCC425DF30D}" ShortID="1050928028">
+							<PropertyList>
+								<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="footsteps" ID="{C7EA79EC-E16D-44BD-B2E9-8D2356BF7D1C}" ShortID="993435588">
+									<PropertyList>
+										<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+										<Property Name="Highpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C9023827-C607-44EE-9820-048A061FD7AB}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="30"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5F1B130E-3D9F-4F4B-9081-47C1A40A704A}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="30"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{48CF3F2D-9B39-4550-8F63-F9F21DAE4DEA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-350"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<BlendContainer Name="footstepsBlend1" ID="{3138DFE3-E48A-42A6-9460-ACA75A88A227}" ShortID="610432113">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="footstep_1" ID="{ACA19913-44C0-4A84-A32F-19FE443B35D4}" ShortID="669222660" Type="SoundFX">
+													<PropertyList>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="footstep_1" ID="{1D362735-4FEF-4726-9401-23FC14149FB5}" ShortID="780200417">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.000708378920495988"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0662334290663749"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0396692195477754"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.176032161743253"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>footstep_1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="footstep_1" ID="{1D362735-4FEF-4726-9401-23FC14149FB5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="footstep_3" ID="{A1F1C487-DEB3-45EB-89D7-BB13F08D5E8E}" ShortID="382457953" Type="SoundFX">
+													<PropertyList>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="footstep_3" ID="{A5BD55BA-6E13-46FD-9A68-0562646B4B17}" ShortID="848562486">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.000646425966447848"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0759550510576222"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0281195295404814"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.267297137126185"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>footstep_3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="footstep_3" ID="{A5BD55BA-6E13-46FD-9A68-0562646B4B17}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<BlendTrackList>
+												<BlendTrack Name="footstep1" ID="{4B4214C3-8F08-498F-8C2C-28309E3246C1}" ShortID="673248306">
+													<PropertyList>
+														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="LayerCrossFadeControlInput">
+															<ObjectRef Name="footstepVelocity" ID="{8BC81394-FA36-4D7E-A59C-733EB8F83E32}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
+														</Reference>
+													</ReferenceList>
+													<BlendTrackAssocList>
+														<BlendTrackAssoc>
+															<ItemRef Name="footstep_1" ID="{ACA19913-44C0-4A84-A32F-19FE443B35D4}"/>
+															<CrossfadingInfo>
+																<LeftEdgePos>0</LeftEdgePos>
+																<LeftFadingMode>Automatic</LeftFadingMode>
+																<RightEdgePos>99.9995</RightEdgePos>
+																<RightFadingMode>Automatic</RightFadingMode>
+															</CrossfadingInfo>
+														</BlendTrackAssoc>
+														<BlendTrackAssoc>
+															<ItemRef Name="footstep_3" ID="{A1F1C487-DEB3-45EB-89D7-BB13F08D5E8E}"/>
+															<CrossfadingInfo>
+																<LeftEdgePos>0.0005</LeftEdgePos>
+																<LeftFadingMode>Automatic</LeftFadingMode>
+																<RightEdgePos>100</RightEdgePos>
+																<RightFadingMode>Automatic</RightFadingMode>
+															</CrossfadingInfo>
+														</BlendTrackAssoc>
+													</BlendTrackAssocList>
+												</BlendTrack>
+											</BlendTrackList>
+										</BlendContainer>
+										<BlendContainer Name="footstepsBlend2" ID="{D4239424-4BF2-443D-B3AC-AA0E2380FC31}" ShortID="612420261">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="footstep_4" ID="{C1B02476-C039-4B2F-8A7C-AAEAD79FEC18}" ShortID="5969246" Type="SoundFX">
+													<PropertyList>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="footstep_4" ID="{DF2F7392-466E-46E8-A6DB-71E4CCF3A957}" ShortID="212920129">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.000852844638949669"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0417893873085339"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0437793581327498"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.185067286652079"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>footstep_4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="footstep_4" ID="{DF2F7392-466E-46E8-A6DB-71E4CCF3A957}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="footstep_5" ID="{221CEF02-2A8D-42FD-A0D5-0EDE2F77FD12}" ShortID="1053170746" Type="SoundFX">
+													<PropertyList>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="footstep_5" ID="{90ADD8D8-F6B8-4611-9EC8-D25B7D9FA62D}" ShortID="1016662856">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.000308939136072613"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0698588621444201"/>
+																<Property Name="FadeOutShape" Type="int16" Value="6"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0388877137531404"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.306718636032093"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>footstep_5.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="footstep_5" ID="{90ADD8D8-F6B8-4611-9EC8-D25B7D9FA62D}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+											<BlendTrackList>
+												<BlendTrack Name="footsteps2" ID="{B6ACDBDC-36AE-441C-B253-8CF5A7D456CC}" ShortID="386177809">
+													<PropertyList>
+														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="LayerCrossFadeControlInput">
+															<ObjectRef Name="footstepVelocity" ID="{8BC81394-FA36-4D7E-A59C-733EB8F83E32}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
+														</Reference>
+													</ReferenceList>
+													<BlendTrackAssocList>
+														<BlendTrackAssoc>
+															<ItemRef Name="footstep_4" ID="{C1B02476-C039-4B2F-8A7C-AAEAD79FEC18}"/>
+															<CrossfadingInfo>
+																<LeftEdgePos>0</LeftEdgePos>
+																<LeftFadingMode>Automatic</LeftFadingMode>
+																<RightEdgePos>99.9995</RightEdgePos>
+																<RightFadingMode>Automatic</RightFadingMode>
+															</CrossfadingInfo>
+														</BlendTrackAssoc>
+														<BlendTrackAssoc>
+															<ItemRef Name="footstep_5" ID="{221CEF02-2A8D-42FD-A0D5-0EDE2F77FD12}"/>
+															<CrossfadingInfo>
+																<LeftEdgePos>0.0005</LeftEdgePos>
+																<LeftFadingMode>Automatic</LeftFadingMode>
+																<RightEdgePos>100</RightEdgePos>
+																<RightFadingMode>Automatic</RightFadingMode>
+															</CrossfadingInfo>
+														</BlendTrackAssoc>
+													</BlendTrackAssocList>
+												</BlendTrack>
+											</BlendTrackList>
+										</BlendContainer>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="footstep_2" ID="{7176426D-800F-415C-837B-6686DAE4E927}" ShortID="346443535" Type="SoundFX">
+									<ExcludedPlatformList>
+										<Platform>Android</Platform>
+									</ExcludedPlatformList>
+									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{CB401A1E-E6CB-4495-93D1-095A72336674}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="30"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Lowpass" Type="int16">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{22073DF4-3314-45E6-84B3-DC9D4D00C536}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="30"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D2E5AF64-F0F2-4805-9A20-F972ED31E716}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="footstep_2" ID="{0FB5F2DE-6D0F-4465-A724-EEE4FA17D054}" ShortID="566063047">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.000386214442013127"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0108140043763676"/>
+												<Property Name="FadeOutShape" Type="int16" Value="3"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.039007658643326"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.122816192560175"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>footstep_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="footstep_2" ID="{0FB5F2DE-6D0F-4465-A724-EEE4FA17D054}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupRef Name="switch1" ID="{D4275CDE-B19C-4922-943C-BB03A7151FE7}"/>
+								<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="footstep_2" ID="{7176426D-800F-415C-837B-6686DAE4E927}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="footsteps" ID="{C7EA79EC-E16D-44BD-B2E9-8D2356BF7D1C}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="New_Switch_01" ID="{2C6AE20C-49DA-4C83-A77A-DA6E95FCD9E8}"/>
+										<ItemList>
+											<ItemRef Name="footstep_2" ID="{7176426D-800F-415C-837B-6686DAE4E927}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="New_Switch" ID="{E8EBD2FD-B73B-411A-AFCF-C2743918BC05}"/>
+										<ItemList>
+											<ItemRef Name="footsteps" ID="{C7EA79EC-E16D-44BD-B2E9-8D2356BF7D1C}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="ymer" ID="{0E4E69D0-3C37-44E2-A003-CC4F7F62D86D}" ShortID="955554763">
+					<ChildrenList>
+						<Sound Name="ymer bliver hældt op" ID="{3CEF44B2-16B8-4BDC-A11E-0767D5875B4B}" ShortID="16737949" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ymer bliver hældt op" ID="{B2CC4328-251D-491D-B7E7-B635BC8AE012}" ShortID="483396281">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.155910261670314"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.1099577634938"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.446395696571845"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.02244308442743"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ymer bliver hældt op.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ymer bliver hældt op" ID="{B2CC4328-251D-491D-B7E7-B635BC8AE012}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="ymerskvulp lang" ID="{5E7FEAFA-DAAD-409D-9E26-DE10126F5303}" ShortID="613232081" Type="SoundFX">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5ED7D063-E525-401D-8157-7F7D15F7794C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-300"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="ymerskvulp lang" ID="{D84239B2-4B64-43B2-ABCE-6CBF8A9FA2B9}" ShortID="1073433980">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0141328181983953"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.319401691283735"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.381586091356674"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>ymerskvulp lang.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="ymerskvulp lang" ID="{D84239B2-4B64-43B2-ABCE-6CBF8A9FA2B9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<ActorMixer Name="ymermix" ID="{9EB32914-15F1-45D5-81B4-662C1E9E9746}" ShortID="1061546733">
+							<PropertyList>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="ymerSkvulp2" ID="{F22FE689-87E2-4EFA-9E35-6BDC5A4CE84F}" ShortID="633109906">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ymerskvulp6" ID="{15C31F50-0A94-44AC-9CE4-C743A3CAB7B1}" ShortID="772937513" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp6" ID="{B06B154C-1FFE-41B6-AFCB-55BE96B39084}" ShortID="512918711">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.017027352297593"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.463995350109409"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.435616429613421"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp6.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp6" ID="{B06B154C-1FFE-41B6-AFCB-55BE96B39084}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp7" ID="{EA3A35A8-D719-4804-9A88-1322BD6A5144}" ShortID="690385825" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp7" ID="{157D4BB5-07BB-4213-8EB7-DC32BAF97A1D}" ShortID="679671193">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.100745167760759"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.398723832968636"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.441292213712619"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp7.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp7" ID="{157D4BB5-07BB-4213-8EB7-DC32BAF97A1D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp8" ID="{099CA8AE-8A5E-4863-AEB7-521A0D6E02D4}" ShortID="325858620" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp8" ID="{0E47EA13-D235-4F25-9315-2431EC71C53A}" ShortID="644231504">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0567578409919766"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.324938639679066"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.502306892778993"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp8.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp8" ID="{0E47EA13-D235-4F25-9315-2431EC71C53A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp9" ID="{02BB4A43-8DDB-4ABE-9CE2-DDDD47C06F49}" ShortID="237642605" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp9" ID="{C9A78784-1BE0-4D7A-9F3F-9B048A457D9B}" ShortID="143273572">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0759992706053975"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.486395331874544"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.778992523705325"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.46868590444931"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp9.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp9" ID="{C9A78784-1BE0-4D7A-9F3F-9B048A457D9B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp voldsom" ID="{B0D829CB-D54C-4FB0-B70E-01EACEB9E6DE}" ShortID="421671214" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp voldsom" ID="{5036879B-FFF1-4E63-A55C-122755229D59}" ShortID="594727261">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0567578409919767"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.4866984865062"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.429940645514223"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp voldsom.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp voldsom" ID="{5036879B-FFF1-4E63-A55C-122755229D59}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="ymer anden resonans" ID="{44B10A4F-CC58-4A1B-BF46-4CA6D9FAE4C1}" ShortID="929131319">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ymerskvulp12 anderledes støj anderledes resonans" ID="{A7C5F4D2-254D-415A-9EAA-7433F48AEC72}" ShortID="279974343" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp12 anderledes støj anderledes resonans" ID="{9BC8EE1D-1518-4F47-BA91-58DA57F4E075}" ShortID="846919586">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0196938594091904"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.374183328774617"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.19037397428884"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.754931277352298"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp12 anderledes støj anderledes resonans.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp12 anderledes støj anderledes resonans" ID="{9BC8EE1D-1518-4F47-BA91-58DA57F4E075}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp13 anderledes støj anderledes resonans" ID="{14225AB2-A8B3-455B-863F-599C606AD6F8}" ShortID="88934868" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp13 anderledes støj anderledes resonans" ID="{0883A268-FCDC-4C3E-BE3F-E9B2FD71D81A}" ShortID="334962905">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0492348194748359"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.410290162290299"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.448036857221007"/>
+														<Property Name="TrimEnd" Type="Real64" Value="1.09793647428884"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp13 anderledes støj anderledes resonans.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp13 anderledes støj anderledes resonans" ID="{0883A268-FCDC-4C3E-BE3F-E9B2FD71D81A}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp14 anderledes støj anderledes resonans" ID="{FF37BF0C-FAB1-4B8C-9D52-8ED0C0591E9B}" ShortID="1042352081" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp14 anderledes støj anderledes resonans" ID="{0EA31AB4-7D3B-4CBD-832A-6A0E9DDE5DB1}" ShortID="402368179">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0404822438001459"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.121446731400438"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.191470072027717"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.677256997629468"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp14 anderledes støj anderledes resonans.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp14 anderledes støj anderledes resonans" ID="{0EA31AB4-7D3B-4CBD-832A-6A0E9DDE5DB1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp15 anderledes støj anderledes resonans" ID="{242E2A55-23A1-4A3F-8CA2-60678465A127}" ShortID="414336972" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp15 anderledes støj anderledes resonans" ID="{12F6E954-7517-4528-B0CB-A8B66C26563F}" ShortID="545566373">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0180527671407731"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.308538202042305"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.379108109956236"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.976490586250912"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp15 anderledes støj anderledes resonans.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp15 anderledes støj anderledes resonans" ID="{12F6E954-7517-4528-B0CB-A8B66C26563F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="ymerdråbe" ID="{635520D5-7290-4B96-918E-B6E6A1CB0EFF}" ShortID="1010130111">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ymer plask dråbe1" ID="{4184C427-5AD9-4FB6-BB35-A76A3385E198}" ShortID="129011485" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymer plask dråbe1" ID="{32927666-8C2D-40D9-9F41-5DC9E170ED0B}" ShortID="977034157">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0131294675419402"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.0771356218088985"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.251921658460977"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.421784144784829"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymer plask dråbe1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymer plask dråbe1" ID="{32927666-8C2D-40D9-9F41-5DC9E170ED0B}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymer plask dråbe2" ID="{BA7AA17A-FFDB-4257-9B66-541197645544}" ShortID="794700899" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymer plask dråbe2" ID="{61823CE0-68A5-4876-9059-3A94F488B969}" ShortID="275075370">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00512866976659374"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.313874589715536"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.24515041484318"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.559025004558716"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymer plask dråbe2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymer plask dråbe2" ID="{61823CE0-68A5-4876-9059-3A94F488B969}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymer plask dråbe3" ID="{DEEF26E1-9F8D-4EC2-86A1-34254954197E}" ShortID="867229950" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymer plask dråbe3" ID="{E854BBEA-D72E-4973-85AB-A88FDABDA6B1}" ShortID="193980638">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00656473377097011"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.186274320751277"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.169862486323851"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.356136807075128"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymer plask dråbe3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymer plask dråbe3" ID="{E854BBEA-D72E-4973-85AB-A88FDABDA6B1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymer plask dråbe4" ID="{E20C2991-0DBA-4F04-97B8-72CE90AF7D17}" ShortID="602744626" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymer plask dråbe4" ID="{78172EF2-B6F6-4876-8DF5-208EFA7C1933}" ShortID="288818242">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.00283000547045953"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.214137080598104"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.23394711889132"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.448084199489424"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymer plask dråbe4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymer plask dråbe4" ID="{78172EF2-B6F6-4876-8DF5-208EFA7C1933}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="ymerPlasj" ID="{C4F8CB5C-8453-4CE8-80B2-467F7FEFCFEB}" ShortID="322722936">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ymer plask" ID="{57482294-3FF0-433D-BF56-225CC8B256EC}" ShortID="159846868" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymer plask" ID="{B59DB920-D86D-4C54-B806-56798A7AD5D2}" ShortID="581494060">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0656461980306345"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.700226112326769"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.503287518234865"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymer plask.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymer plask" ID="{B59DB920-D86D-4C54-B806-56798A7AD5D2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymer plask2" ID="{10B83733-7ACA-4466-B2F3-885FE46A5FF5}" ShortID="501279328" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymer plask2" ID="{28479242-994E-441E-8B91-01999421EA1E}" ShortID="747513450">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0361055342815464"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.797604075492341"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.623641046681255"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymer plask2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymer plask2" ID="{28479242-994E-441E-8B91-01999421EA1E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymer plask3" ID="{60457ACE-4E37-4D1C-AEF2-07E1BD802361}" ShortID="702591250" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymer plask3" ID="{F2C371CC-BD54-43D6-90BD-00E6FB56706C}" ShortID="140437786">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.153174142961342"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="1.49344789387309"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.306348285922684"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymer plask3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymer plask3" ID="{F2C371CC-BD54-43D6-90BD-00E6FB56706C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymer plask4" ID="{E50BEB45-6762-443C-BC8E-0951C21DB44E}" ShortID="913697379" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymer plask4" ID="{DF2D21B1-524C-473C-BC4B-73B16D840B06}" ShortID="592308638">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0525171407731583"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.482501230853391"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.469371945660102"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.951873176513494"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymer plask4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymer plask4" ID="{DF2D21B1-524C-473C-BC4B-73B16D840B06}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp10 anderledes støj" ID="{BC0B3588-6FB6-4C4F-98A6-7B81B2882E5E}" ShortID="47525839" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp10 anderledes støj" ID="{9881A2D7-8AF0-4356-89A0-DD171857860E}" ShortID="882379106">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0170998358862144"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.243197665937272"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.277397337709701"/>
+														<Property Name="TrimEnd" Type="Real64" Value="0.607044173960613"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp10 anderledes støj.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp10 anderledes støj" ID="{9881A2D7-8AF0-4356-89A0-DD171857860E}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp11 anderledes støj" ID="{EE4DA0DC-8C90-46B8-AB85-20149EC3145F}" ShortID="135440673" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp11 anderledes støj" ID="{F6920C04-6A97-4E20-B542-B1C8657653FE}" ShortID="538390941">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0226889132020422"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.441015750364697"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.737389679066375"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp11 anderledes støj.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp11 anderledes støj" ID="{F6920C04-6A97-4E20-B542-B1C8657653FE}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="ymerSkvulp1" ID="{7812C547-5B30-49C8-B2DE-179AF965AC7F}" ShortID="537406422">
+									<PropertyList>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="UserAuxSendVolume0" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+										<Reference Name="UserAuxSend0">
+											<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="ymerskvulp1" ID="{A5F1B20E-90FE-4A4F-B9F4-39C40BC6C2B1}" ShortID="205941674" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp1" ID="{0CBE1465-D62F-4166-A272-0375713F4709}" ShortID="331865315">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0473200446754194"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.793083948760029"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.494021266411379"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp1.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp1" ID="{0CBE1465-D62F-4166-A272-0375713F4709}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp2" ID="{49F4ACCD-936A-44D0-94C7-641A07C6B166}" ShortID="679230901" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp2" ID="{FD07885B-1744-4CC8-9FD3-08254EC4B0E6}" ShortID="219312287">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0511058533916849"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.583458492888403"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.452854645331875"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp2.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp2" ID="{FD07885B-1744-4CC8-9FD3-08254EC4B0E6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp3" ID="{68DB621B-60AC-4183-9BDF-6671C63435BE}" ShortID="201056618" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp3" ID="{3ECAE3F2-6F1A-40DB-8A7D-70D13E82B385}" ShortID="539329039">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0208208196571846"/>
+														<Property Name="TrimBegin" Type="Real64" Value="1.32117564733771"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp3.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp3" ID="{3ECAE3F2-6F1A-40DB-8A7D-70D13E82B385}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp4" ID="{08CC2DF1-D7FB-4A19-AB3F-D5A5001CC356}" ShortID="490915268" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp4" ID="{C878D9D1-FBA8-43BC-A7F7-68F98208460D}" ShortID="467679042">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0189279722830051"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.274455598103574"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp4.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp4" ID="{C878D9D1-FBA8-43BC-A7F7-68F98208460D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="ymerskvulp5" ID="{70EE6CEB-EAF2-447A-A0A7-9792A33E7D30}" ShortID="562319712" Type="SoundFX">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="ymerskvulp5" ID="{056D4C2D-3625-4539-ACEB-6A4EFCD46897}" ShortID="325491423">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.0264995441283734"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.298119871444201"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.316101704959883"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>ymerskvulp5.wav</AudioFile>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="ymerskvulp5" ID="{056D4C2D-3625-4539-ACEB-6A4EFCD46897}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+						</ActorMixer>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
