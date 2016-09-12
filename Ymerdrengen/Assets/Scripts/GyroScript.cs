@@ -48,6 +48,8 @@ public class GyroScript : MonoBehaviour
     public bool isCalibrated;
     float calibTimer;
 
+    private MoveScript moveScript;
+
 
     GameObject ball;
     Text text;
@@ -59,6 +61,7 @@ public class GyroScript : MonoBehaviour
         DontDestroyOnLoad(transform.gameObject);
         //Only for Philip's Scene
         text = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
+        moveScript = GameObject.FindWithTag("Ymerdrengen").GetComponent<MoveScript>();
         //ball = GameObject.Find("Sphere").gameObject;
 
         Input.gyro.enabled = true;
@@ -168,7 +171,6 @@ public class GyroScript : MonoBehaviour
                     isCalibrated = true;
                     text.text = "";
                     calibTimer = 0;
-                    MoveScript moveScript = GameObject.FindWithTag("Ymerdrengen").GetComponent<MoveScript>();
                     moveScript.CharacterState = States.MovingForward;
                 }
             }
@@ -177,8 +179,13 @@ public class GyroScript : MonoBehaviour
                 xCalib = Input.gyro.attitude.x;
                 zCalib = Input.gyro.attitude.y;
                 calibTimer = 0;
+                moveScript.CharacterState = States.MovingForward;
             }
 
+        }
+        if (isCalibrated)
+        {
+            moveScript.CharacterState = States.MovingForward;
         }
     }
 
