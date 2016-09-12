@@ -104,7 +104,9 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     void Start()
     {
-        if(GameObject.Find("GravityManager") == null)
+        BoyAnim = GetComponent<Animator>();
+
+        if (GameObject.Find("GravityManager") == null)
         {
             characterState = States.MovingForward;
         }
