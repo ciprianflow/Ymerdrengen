@@ -68,9 +68,11 @@ public class AudioScript : MonoBehaviour
     {
         time += Time.deltaTime;
 
+        /*
         Debug.Log("time " + time);
         Debug.Log("music " + musicTime);
         Debug.Log("pause " + pauseTime);
+         */
 
         if (audio.isPlaying && time >= musicTime)
         {

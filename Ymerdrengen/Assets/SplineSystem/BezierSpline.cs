@@ -4,6 +4,7 @@
 
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
@@ -22,6 +23,17 @@ public class BezierSpline : MonoBehaviour
     /// </summary>
     [SerializeField]
     public Vector3[] Points;
+
+    [SerializeField]
+    public List<BezierSpline> nextSplines;
+    [SerializeField]
+    public List<BezierSpline> previusSplines;
+
+    [SerializeField]
+    public bool endPoint;
+
+    [SerializeField]
+    public int index;
 
     /// <summary>
     /// Gets the current count of curves in the spline
@@ -72,29 +84,78 @@ public class BezierSpline : MonoBehaviour
         return Points[i];
     }
 
+    public void addConnectionTospline(BezierSpline spline)
+    {
+        nextSplines.Add(spline);
+        spline.addPreviusSpline(this);
+    }
+
+    public void addPreviusSpline(BezierSpline spline)
+    {
+        previusSplines.Add(spline);
+    }
+
     /// <summary>
     /// Sets the control point of index i
     /// </summary>
-    /// <param name="i">Index of control point</param>
+    /// <param name="index">Index of control point</param>
     /// <param name="p">V3 Point</param>
-    public void SetControlPoint(int i, Vector3 p)
+    public void SetControlPoint(int index, Vector3 p)
     {
-        if (i % 3 == 0)
+        if (index % 3 == 0)
         {
-            Vector3 delta = p - Points[i];
-            if (i > 0)
+            Vector3 delta = p - Points[index];
+            if (index > 0)
             {
-                Points[i - 1] += delta;
+                Points[index - 1] += delta;
             }
 
-            if (i + 1 < Points.Length)
+            if (index + 1 < Points.Length)
             {
-                Points[i + 1] += delta;
+                Points[index + 1] += delta;
             }
         }
 
-        Points[i] = p;
-        EnforceMode(i);
+        Debug.Log("ENFORCING");
+
+        EnforceConnections(index);
+
+        Points[index] = p;
+        EnforceMode(index);
+    }
+
+    public void joinSpline()
+    {
+        pathSystem path = transform.parent.GetComponent<pathSystem>();
+
+        path.JoinSpline(this);
+    }
+
+    public void EnforceConnections(int index)
+    {
+        Vector3 p = GetControlPoint(index);
+        if (index == 0)
+        {
+            for (int i = 0; i < previusSplines.Count; i++)
+            {
+                previusSplines[i].Points[previusSplines[i].Points.Length - 1] = p;
+                for(int y = 0; y < previusSplines[i].nextSplines.Count; y++)
+                {
+                    previusSplines[i].nextSplines[y].Points[0] = p;
+                }
+            }
+        }
+        if (index == Points.Length - 1)
+        {
+            for (int i = 0; i < nextSplines.Count; i++)
+            {
+                nextSplines[i].Points[0] = p;
+                for (int y = 0; y < nextSplines[i].previusSplines.Count; y++)
+                {
+                    nextSplines[i].previusSplines[y].Points[nextSplines[i].previusSplines[y].Points.Length - 1] = p;
+                }
+            }
+        }
     }
 
     public BezierControlPointMode GetControlPointMode(int index)
@@ -186,12 +247,41 @@ public class BezierSpline : MonoBehaviour
         EnforceMode(Points.Length - 4);
     }
 
+    public void SplitCurve()
+    {
+        Vector3 point = Points[Points.Length - 1];
+        pathSystem path = transform.parent.GetComponent<pathSystem>();
+
+        path.SplitPath(this);
+
+        //EnforceMode(Points.Length - 4);
+    }
+
+    /// <summary>
+    /// Adds a curve to the current spline, this is for editor view use only
+    /// </summary>
+    public void AddCurve(Vector3 startPoint)
+    {
+        Vector3 point = startPoint;
+        Array.Resize(ref Points, Points.Length + 3);
+        point.x += 1f;
+        Points[Points.Length - 3] = point;
+        point.x += 1f;
+        Points[Points.Length - 2] = point;
+        point.x += 1f;
+        Points[Points.Length - 1] = point;
+
+        Array.Resize(ref modes, modes.Length + 1);
+        modes[modes.Length - 1] = modes[modes.Length - 2];
+        EnforceMode(Points.Length - 4);
+    }
+
     /// <summary>
     /// Resets the current spline to a standard one curve spline, this is for editor view use only
     /// </summary>
-    public void Reset()
+    public void Reset(int index)
     {
-        Points = new Vector3[] 
+        Points = new Vector3[]
         {
             new Vector3(1, 0, 0),
             new Vector3(2, 0, 0),
@@ -199,11 +289,36 @@ public class BezierSpline : MonoBehaviour
             new Vector3(4, 0, 0)
         };
 
+        modes = new BezierControlPointMode[]
+        {
+            BezierControlPointMode.Free,
+            BezierControlPointMode.Free
+        };
+
+        this.index = index; 
+        nextSplines = new List<BezierSpline>();
+        previusSplines = new List<BezierSpline>();
+    }
+
+    public void Reset(Vector3 pos, int index)
+    {
+        Points = new Vector3[] 
+        {
+            new Vector3(0, 0, 0) + pos,
+            new Vector3(1, 0, 0) + pos,
+            new Vector3(2, 0, 0) + pos,
+            new Vector3(3, 0, 0) + pos
+        };
+
         modes = new BezierControlPointMode[] 
         {
             BezierControlPointMode.Free,
             BezierControlPointMode.Free
         };
+
+        this.index = index;
+        nextSplines = new List<BezierSpline>();
+        previusSplines = new List<BezierSpline>();
     }
 
     private void EnforceMode(int index)
