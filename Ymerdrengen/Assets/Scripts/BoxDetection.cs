@@ -31,7 +31,7 @@ public class BoxDetection : MonoBehaviour
     /// <summary>
     /// 
     /// </summary>
-    void FixedUpdate()
+    void Update()
     {
         for (int i = 0; i <= cereal.Length; i++)
         {
