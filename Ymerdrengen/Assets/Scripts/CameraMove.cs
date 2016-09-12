@@ -9,21 +9,15 @@ public class CameraMove : MonoBehaviour {
     void Start () {
         CamAnimator = GetComponent<Animator>();
         CamAnimator.SetTrigger("GameStarted");
-
-        BoyAnimator = this.GetComponentInParent<Animator>();
-
+        BoyAnimator = this.transform.parent.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update () {
-        CamAnimator.Update(Time.smoothDeltaTime);
-        CamAnimator.Update(Time.smoothDeltaTime);
-        if (BoyAnimator.GetCurrentAnimatorStateInfo(0).IsName("CameraStart"))
+      
+        if (BoyAnimator.GetCurrentAnimatorStateInfo(0).IsName("IdleBase"))
         {
-            Debug.Log("camera move!");
             CamAnimator.SetTrigger("CamIsMoving");
         }
-
-
     }
 }
