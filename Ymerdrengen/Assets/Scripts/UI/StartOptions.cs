@@ -56,17 +56,31 @@ public class StartOptions : MonoBehaviour
     /// <summary>
     /// initialize components
     /// </summary>
+
+    public static StartOptions Instance;
+
     public void Awake()
     {
-        showPanels = GetComponent<ShowPanels>();
-        music = GetComponent<PlayMusic>();
+        if (Instance)
+        {
+            DestroyImmediate(gameObject);
+        }
+        else
+        {
+            showPanels = GetComponent<ShowPanels>();
+            music = GetComponent<PlayMusic>();
+
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
     }
-    
+
     /// <summary>
     /// init coroutine for opening main menu
     /// </summary>
     public void Start()
     {
+        showPanels.ToggleBackground(true);
         // open main menu after MainMenuDelay delay
         StartCoroutine(OpenMainMenu());
     }
@@ -79,6 +93,14 @@ public class StartOptions : MonoBehaviour
     {
         yield return new WaitForSeconds(MainMenuDelay);
 
+        showMainMenu();
+    }
+
+    /// <summary>
+    /// show main menu
+    /// </summary>
+    private void showMainMenu()
+    {
         showPanels.HideMenutitle();
         showPanels.ShowMenuPanel();
         music.PlayMenuMusic();
@@ -90,6 +112,7 @@ public class StartOptions : MonoBehaviour
     public void StartButtonClicked()
     {
         showPanels.HideMenuPanel();
+        showPanels.ToggleBackground(false);
 
         music.StopPlayMusic();
         LoadGame();
@@ -110,15 +133,37 @@ public class StartOptions : MonoBehaviour
     }
 
     /// <summary>
+    /// back to main menu from in game 
+    /// </summary>
+    public void BackToMainMenu()
+    {
+        InMainMenu = true;
+
+        showPanels.HidePausePanel();
+        showPanels.HideMenutitle();
+        showPanels.ShowMenuPanel();
+        showPanels.HideGameButtons();
+        music.PlayMenuMusic();
+
+        // scene 0 is the main menu (HARDOCODED)
+        SceneManager.LoadScene(0);
+    }
+
+    /// <summary>
     /// show current level text and init coroutine to hide it after LevelDelay
     /// </summary>
     public void OnLevelWasLoaded()
     {
-        // set text to label from the level array
-        TextLevel.text = LevelStartText[SceneManager.GetActiveScene().buildIndex - 1];
-        showPanels.ToggleLevelTitle(true);
+        int currentLevel = SceneManager.GetActiveScene().buildIndex;
+        // set text to label from the level array (only if in the game)
+        if (currentLevel > 0)
+        {
+            TextLevel.text = LevelStartText[currentLevel - 1];
+            showPanels.ToggleLevelTitle(true);
 
-        StartCoroutine(DisplayLevelText());
+            StartCoroutine(DisplayLevelText());
+        }
+        
     }
 
     /// <summary>

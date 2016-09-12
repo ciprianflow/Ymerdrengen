@@ -74,9 +74,6 @@ public class GyroScript : MonoBehaviour
     }
     void Start () {
         
-
-
-
         //Only for Philip's Scene
         text = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
         moveScript = GameObject.FindWithTag("Ymerdrengen").GetComponent<MoveScript>();
@@ -187,7 +184,13 @@ public class GyroScript : MonoBehaviour
                 {
                     isCalibrating = false;
                     isCalibrated = true;
-                    text.text = "";
+
+                    // wierd error when going to scene 0 the object doesn't get destoryed
+                    if (text != null)
+                    {
+                        text.text = "";
+                    }
+                    
                     calibTimer = 0;
                     moveScript.CharacterState = States.MovingForward;
                 }
