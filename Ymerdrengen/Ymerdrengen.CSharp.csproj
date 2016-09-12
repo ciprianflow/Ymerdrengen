@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\UI\QuitApplication.cs" />
     <Compile Include="Assets\Scripts\UI\ShowPanels.cs" />
     <Compile Include="Assets\Scripts\UI\StartOptions.cs" />
+    <Compile Include="Assets\Scripts\WwiseAudioEditor.cs" />
     <Compile Include="Assets\Scripts\WwiseAudioScript.cs" />
     <Compile Include="Assets\Scripts\YoghurtDetection.cs" />
     <Compile Include="Assets\SplineSystem\BFS.cs" />
@@ -206,7 +207,7 @@
     <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerMouseUp.cs" />
     <Compile Include="Assets\Wwise\Deployment\Components\AkUnityEventHandler.cs" />
     <Compile Include="Assets\Wwise\Deployment\Components\AkUtilities.cs" />
-    <Compile Include="Assets\Wwise_Test.cs" />
+    <Compile Include="Assets\Scripts\WwiseAssistantScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mini Profiler\CHANGELOG.txt" />
