@@ -45,7 +45,7 @@ public class BoxScript : MonoBehaviour {
     /// </summary>
     void FixedUpdate()
     {
-        if (GyroScript.isShaked && BoxDetection.isFalling)
+        if (!GyroScript.isShaked && BoxDetection.isFalling)
         {
 
             if (box.transform.eulerAngles.z < 90)
