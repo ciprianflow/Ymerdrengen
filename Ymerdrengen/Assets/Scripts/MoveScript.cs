@@ -131,19 +131,19 @@ public class MoveScript : MonoBehaviour
         switch (characterState)
         {
             case States.MovingForward:
-                //Debug.Log("moving forward");
+                Debug.Log("moving forward");
                 MoveForward();
                 break;
             case States.Turning:
-                //Debug.Log("turning");
+                Debug.Log("turning");
                 Rotate(nextDirection, wasBlocked);
                 break;
             case States.MovingBack:
-                //Debug.Log("moving back");
+                Debug.Log("moving back");
                 MoveBack();
                 break;
             case States.StandingStill:
-                //Debug.Log("standing still");
+                Debug.Log("standing still");
                 StandStill();
                 break;
             default:

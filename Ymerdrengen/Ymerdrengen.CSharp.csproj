@@ -64,18 +64,15 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Boy Anim\AnimationYmerdreng.cs" />
+    <Compile Include="Assets\Girl Anim\AnimationPigen.cs" />
     <Compile Include="Assets\Prefabs\calibrationscript.cs" />
     <Compile Include="Assets\Scripts\AudioScript.cs" />
     <Compile Include="Assets\Scripts\BoxDetection.cs" />
     <Compile Include="Assets\Scripts\BoxScript.cs" />
+    <Compile Include="Assets\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Scripts\DebugCameraController.cs" />
     <Compile Include="Assets\Scripts\DesignerEditorExtensions.cs" />
     <Compile Include="Assets\Scripts\FramerateMonitor.cs" />
@@ -86,6 +83,7 @@
     <Compile Include="Assets\Scripts\MoveScript.cs" />
     <Compile Include="Assets\Scripts\MovieManager_TestScript.cs" />
     <Compile Include="Assets\Scripts\ParticleGenerator.cs" />
+    <Compile Include="Assets\Scripts\SpawnYoghurt.cs" />
     <Compile Include="Assets\Scripts\UI\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\UI\Pause.cs" />
     <Compile Include="Assets\Scripts\UI\PlayMusic.cs" />
