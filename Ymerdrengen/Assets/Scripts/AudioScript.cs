@@ -49,12 +49,13 @@ public class AudioScript : MonoBehaviour
     /// </summary>
     private float pauseTime;
 
+    public NoteSpawner noteSpawner;
+
     /// <summary>
     /// Sets the random values for music and pausing
     /// </summary>
     private void Start()
     {
-        AudioSource audio = GetComponent<AudioSource>();
         audio.Pause();
         SetRandomMusicTime();
         SetRandomPauseTime();
@@ -72,7 +73,7 @@ public class AudioScript : MonoBehaviour
         Debug.Log("time " + time);
         Debug.Log("music " + musicTime);
         Debug.Log("pause " + pauseTime);
-         */
+        */
 
         if (audio.isPlaying && time >= musicTime)
         {
@@ -80,9 +81,12 @@ public class AudioScript : MonoBehaviour
             time = 0f;
             SetRandomMusicTime();
         }
+
         else if (!audio.isPlaying && time >= pauseTime)
         {
+            Debug.Log("OK");
             audio.Play();
+            noteSpawner.beginNoteSpawn();
             time = 0f;
             SetRandomPauseTime();
         }

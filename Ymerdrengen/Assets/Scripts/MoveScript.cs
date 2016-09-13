@@ -120,8 +120,8 @@ public class MoveScript : MonoBehaviour
         {
             characterState = States.MovingForward;
         }
-
         girl = GameObject.FindGameObjectWithTag("Girl");
+
         //girlAudio = girl.GetComponent<WwiseAudioScript>();
         girlAudio = girl.GetComponent<AudioScript>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
@@ -132,6 +132,8 @@ public class MoveScript : MonoBehaviour
 
         transform.position = currentSpline.GetPoint(0);
         transform.root.LookAt(transform.position + currentSpline.GetDirection(0));
+
+        GetComponent<NoteSpawner>().Init();
 
         characterState = States.Idle;
         PlayerTracking();
@@ -152,7 +154,6 @@ public class MoveScript : MonoBehaviour
         {
             case States.MovingForward:
                 //Debug.Log("moving forward");
-                if (playStep)
                 MoveForward();
                 break;
             case States.Turning:
@@ -267,7 +268,6 @@ public class MoveScript : MonoBehaviour
         }
         if (pauseStarted)
         {
-            Debug.Log("pause");
             if (pauseStart + pauseDuration < Time.time)
             {
                 Debug.Log("switching to moving");
