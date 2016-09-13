@@ -14,8 +14,8 @@ public class CameraMove : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-      
-        if (BoyAnimator.GetCurrentAnimatorStateInfo(0).IsName("IdleBase"))
+        Debug.Log(BoyAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime);
+        if (BoyAnimator.GetCurrentAnimatorStateInfo(0).IsName("CameraStart") && (BoyAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.4f))
         {
             CamAnimator.SetTrigger("CamIsMoving");
         }
