@@ -5,6 +5,9 @@
 			<ChildrenList>
 				<GameParameter Name="footstepVelocity" ID="{8BC81394-FA36-4D7E-A59C-733EB8F83E32}"/>
 				<GameParameter Name="ambiensHiPass" ID="{74DA9855-9FD3-4102-BA56-34205B22B715}"/>
+				<GameParameter Name="ymerVelocity" ID="{29A9ECF6-476B-464F-A2F0-A90EACC515FB}"/>
+				<GameParameter Name="ymerProcent" ID="{A6057CC9-F36D-4543-B4A4-D8C09F1D0C07}"/>
+				<GameParameter Name="distanceToGirl" ID="{9472C309-350F-447B-866D-7186BC6426E5}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

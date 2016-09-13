@@ -57,6 +57,13 @@
 								</Element>
 							</ElementList>
 						</Action>
+						<Action Name="Play" ID="{8A33F4B3-C573-4CE0-BE05-5A556B91F5BE}" ShortID="551212826" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{40351930-A57B-4F71-90D6-BB9ACD801B3F}" Global="false">
+									<ObjectRef Name="ymerTrin" ID="{70FB0026-0D37-44D1-9C43-BB9F479CB8C6}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="pigeSangStop" ID="{294F8575-64E6-4489-B090-908A73E13790}">
@@ -81,7 +88,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Jublen" ID="{38B9E88F-DFFE-43EB-967D-DF19FFE445CB}">
+				<Event Name="jublen" ID="{38B9E88F-DFFE-43EB-967D-DF19FFE445CB}">
 					<ChildrenList>
 						<Action Name="Play" ID="{EB46BD47-1794-48B2-9ACF-7D45A6690C9C}" ShortID="934719509" Type="Play" Scope="One" Global="false">
 							<ElementList>
@@ -120,13 +127,6 @@
 				</Event>
 				<Event Name="ymer" ID="{32D24638-F02E-4D73-85D6-5AE63A63F893}">
 					<ChildrenList>
-						<Action Name="Set Voice Volume" ID="{ED8A0386-9EBE-4F17-80B8-51CB6B7BC189}" ShortID="9988771" Type="ChangeVolume" Scope="One" Global="false">
-							<ElementList>
-								<Element ID="{6BE2A653-58D5-41C2-93B4-ABDB47F98561}" Global="false">
-									<ObjectRef Name="ymermix" ID="{9EB32914-15F1-45D5-81B4-662C1E9E9746}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
-								</Element>
-							</ElementList>
-						</Action>
 						<Action Name="Play" ID="{479282F7-5394-47AB-8489-CAECBFCFFFB2}" ShortID="864285555" Type="Play" Scope="One" Global="false">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64">
@@ -260,17 +260,6 @@
 								</Element>
 							</ElementList>
 						</Action>
-						<Action Name="Set Voice Volume" ID="{45AA6B75-E907-4ABB-B5DA-B087DFB8EEAD}" ShortID="924955559" Type="ChangeVolume" Scope="One" Global="false">
-							<PropertyList>
-								<Property Name="FadeTime" Type="Real64" Value="3"/>
-								<Property Name="Volume" Type="Real64" Value="-96"/>
-							</PropertyList>
-							<ElementList>
-								<Element ID="{695C89D7-02A0-49B9-B9CA-C58B91F36679}" Global="false">
-									<ObjectRef Name="ymermix" ID="{9EB32914-15F1-45D5-81B4-662C1E9E9746}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
-								</Element>
-							</ElementList>
-						</Action>
 						<Action Name="Play" ID="{907A3B87-F2A8-413B-BB4E-C85E09840F02}" ShortID="585520646" Type="Play" Scope="One" Global="false">
 							<PropertyList>
 								<Property Name="Delay" Type="Real64" Value="1.8">
@@ -335,7 +324,6 @@
 								</Element>
 							</ElementList>
 						</Action>
-						<Action Name="Play" ID="{B852E1F5-1E36-4FFA-B59F-9B62DA76BBEF}" ShortID="976879551" Type="Play" Scope="One" Global="false"/>
 					</ChildrenList>
 				</Event>
 				<Event Name="ymerStop" ID="{D01FFF95-2C71-436F-9AC7-644057B57BE9}">
@@ -344,6 +332,17 @@
 							<ElementList>
 								<Element ID="{BA7697E3-3EFE-48BD-BBE7-B022D3AAAFF8}" Global="false">
 									<ObjectRef Name="ymermix" ID="{9EB32914-15F1-45D5-81B4-662C1E9E9746}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="win" ID="{5EF7AF7F-D8C4-49F0-8C65-789E1FEBBE65}">
+					<ChildrenList>
+						<Action Name="Play" ID="{01A1C7C9-CBE0-4EB0-956F-4B4ECB5430C6}" ShortID="948981610" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{51F5AD95-DC52-4678-9327-894A6FD6DCC4}" Global="false">
+									<ObjectRef Name="win sound w_ rvb" ID="{4C1BD3AD-08FA-4FF1-BB58-9D02F7411A68}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
 								</Element>
 							</ElementList>
 						</Action>

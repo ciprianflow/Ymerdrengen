@@ -1234,64 +1234,6 @@
 													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
 												</Reference>
 											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="footstep_1" ID="{ACA19913-44C0-4A84-A32F-19FE443B35D4}" ShortID="669222660" Type="SoundFX">
-													<PropertyList>
-														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="footstep_1" ID="{1D362735-4FEF-4726-9401-23FC14149FB5}" ShortID="780200417">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.000708378920495988"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.0662334290663749"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.0396692195477754"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.176032161743253"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>footstep_1.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="footstep_1" ID="{1D362735-4FEF-4726-9401-23FC14149FB5}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="footstep_3" ID="{A1F1C487-DEB3-45EB-89D7-BB13F08D5E8E}" ShortID="382457953" Type="SoundFX">
-													<PropertyList>
-														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="footstep_3" ID="{A5BD55BA-6E13-46FD-9A68-0562646B4B17}" ShortID="848562486">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.000646425966447848"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.0759550510576222"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.0281195295404814"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.267297137126185"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>footstep_3.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="footstep_3" ID="{A5BD55BA-6E13-46FD-9A68-0562646B4B17}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
 											<BlendTrackList>
 												<BlendTrack Name="footstep1" ID="{4B4214C3-8F08-498F-8C2C-28309E3246C1}" ShortID="673248306">
 													<PropertyList>
@@ -1302,127 +1244,6 @@
 															<ObjectRef Name="footstepVelocity" ID="{8BC81394-FA36-4D7E-A59C-733EB8F83E32}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
 														</Reference>
 													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="footstep_1" ID="{ACA19913-44C0-4A84-A32F-19FE443B35D4}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>99.9995</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-														<BlendTrackAssoc>
-															<ItemRef Name="footstep_3" ID="{A1F1C487-DEB3-45EB-89D7-BB13F08D5E8E}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0.0005</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>100</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
-												</BlendTrack>
-											</BlendTrackList>
-										</BlendContainer>
-										<BlendContainer Name="footstepsBlend2" ID="{D4239424-4BF2-443D-B3AC-AA0E2380FC31}" ShortID="612420261">
-											<ReferenceList>
-												<Reference Name="Conversion">
-													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
-												</Reference>
-												<Reference Name="OutputBus">
-													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
-												</Reference>
-											</ReferenceList>
-											<ChildrenList>
-												<Sound Name="footstep_4" ID="{C1B02476-C039-4B2F-8A7C-AAEAD79FEC18}" ShortID="5969246" Type="SoundFX">
-													<PropertyList>
-														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="footstep_4" ID="{DF2F7392-466E-46E8-A6DB-71E4CCF3A957}" ShortID="212920129">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.000852844638949669"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.0417893873085339"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.0437793581327498"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.185067286652079"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>footstep_4.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="footstep_4" ID="{DF2F7392-466E-46E8-A6DB-71E4CCF3A957}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-												<Sound Name="footstep_5" ID="{221CEF02-2A8D-42FD-A0D5-0EDE2F77FD12}" ShortID="1053170746" Type="SoundFX">
-													<PropertyList>
-														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="Conversion">
-															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
-														</Reference>
-														<Reference Name="OutputBus">
-															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
-														</Reference>
-													</ReferenceList>
-													<ChildrenList>
-														<AudioFileSource Name="footstep_5" ID="{90ADD8D8-F6B8-4611-9EC8-D25B7D9FA62D}" ShortID="1016662856">
-															<PropertyList>
-																<Property Name="FadeInDuration" Type="Real64" Value="0.000308939136072613"/>
-																<Property Name="FadeOutDuration" Type="Real64" Value="0.0698588621444201"/>
-																<Property Name="FadeOutShape" Type="int16" Value="6"/>
-																<Property Name="TrimBegin" Type="Real64" Value="0.0388877137531404"/>
-																<Property Name="TrimEnd" Type="Real64" Value="0.306718636032093"/>
-															</PropertyList>
-															<Language>SFX</Language>
-															<AudioFile>footstep_5.wav</AudioFile>
-														</AudioFileSource>
-													</ChildrenList>
-													<ActiveSourceList>
-														<ActiveSource Name="footstep_5" ID="{90ADD8D8-F6B8-4611-9EC8-D25B7D9FA62D}" Platform="Linked"/>
-													</ActiveSourceList>
-												</Sound>
-											</ChildrenList>
-											<BlendTrackList>
-												<BlendTrack Name="footsteps2" ID="{B6ACDBDC-36AE-441C-B253-8CF5A7D456CC}" ShortID="386177809">
-													<PropertyList>
-														<Property Name="EnableCrossFading" Type="bool" Value="True"/>
-													</PropertyList>
-													<ReferenceList>
-														<Reference Name="LayerCrossFadeControlInput">
-															<ObjectRef Name="footstepVelocity" ID="{8BC81394-FA36-4D7E-A59C-733EB8F83E32}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
-														</Reference>
-													</ReferenceList>
-													<BlendTrackAssocList>
-														<BlendTrackAssoc>
-															<ItemRef Name="footstep_4" ID="{C1B02476-C039-4B2F-8A7C-AAEAD79FEC18}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>99.9995</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-														<BlendTrackAssoc>
-															<ItemRef Name="footstep_5" ID="{221CEF02-2A8D-42FD-A0D5-0EDE2F77FD12}"/>
-															<CrossfadingInfo>
-																<LeftEdgePos>0.0005</LeftEdgePos>
-																<LeftFadingMode>Automatic</LeftFadingMode>
-																<RightEdgePos>100</RightEdgePos>
-																<RightFadingMode>Automatic</RightFadingMode>
-															</CrossfadingInfo>
-														</BlendTrackAssoc>
-													</BlendTrackAssocList>
 												</BlendTrack>
 											</BlendTrackList>
 										</BlendContainer>
@@ -1495,13 +1316,407 @@
 										<ActiveSource Name="footstep_2" ID="{0FB5F2DE-6D0F-4465-A724-EEE4FA17D054}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
+								<BlendContainer Name="ymer" ID="{BFF481C4-D86B-427C-883C-45429D25D57C}" ShortID="617123406">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="ymerTrin" ID="{70FB0026-0D37-44D1-9C43-BB9F479CB8C6}" ShortID="621860378">
+											<PropertyList>
+												<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+												<Property Name="Lowpass" Type="int16">
+													<ValueList>
+														<Value>30</Value>
+													</ValueList>
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{F9BC2324-CF21-4707-8E62-6FCC1470AA49}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Max" Type="Real64" Value="10"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="Pitch" Type="int32">
+													<ModifierList>
+														<ModifierInfo>
+															<Modifier Name="" ID="{7AE1E4C2-34CE-498D-85E2-7CC7B44072C1}">
+																<PropertyList>
+																	<Property Name="Enabled" Type="bool" Value="True"/>
+																	<Property Name="Min" Type="Real64" Value="-300"/>
+																</PropertyList>
+															</Modifier>
+														</ModifierInfo>
+													</ModifierList>
+												</Property>
+												<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+												<Property Name="UserAuxSendVolume0" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+												<Reference Name="UserAuxSend0">
+													<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<Sound Name="ymer plask dråbe4" ID="{69AE768B-C3F8-4EB3-93E8-996AE488DEAE}" ShortID="100915013" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="ymer plask dråbe4" ID="{19F3ECF6-A2FE-4F5B-955C-3292B00E4158}" ShortID="609127283">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.00283000547045953"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.214137080598104"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.23394711889132"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.448084199489424"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>ymer plask dråbe4.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="ymer plask dråbe4" ID="{19F3ECF6-A2FE-4F5B-955C-3292B00E4158}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="ymer plask dråbe1" ID="{C0EF9149-6F32-4CB8-8388-781D92F1F1F8}" ShortID="799896604" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="ymer plask dråbe1" ID="{EDABABCA-674E-4EB4-ADEA-21DFD0988CCA}" ShortID="663353180">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.0131294675419402"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0771356218088985"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.251921658460977"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.421784144784829"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>ymer plask dråbe1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="ymer plask dråbe1" ID="{EDABABCA-674E-4EB4-ADEA-21DFD0988CCA}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="ymer plask dråbe3" ID="{D3A85F3F-841D-4DAE-A904-AA27D41168C8}" ShortID="955928681" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="ymer plask dråbe3" ID="{DE74D0CC-004B-4825-8FCC-8E7FE3FA2712}" ShortID="222526706">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.00656473377097011"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.186274320751277"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.169862486323851"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.356136807075128"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>ymer plask dråbe3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="ymer plask dråbe3" ID="{DE74D0CC-004B-4825-8FCC-8E7FE3FA2712}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="ymer plask dråbe2" ID="{CC29416C-CD17-4435-8C7F-DC2E4A19142C}" ShortID="553751970" Type="SoundFX">
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="ymer plask dråbe2" ID="{E8771BC4-5AE8-4E0D-A573-AA988345E006}" ShortID="812743554">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.00512866976659374"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.313874589715536"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.24515041484318"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.559025004558716"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>ymer plask dråbe2.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="ymer plask dråbe2" ID="{E8771BC4-5AE8-4E0D-A573-AA988345E006}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="trin" ID="{75CD2B09-184B-4F6D-A2C1-125721A11FCE}" ShortID="669731906">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<BlendContainer Name="footstepsBlend2" ID="{D4239424-4BF2-443D-B3AC-AA0E2380FC31}" ShortID="612420261">
+													<PropertyList>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<Sound Name="footstep_4" ID="{C1B02476-C039-4B2F-8A7C-AAEAD79FEC18}" ShortID="5969246" Type="SoundFX">
+															<PropertyList>
+																<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="footstep_4" ID="{DF2F7392-466E-46E8-A6DB-71E4CCF3A957}" ShortID="212920129">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.000852844638949669"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0417893873085339"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0437793581327498"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.185067286652079"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>footstep_4.wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="footstep_4" ID="{DF2F7392-466E-46E8-A6DB-71E4CCF3A957}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+														<Sound Name="footstep_5" ID="{221CEF02-2A8D-42FD-A0D5-0EDE2F77FD12}" ShortID="1053170746" Type="SoundFX">
+															<PropertyList>
+																<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="Conversion">
+																	<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+																</Reference>
+																<Reference Name="OutputBus">
+																	<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+																</Reference>
+															</ReferenceList>
+															<ChildrenList>
+																<AudioFileSource Name="footstep_5" ID="{90ADD8D8-F6B8-4611-9EC8-D25B7D9FA62D}" ShortID="1016662856">
+																	<PropertyList>
+																		<Property Name="FadeInDuration" Type="Real64" Value="0.000308939136072613"/>
+																		<Property Name="FadeOutDuration" Type="Real64" Value="0.0698588621444201"/>
+																		<Property Name="FadeOutShape" Type="int16" Value="6"/>
+																		<Property Name="TrimBegin" Type="Real64" Value="0.0388877137531404"/>
+																		<Property Name="TrimEnd" Type="Real64" Value="0.306718636032093"/>
+																	</PropertyList>
+																	<Language>SFX</Language>
+																	<AudioFile>footstep_5.wav</AudioFile>
+																</AudioFileSource>
+															</ChildrenList>
+															<ActiveSourceList>
+																<ActiveSource Name="footstep_5" ID="{90ADD8D8-F6B8-4611-9EC8-D25B7D9FA62D}" Platform="Linked"/>
+															</ActiveSourceList>
+														</Sound>
+													</ChildrenList>
+													<BlendTrackList>
+														<BlendTrack Name="footsteps2" ID="{B6ACDBDC-36AE-441C-B253-8CF5A7D456CC}" ShortID="386177809">
+															<PropertyList>
+																<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+															</PropertyList>
+															<ReferenceList>
+																<Reference Name="LayerCrossFadeControlInput">
+																	<ObjectRef Name="footstepVelocity" ID="{8BC81394-FA36-4D7E-A59C-733EB8F83E32}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
+																</Reference>
+															</ReferenceList>
+															<BlendTrackAssocList>
+																<BlendTrackAssoc>
+																	<ItemRef Name="footstep_4" ID="{C1B02476-C039-4B2F-8A7C-AAEAD79FEC18}"/>
+																	<CrossfadingInfo>
+																		<LeftEdgePos>0</LeftEdgePos>
+																		<LeftFadingMode>Automatic</LeftFadingMode>
+																		<RightEdgePos>99.9995</RightEdgePos>
+																		<RightFadingMode>Automatic</RightFadingMode>
+																	</CrossfadingInfo>
+																</BlendTrackAssoc>
+																<BlendTrackAssoc>
+																	<ItemRef Name="footstep_5" ID="{221CEF02-2A8D-42FD-A0D5-0EDE2F77FD12}"/>
+																	<CrossfadingInfo>
+																		<LeftEdgePos>0.0005</LeftEdgePos>
+																		<LeftFadingMode>Automatic</LeftFadingMode>
+																		<RightEdgePos>100</RightEdgePos>
+																		<RightFadingMode>Automatic</RightFadingMode>
+																	</CrossfadingInfo>
+																</BlendTrackAssoc>
+															</BlendTrackAssocList>
+														</BlendTrack>
+													</BlendTrackList>
+												</BlendContainer>
+												<Sound Name="footstep_1" ID="{ACA19913-44C0-4A84-A32F-19FE443B35D4}" ShortID="669222660" Type="SoundFX">
+													<PropertyList>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="footstep_1" ID="{1D362735-4FEF-4726-9401-23FC14149FB5}" ShortID="780200417">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.000708378920495988"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0662334290663749"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0396692195477754"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.176032161743253"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>footstep_1.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="footstep_1" ID="{1D362735-4FEF-4726-9401-23FC14149FB5}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+												<Sound Name="footstep_3" ID="{A1F1C487-DEB3-45EB-89D7-BB13F08D5E8E}" ShortID="382457953" Type="SoundFX">
+													<PropertyList>
+														<Property Name="EnableLoudnessNormalization" Type="bool" Value="True"/>
+														<Property Name="UserAuxSendVolume0" Type="Real64">
+															<ValueList>
+																<Value>-5</Value>
+															</ValueList>
+														</Property>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Conversion">
+															<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+														</Reference>
+														<Reference Name="OutputBus">
+															<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+														<Reference Name="UserAuxSend0">
+															<ObjectRef Name="rvb" ID="{EFECEA45-98A9-4F93-82C3-E5E061D5F605}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+														</Reference>
+													</ReferenceList>
+													<ChildrenList>
+														<AudioFileSource Name="footstep_3" ID="{A5BD55BA-6E13-46FD-9A68-0562646B4B17}" ShortID="848562486">
+															<PropertyList>
+																<Property Name="FadeInDuration" Type="Real64" Value="0.000646425966447848"/>
+																<Property Name="FadeOutDuration" Type="Real64" Value="0.0759550510576222"/>
+																<Property Name="TrimBegin" Type="Real64" Value="0.0281195295404814"/>
+																<Property Name="TrimEnd" Type="Real64" Value="0.267297137126185"/>
+															</PropertyList>
+															<Language>SFX</Language>
+															<AudioFile>footstep_3.wav</AudioFile>
+														</AudioFileSource>
+													</ChildrenList>
+													<ActiveSourceList>
+														<ActiveSource Name="footstep_3" ID="{A5BD55BA-6E13-46FD-9A68-0562646B4B17}" Platform="Linked"/>
+													</ActiveSourceList>
+												</Sound>
+											</ChildrenList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<BlendTrackList>
+										<BlendTrack Name="ymertrin" ID="{8F513024-8870-4519-A62C-0C58215BDFCB}" ShortID="719396319">
+											<PropertyList>
+												<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="LayerCrossFadeControlInput">
+													<ObjectRef Name="ymerProcent" ID="{A6057CC9-F36D-4543-B4A4-D8C09F1D0C07}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
+												</Reference>
+											</ReferenceList>
+											<BlendTrackAssocList>
+												<BlendTrackAssoc>
+													<ItemRef Name="trin" ID="{75CD2B09-184B-4F6D-A2C1-125721A11FCE}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>0</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>99.9995</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+												<BlendTrackAssoc>
+													<ItemRef Name="ymerTrin" ID="{70FB0026-0D37-44D1-9C43-BB9F479CB8C6}"/>
+													<CrossfadingInfo>
+														<LeftEdgePos>30.0597281897492</LeftEdgePos>
+														<LeftFadingMode>Automatic</LeftFadingMode>
+														<RightEdgePos>100</RightEdgePos>
+														<RightFadingMode>Automatic</RightFadingMode>
+													</CrossfadingInfo>
+												</BlendTrackAssoc>
+											</BlendTrackAssocList>
+										</BlendTrack>
+									</BlendTrackList>
+								</BlendContainer>
 							</ChildrenList>
 							<GroupingInfo>
-								<GroupRef Name="switch1" ID="{D4275CDE-B19C-4922-943C-BB03A7151FE7}"/>
+								<GroupRef Name="fodtrin" ID="{D4275CDE-B19C-4922-943C-BB03A7151FE7}"/>
 								<DefaultSwitchRef Name="" ID="{00000000-0000-0000-0000-000000000000}"/>
 								<GroupingBehaviorList>
 									<GroupingBehavior>
 										<ItemRef Name="footstep_2" ID="{7176426D-800F-415C-837B-6686DAE4E927}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="ymer" ID="{BFF481C4-D86B-427C-883C-45429D25D57C}"/>
 									</GroupingBehavior>
 									<GroupingBehavior>
 										<ItemRef Name="footsteps" ID="{C7EA79EC-E16D-44BD-B2E9-8D2356BF7D1C}"/>
@@ -1509,13 +1724,13 @@
 								</GroupingBehaviorList>
 								<GroupingList>
 									<Grouping>
-										<SwitchRef Name="New_Switch_01" ID="{2C6AE20C-49DA-4C83-A77A-DA6E95FCD9E8}"/>
+										<SwitchRef Name="gulv" ID="{2C6AE20C-49DA-4C83-A77A-DA6E95FCD9E8}"/>
 										<ItemList>
 											<ItemRef Name="footstep_2" ID="{7176426D-800F-415C-837B-6686DAE4E927}"/>
 										</ItemList>
 									</Grouping>
 									<Grouping>
-										<SwitchRef Name="New_Switch" ID="{E8EBD2FD-B73B-411A-AFCF-C2743918BC05}"/>
+										<SwitchRef Name="ymer" ID="{E8EBD2FD-B73B-411A-AFCF-C2743918BC05}"/>
 										<ItemList>
 											<ItemRef Name="footsteps" ID="{C7EA79EC-E16D-44BD-B2E9-8D2356BF7D1C}"/>
 										</ItemList>
@@ -1592,10 +1807,68 @@
 						</Sound>
 						<ActorMixer Name="ymermix" ID="{9EB32914-15F1-45D5-81B4-662C1E9E9746}" ShortID="1061546733">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{6820F554-5DD6-4894-AD84-DDF0C8E5EE40}" ShortID="601754431">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="ymerVelocity" ID="{29A9ECF6-476B-464F-A2F0-A90EACC515FB}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{EE9C1CA0-EFC4-4842-9137-0501C542C42E}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-643</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>InvertedSCurve</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="UserAuxSendVolume0" Type="Real64">
 									<ValueList>
 										<Value>-6</Value>
 									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{ED47A28E-724B-425C-9DE0-C56AE2273564}" ShortID="851937180">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="ymerVelocity" ID="{29A9ECF6-476B-464F-A2F0-A90EACC515FB}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{6E970B97-5702-4049-8242-5989C571B6A1}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>SCurve</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
@@ -1612,6 +1885,9 @@
 							<ChildrenList>
 								<RandomSequenceContainer Name="ymerSkvulp2" ID="{F22FE689-87E2-4EFA-9E35-6BDC5A4CE84F}" ShortID="633109906">
 									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
@@ -1756,6 +2032,9 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="ymer anden resonans" ID="{44B10A4F-CC58-4A1B-BF46-4CA6D9FAE4C1}" ShortID="929131319">
 									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
@@ -1879,6 +2158,9 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="ymerdråbe" ID="{635520D5-7290-4B96-918E-B6E6A1CB0EFF}" ShortID="1010130111">
 									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
@@ -2002,7 +2284,10 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="ymerPlasj" ID="{C4F8CB5C-8453-4CE8-80B2-467F7FEFCFEB}" ShortID="322722936">
 									<PropertyList>
-										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="3"/>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
 												<Value>-6</Value>
@@ -2171,6 +2456,9 @@
 								</RandomSequenceContainer>
 								<RandomSequenceContainer Name="ymerSkvulp1" ID="{7812C547-5B30-49C8-B2DE-179AF965AC7F}" ShortID="537406422">
 									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 										<Property Name="UserAuxSendVolume0" Type="Real64">
 											<ValueList>
@@ -2310,8 +2598,350 @@
 										</Sound>
 									</ChildrenList>
 								</RandomSequenceContainer>
+								<Sound Name="reverse ymer" ID="{A2B25AE6-D0E7-4DF4-B54A-E6D7710F27E5}" ShortID="890137937" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="reverse ymer" ID="{9AAA60A7-A07F-4A2D-B607-9F7CA1F51815}" ShortID="349746374">
+											<Language>SFX</Language>
+											<AudioFile>reverse ymer.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="reverse ymer" ID="{9AAA60A7-A07F-4A2D-B607-9F7CA1F51815}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
 						</ActorMixer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Menu" ID="{8DAE5B30-8FE7-4189-B06E-7DBCCA217A0B}" ShortID="994110104">
+					<ChildrenList>
+						<RandomSequenceContainer Name="start" ID="{A8D2B6AC-9D50-4DA8-A720-FA6F13966BE6}" ShortID="625481908">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<ObjectRef Name="comb" ID="{993047DB-3995-4606-BD7A-752E19D16E97}" WorkUnitID="{516F9723-DC42-481F-9E91-8952C09F5A3D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ymer plask dråbe1" ID="{E3B692FB-316C-4579-8F2D-B9DCD5E7A87B}" ShortID="78496223" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ymer plask dråbe1" ID="{35BFCFD5-DF43-42CE-886C-7A34CE14DB08}" ShortID="622197815">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0131294675419402"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0771356218088985"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.251921658460977"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.421784144784829"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ymer plask dråbe1.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="977034157"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ymer plask dråbe1" ID="{35BFCFD5-DF43-42CE-886C-7A34CE14DB08}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ymer plask dråbe2" ID="{00E072E3-2186-4F73-AE5B-3E79120988B8}" ShortID="215583212" Type="SoundFX">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E0B205EC-9965-4D7E-8379-9B9D7326E0B3}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-100"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ymer plask dråbe2" ID="{B3774491-113C-4EAE-81F9-FCC07C4F3DBE}" ShortID="105113618">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.00512866976659374"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0297462846462435"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.24515041484318"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.274896699489424"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ymer plask dråbe2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ymer plask dråbe2" ID="{B3774491-113C-4EAE-81F9-FCC07C4F3DBE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="pause" ID="{0AD7BC31-2906-48D7-BDBB-56D40F70B123}" ShortID="866385536">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ymer bliver hældt op" ID="{5857EB52-7CE2-43DD-9EE3-8341659D6FE8}" ShortID="472136514" Type="SoundFX">
+									<PropertyList>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ymer bliver hældt op" ID="{6EE036B1-68FE-4593-A292-5A124A0200C6}" ShortID="607715150">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.155910261670314"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.1099577634938"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.446395696571845"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.02244308442743"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>ymer bliver hældt op.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="483396281"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ymer bliver hældt op" ID="{6EE036B1-68FE-4593-A292-5A124A0200C6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="reverse ymer" ID="{02866060-041A-4DDD-83FD-69330BC0531D}" ShortID="768830803" Type="SoundFX">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="reverse ymer" ID="{BD6E6D63-83EE-49FC-A1B4-076BDBC05932}" ShortID="773006416">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.037746170678337"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.149343544857768"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.556345733041575"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.2062363238512"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>reverse ymer.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="reverse ymer" ID="{BD6E6D63-83EE-49FC-A1B4-076BDBC05932}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<Playlist>
+								<ItemRef Name="ymer bliver hældt op" ID="{5857EB52-7CE2-43DD-9EE3-8341659D6FE8}"/>
+								<ItemRef Name="reverse ymer" ID="{02866060-041A-4DDD-83FD-69330BC0531D}"/>
+							</Playlist>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="musik" ID="{A517C9C2-04C1-43A2-A69E-2814A0EA7612}" ShortID="829462233">
+					<ChildrenList>
+						<BlendContainer Name="ambientChords" ID="{4F34E6E3-A326-40F6-8AC1-83D64DDE8088}" ShortID="531221425">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{223E437F-71F5-4435-AAE2-11A6C4283E16}" ShortID="549130581">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="distanceToGirl" ID="{9472C309-350F-447B-866D-7186BC6426E5}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{B06940DD-D834-4C7E-83AA-67639F5E2DCF}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-0.04866</YPos>
+														<Flags>5</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>40.15957</XPos>
+														<YPos>-8.00023</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>InvertedSCurve</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>69.94681</XPos>
+														<YPos>-200</YPos>
+														<Flags>0</Flags>
+														<SegmentShape>Log3</SegmentShape>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>-200</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="ambienceloop 1" ID="{6630822A-FA51-4FEE-B57A-BF06431F6629}" ShortID="943676188" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambienceloop 1" ID="{8716784A-40A9-4F80-A465-B123872CDA63}" ShortID="814851806">
+											<Language>SFX</Language>
+											<AudioFile> ambienceloop 1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambienceloop 1" ID="{8716784A-40A9-4F80-A465-B123872CDA63}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="ambienceloop 2" ID="{845788C8-0B8D-4827-93B5-0D431805E9FE}" ShortID="137511657" Type="SoundFX">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="ambienceloop 2" ID="{8B9419AC-2F0F-4561-9ADA-36D20FDDEBBD}" ShortID="339680976">
+											<Language>SFX</Language>
+											<AudioFile> ambienceloop 2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="ambienceloop 2" ID="{8B9419AC-2F0F-4561-9ADA-36D20FDDEBBD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="New Blend Track" ID="{7C7FB9EB-239C-4FBA-9FD1-C108293BBA23}" ShortID="995323397">
+									<PropertyList>
+										<Property Name="EnableCrossFading" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="distanceToGirl" ID="{9472C309-350F-447B-866D-7186BC6426E5}" WorkUnitID="{ECC34A3F-10AF-4BD5-B24F-D7D449482991}"/>
+										</Reference>
+									</ReferenceList>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="ambienceloop 2" ID="{845788C8-0B8D-4827-93B5-0D431805E9FE}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0.0005</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>99.9995</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="ambienceloop 1" ID="{6630822A-FA51-4FEE-B57A-BF06431F6629}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0.001</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>100</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Reward" ID="{E33AB42F-DFC6-4F4E-ADA7-872EB0DEFF99}" ShortID="972771128">
+					<ChildrenList>
+						<Sound Name="win sound w_ rvb" ID="{4C1BD3AD-08FA-4FF1-BB58-9D02F7411A68}" ShortID="161115250" Type="SoundFX">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{B64F6D0D-3317-4CB9-911D-D6554F633AB6}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{9D4122AB-3A42-4E42-8165-11D1118E4C5C}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="win sound w_ rvb" ID="{9BD8B6F5-8237-4E5D-8188-CA4248C39897}" ShortID="17149364">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.856787746170678"/>
+										<Property Name="FadeOutShape" Type="int16" Value="3"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>win sound w. rvb.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="win sound w_ rvb" ID="{9BD8B6F5-8237-4E5D-8188-CA4248C39897}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>
