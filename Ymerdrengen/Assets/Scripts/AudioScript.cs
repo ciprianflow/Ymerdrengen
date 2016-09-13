@@ -1,7 +1,6 @@
 ﻿// <copyright file="AudioScript.cs" company="Team4">
 // Company copyright tag.
 // </copyright>
-
 using System.Collections;
 using UnityEngine;
 
@@ -56,6 +55,7 @@ public class AudioScript : MonoBehaviour
     private void Start()
     {
         AudioSource audio = GetComponent<AudioSource>();
+        audio.Pause();
         SetRandomMusicTime();
         SetRandomPauseTime();
     }

@@ -14,13 +14,17 @@ public class QuitApplication : MonoBehaviour
     /// </summary>
     public void QuitGame()
     {
-        #if UNITY_STANDALONE
-            Application.Quit();
-        #endif
+        // kill process
+#if UNITY_STANDALONE
+        
+        System.Diagnostics.Process.GetCurrentProcess().Kill();
 
-        #if UNITY_EDITOR
+        Application.Quit();
+#endif
 
-            UnityEditor.EditorApplication.isPlaying = false;
-        #endif
+#if UNITY_EDITOR
+
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
     }
 }

@@ -29,6 +29,8 @@ public class MoveScript : MonoBehaviour
 
     public float RotationSpeed = 0.5f;
 
+    public Animator BoyAnim;
+
     /// <summary>
     /// The path for the player
     /// </summary>
@@ -89,20 +91,28 @@ public class MoveScript : MonoBehaviour
 
     private Vector3 nextDirection;
 
-    private AudioSource girlAudio;
+    private WwiseAudioScript girlAudio;
+
+    private float pauseStart;
+
+    private float pauseDuration = 2f;
+
+    private bool pauseStarted = false;
 
     /// <summary>
     /// Getting the components and initialize start and end positions
     /// </summary>
     void Start()
     {
-        if(GameObject.Find("GravityManager") == null)
+        BoyAnim = GetComponent<Animator>();
+
+        if (GameObject.Find("GravityManager") == null)
         {
             characterState = States.MovingForward;
         }
 
         girl = GameObject.FindGameObjectWithTag("Girl");
-        girlAudio = girl.GetComponent<AudioSource>();
+        girlAudio = girl.GetComponent<WwiseAudioScript>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
         BFS bfs = new BFS();
         Path = new Stack<BezierSpline>();
@@ -122,23 +132,22 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     void LateUpdate()
     {
-
         switch (characterState)
         {
             case States.MovingForward:
-                //Debug.Log("moving forward");
+                Debug.Log("moving forward");
                 MoveForward();
                 break;
             case States.Turning:
-                //Debug.Log("turning");
+                Debug.Log("turning");
                 Rotate(nextDirection, wasBlocked);
                 break;
             case States.MovingBack:
-                //Debug.Log("moving back");
+                Debug.Log("moving back");
                 MoveBack();
                 break;
             case States.StandingStill:
-                //Debug.Log("standing still");
+                Debug.Log("standing still");
                 StandStill();
                 break;
             default:
@@ -158,10 +167,11 @@ public class MoveScript : MonoBehaviour
         //trackLength = ((actualEndPos - actualStartPos).magnitude);
         trackLength = currentSpline.GetSplineLength();
     }
-
+    
     private void MoveForward()
     {
         wasBlocked = false;
+        BoyAnim.SetTrigger("isMoving"); // start walking animation when moving
         lastMovementDirection = States.MovingForward;
         if (girlAudio.isPlaying && yoghurtDetection.CanMove)
         {
@@ -195,12 +205,15 @@ public class MoveScript : MonoBehaviour
         {
             //Debug.Log("MOVING BACK NOW");
             characterState = States.StandingStill;
+            pauseStart = Time.time;
+            pauseStarted = true;
         }
     }
 
     private void MoveBack()
     {
         wasBlocked = false;
+        BoyAnim.SetTrigger("isMoving"); // start walking animation when moving
         lastMovementDirection = States.MovingBack;
         if (girlAudio.isPlaying && yoghurtDetection.CanMove)
         {
@@ -237,10 +250,24 @@ public class MoveScript : MonoBehaviour
             Debug.Log("DEAD");
             return;
         }
-        wasBlocked = true;
-        float t = (timeTravelled * Speed) / trackLength;
-        nextDirection = -currentSpline.GetDirection(t);
-        characterState = States.Turning;
+        if (pauseStarted)
+        {
+            Debug.Log("pause");
+            if (pauseStart + pauseDuration < Time.time)
+            {
+                Debug.Log("switching to moving");
+                characterState = States.MovingForward;
+                pauseStarted = false;
+            }
+        }
+        else
+        {
+            wasBlocked = true;
+            BoyAnim.SetTrigger("isNotMoving"); // stop walking animation when not moving
+            float t = (timeTravelled * Speed) / trackLength;
+            nextDirection = -currentSpline.GetDirection(t);
+            characterState = States.Turning;
+        }
     }
 
     private float GetAngle(Vector3 currentPos, Vector3 nextPosition)
@@ -300,5 +327,13 @@ public class MoveScript : MonoBehaviour
          Vector3 referenceRight = Vector3.Cross(Vector3.up, referenceForward);
          float sign = Mathf.Sign(Vector3.Dot(newDirection, referenceRight));
          return sign;
+    }
+
+    private IEnumerator CoFootsteps()
+    {
+        while (true) {
+            AkSoundEngine.PostEvent("footstep", gameObject);
+            yield return new WaitForSeconds(0.5f);
+        }
     }
 }

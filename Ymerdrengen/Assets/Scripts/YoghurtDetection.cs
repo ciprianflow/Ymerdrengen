@@ -31,15 +31,17 @@ public class YoghurtDetection : MonoBehaviour
         }
     }
 
+    /*
     /// <summary>
     /// On trigger enter function.
     /// </summary>
     /// <param name="collision">Collision with the object</param>
     public void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.layer == 29)
+        if (collision.gameObject.layer == 30)
         {
-            //Do pathfinding backwards
+            //AkSoundEngine.PostEvent("bvadr", gameObject);
         }
     }
+    */
 }
