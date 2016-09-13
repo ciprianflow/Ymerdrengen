@@ -67,7 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Boy Anim\AnimYmerdreng.cs" />
-    <Compile Include="Assets\Girl Anim\AnimationPigen.cs" />
+    <Compile Include="Assets\Girl Anim\AnimPigen.cs" />
     <Compile Include="Assets\Prefabs\calibrationscript.cs" />
     <Compile Include="Assets\Scripts\AudioScript.cs" />
     <Compile Include="Assets\Scripts\BoxDetection.cs" />

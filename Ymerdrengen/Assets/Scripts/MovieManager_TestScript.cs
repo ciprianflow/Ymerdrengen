@@ -28,7 +28,7 @@ public class MovieManager_TestScript : MonoBehaviour
     /// </summary>
     public void Start() 
     {
-        this.StartCoroutine(this.PlayStreamingVideo("Video__0004_Layer-Comp-5.mp4"));
+        this.StartCoroutine(this.PlayStreamingVideo("Video_IntroSlideshow.mp4"));
     }
 
     /// <summary>
