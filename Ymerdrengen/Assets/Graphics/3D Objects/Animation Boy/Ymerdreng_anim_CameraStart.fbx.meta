@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 3d7f3cacdf9ac764d9a0184cc98bd0ab
-timeCreated: 1473682396
+guid: 1498cb64de3e757418188e649b443bef
+timeCreated: 1473691230
 licenseType: Pro
 ModelImporter:
   serializedVersion: 19
@@ -188,6 +188,7 @@ ModelImporter:
     4300000: geo_body_01
     7400000: CameraStart
     9500000: //RootNode
+    11100000: //RootNode
     13700000: geo_body_01
   materials:
     importMaterials: 1
@@ -203,221 +204,13 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: CameraStart
-      takeName: CameraStart
-      firstFrame: 1
-      lastFrame: 120
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: grp_boy_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_l_foot_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_l_foot_01/ik_rp_l_leg_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_l_foot_01/ik_sc_l_foot_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_l_knee_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/anim_head_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_clavicle_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_clavicle_01/anim_l_clavicle_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_shoulder_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_shoulder_01/anim_l_shoulder_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_shoulder_01/anim_l_shoulder_01/grp_anim_l_elbow_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_shoulder_01/anim_l_shoulder_01/grp_anim_l_elbow_01/anim_l_elbow_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_shoulder_01/anim_l_shoulder_01/grp_anim_l_elbow_01/anim_l_elbow_01/grp_anim_l_wrist_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_shoulder_01/anim_l_shoulder_01/grp_anim_l_elbow_01/anim_l_elbow_01/grp_anim_l_wrist_01/anim_l_wrist_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_shoulder_01/anim_l_shoulder_01/grp_anim_l_elbow_01/anim_l_elbow_01/grp_anim_l_wrist_01/anim_l_wrist_01/grp_anim_l_hand_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_l_shoulder_01/anim_l_shoulder_01/grp_anim_l_elbow_01/anim_l_elbow_01/grp_anim_l_wrist_01/anim_l_wrist_01/grp_anim_l_hand_01/anim_l_hand_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_clavicle_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_clavicle_01/anim_r_clavicle_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_shoulder_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_shoulder_01/anim_r_shoulder_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_shoulder_01/anim_r_shoulder_01/grp_anim_r_elbow_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_shoulder_01/anim_r_shoulder_01/grp_anim_r_elbow_01/anim_r_elbow_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_shoulder_01/anim_r_shoulder_01/grp_anim_r_elbow_01/anim_r_elbow_01/grp_anim_r_wrist_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_shoulder_01/anim_r_shoulder_01/grp_anim_r_elbow_01/anim_r_elbow_01/grp_anim_r_wrist_01/anim_r_wrist_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_shoulder_01/anim_r_shoulder_01/grp_anim_r_elbow_01/anim_r_elbow_01/grp_anim_r_wrist_01/anim_r_wrist_01/grp_anim_r_hand_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_pelvis_01/anim_spine_01/anim_chest_01/grp_anim_r_shoulder_01/anim_r_shoulder_01/grp_anim_r_elbow_01/anim_r_elbow_01/grp_anim_r_wrist_01/anim_r_wrist_01/grp_anim_r_hand_01/anim_r_hand_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_r_foot_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_r_foot_01/ik_rp_r_leg_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_r_foot_01/ik_sc_r_foot_01
-        weight: 1
-      - path: grp_boy_01/grp_controls_01/anim_r_knee_01
-        weight: 1
-      - path: grp_boy_01/grp_geo_01
-        weight: 1
-      - path: grp_boy_01/grp_geo_01/geo_body_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_l_thigh_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_l_thigh_01/bind_l_knee_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_l_thigh_01/bind_l_knee_01/bind_l_ankle_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_l_thigh_01/bind_l_knee_01/bind_l_ankle_01/bind_l_foot_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_r_thigh_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_r_thigh_01/bind_r_knee_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_r_thigh_01/bind_r_knee_01/bind_r_ankle_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_r_thigh_01/bind_r_knee_01/bind_r_ankle_01/bind_r_foot_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_l_clavicle_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_l_clavicle_01/be_l_shoulder_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_l_clavicle_01/bind_l_shoulder_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_l_clavicle_01/bind_l_shoulder_01/bind_l_elbow_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_l_clavicle_01/bind_l_shoulder_01/bind_l_elbow_01/bind_l_wrist_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_l_clavicle_01/bind_l_shoulder_01/bind_l_elbow_01/bind_l_wrist_01/bind_l_hand_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_neck_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_neck_01/bind_head_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_r_clavicle_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_r_clavicle_01/be_r_shoulder_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_r_clavicle_01/bind_r_shoulder_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_r_clavicle_01/bind_r_shoulder_01/bind_r_elbow_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_r_clavicle_01/bind_r_shoulder_01/bind_r_elbow_01/bind_r_wrist_01
-        weight: 1
-      - path: grp_boy_01/grp_rig_01/bind_pelvis_01/bind_spine_01/bind_chest_01/bind_r_clavicle_01/bind_r_shoulder_01/bind_r_elbow_01/bind_r_wrist_01/bind_r_hand_01
-        weight: 1
-      - path: tmXML1
-        weight: 1
-      - path: tmXML1/tmGroups1
-        weight: 1
-      - path: tmXML1/tmOptions1
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton1
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton1/tmButtonRGB1
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton1/tmButtonValue1
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton2
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton2/tmButtonRGB2
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton2/tmButtonValue2
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton3
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton3/tmButtonRGB3
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton3/tmButtonValue3
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton4
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton4/tmButtonRGB4
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton4/tmButtonValue4
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton5
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton5/tmButtonRGB5
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton5/tmButtonValue5
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton6
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton6/tmButtonRGB6
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton6/tmButtonValue6
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton7
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton7/tmButtonRGB7
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtons1/tmButton7/tmButtonValue7
-        weight: 1
-      - path: tmXML1/tmOptions1/tmButtonVis1
-        weight: 1
-      - path: tmXML1/tmOptions1/tmSliderVis1
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
