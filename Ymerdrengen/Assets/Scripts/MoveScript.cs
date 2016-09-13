@@ -2,6 +2,7 @@
 // Company copyright tag.
 // </copyright>
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -103,6 +104,13 @@ public class MoveScript : MonoBehaviour
 
     private bool playStep = false;
 
+    private float t;
+
+    public float getT()
+    {
+        return t;
+    }
+
     /// <summary>
     /// Getting the components and initialize start and end positions
     /// </summary>
@@ -127,6 +135,11 @@ public class MoveScript : MonoBehaviour
 
         characterState = States.Idle;
         PlayerTracking();
+    }
+
+    public BezierSpline getCurrentBezierSpline()
+    {
+        return currentSpline;
     }
 
     /// <summary>
@@ -179,7 +192,7 @@ public class MoveScript : MonoBehaviour
         if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
         {
             timeTravelled += Time.deltaTime;
-            float t = (timeTravelled * Speed) / trackLength;
+            t = (timeTravelled * Speed) / trackLength;
             nextDirection = currentSpline.GetDirection(t);
 
             if (ShouldITurn(nextDirection))
@@ -220,7 +233,7 @@ public class MoveScript : MonoBehaviour
         if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
         {
             timeTravelled -= Time.deltaTime;
-            float t = (timeTravelled * Speed) / trackLength;
+            t = (timeTravelled * Speed) / trackLength;
             nextDirection = -currentSpline.GetDirection(t);
 
             if (ShouldITurn(nextDirection))
