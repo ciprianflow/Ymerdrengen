@@ -1,4 +1,4 @@
-﻿using UnityEditor;
+﻿/*using UnityEditor;
 using UnityEngine;
 
 /// <summary>
@@ -6,6 +6,7 @@ using UnityEngine;
 /// </summary>
 public class DesignerEditorExtensions : Editor
 {
+    /*
     /// <summary>
     /// Creates a new freeform camera and switches focus to that camera.
     /// </summary>
@@ -37,4 +38,6 @@ public class DesignerEditorExtensions : Editor
             GameObject.Destroy(debugCamera.gameObject);
         }
     }
+    
 }
+*/

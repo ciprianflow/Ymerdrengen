@@ -1,4 +1,5 @@
-﻿// <copyright file="WwiseAudioEditor.cs" company="Team4">
+﻿/*
+// <copyright file="WwiseAudioEditor.cs" company="Team4">
 // Copyright(c) 2016 All Rights Reserved
 // </copyright>
 // <author>Alexander Kirk Jørgensen</author>
@@ -72,3 +73,4 @@ public class WwiseAudioEditor : Editor
         this.maximumPauseTime = serializedObject.FindProperty("MaximumPauseTime");
     }
 }
+*/
