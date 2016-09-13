@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimationYmerdreng : MonoBehaviour {
+public class AnimYmerdreng : MonoBehaviour {
 
     AnimatorClipInfo[] animationClip;
     public Animator anim;

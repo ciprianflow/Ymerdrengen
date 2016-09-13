@@ -10,6 +10,7 @@ using UnityEngine;
 
 public enum States
 {
+    StartLevel,
     MovingForward,
     MovingBack,
     Turning,
@@ -29,6 +30,12 @@ public class MoveScript : MonoBehaviour
     public float Speed = 10;
 
     public float RotationSpeed = 0.5f;
+
+
+    public Animator BoyAnim;
+
+    private AnimYmerdreng animScript;
+
 
     /// <summary>
     /// The path for the player
@@ -100,6 +107,9 @@ public class MoveScript : MonoBehaviour
     private bool pauseStarted = false;
 
 
+    private float startTime = 0;
+
+
     private float footstepDelay = 0.5f;
 
     private bool playStep = false;
@@ -111,15 +121,18 @@ public class MoveScript : MonoBehaviour
         return t;
     }
 
+
     /// <summary>
     /// Getting the components and initialize start and end positions
     /// </summary>
     void Start()
     {
+
         if(GameObject.Find("GravityManager") == null)
         {
             characterState = States.MovingForward;
         }
+
         girl = GameObject.FindGameObjectWithTag("Girl");
 
         //girlAudio = girl.GetComponent<WwiseAudioScript>();
@@ -135,7 +148,7 @@ public class MoveScript : MonoBehaviour
 
         GetComponent<NoteSpawner>().Init();
 
-        characterState = States.Idle;
+        characterState = States.StartLevel;
         PlayerTracking();
     }
 
@@ -152,6 +165,10 @@ public class MoveScript : MonoBehaviour
     {
         switch (characterState)
         {
+            case States.StartLevel:
+                Debug.Log("StartLevel");
+                StartLevel();
+                break;
             case States.MovingForward:
                 //Debug.Log("moving forward");
                 MoveForward();
@@ -163,14 +180,22 @@ public class MoveScript : MonoBehaviour
             case States.MovingBack:
                 //Debug.Log("moving back");
                 MoveBack();
+                animScript.setWalking();
                 break;
             case States.StandingStill:
                 //Debug.Log("standing still");
                 StandStill();
+                animScript.setNoYmer();
                 break;
             default:
                 break;
         }
+    }
+
+    void Update()
+    {
+        if (characterState == States.Idle && GameObject.Find("GravityManager").transform.GetComponent<GyroScript>().isCalibrated)
+            characterState = States.MovingForward;
     }
 
     /// <summary>
@@ -185,13 +210,35 @@ public class MoveScript : MonoBehaviour
         //trackLength = ((actualEndPos - actualStartPos).magnitude);
         trackLength = currentSpline.GetSplineLength();
     }
-    
+
+    private void StartLevel()
+    {
+        if (BoyAnim.GetCurrentAnimatorStateInfo(0).IsName("IdleBase"))
+        {
+            Debug.Log("DUN DIDDLY DID");
+            characterState = States.Idle;
+        }
+
+        //    startTime += Time.deltaTime;
+        //    if(startTime > 5)
+        //    {
+        //        characterState = States.StandingStill;
+        //        Debug.Log("WAITED 5 SECS");
+        //    }
+    }
+
     private void MoveForward()
     {
+
+        Debug.Log("DOES THIS HAPPEN WHEN IT SHOULDNT?!");
+
         wasBlocked = false;
+
         lastMovementDirection = States.MovingForward;
         if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
         {
+            animScript.setWalking();
+
             timeTravelled += Time.deltaTime;
             t = (timeTravelled * Speed) / trackLength;
             nextDirection = currentSpline.GetDirection(t);
@@ -230,6 +277,7 @@ public class MoveScript : MonoBehaviour
     private void MoveBack()
     {
         wasBlocked = false;
+
         lastMovementDirection = States.MovingBack;
         if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
         {
@@ -261,6 +309,7 @@ public class MoveScript : MonoBehaviour
 
     private void StandStill()
     {
+
         if (endOfPath)
         {
             Debug.Log("DEAD");
@@ -277,10 +326,12 @@ public class MoveScript : MonoBehaviour
         }
         else
         {
+
         wasBlocked = true;
         float t = (timeTravelled * Speed) / trackLength;
         nextDirection = -currentSpline.GetDirection(t);
         characterState = States.Turning;
+
         }
     }
 

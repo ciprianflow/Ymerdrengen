@@ -191,7 +191,6 @@ public class GyroScript : MonoBehaviour
                     }
                     
                     calibTimer = 0;
-                    moveScript.CharacterState = States.MovingForward;
                 }
             }
             else
