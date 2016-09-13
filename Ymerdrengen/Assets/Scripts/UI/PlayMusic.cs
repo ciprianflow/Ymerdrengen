@@ -3,7 +3,7 @@
 // </copyright>
 
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.Audio;
 
 /// <summary>
@@ -25,6 +25,9 @@ public class PlayMusic : MonoBehaviour
     public AudioMixerSnapshot volumeDown;
     public AudioMixerSnapshot volumeUp;
 
+    public Sprite SoundOn;
+    public Sprite SoundOff;
+
     /// <summary>
     /// audio source
     /// </summary>
@@ -34,6 +37,8 @@ public class PlayMusic : MonoBehaviour
     /// delay to start playing music
     /// </summary>
     private float resetTime = 1.01f;
+
+    private bool menuSoundValue = true;
 
     /// <summary>
     /// init audio source
@@ -82,7 +87,6 @@ public class PlayMusic : MonoBehaviour
         //fade
         FadeUp(resetTime);
         audioSource.Play();
-
     }
 
     public void StopPlayMusic()
@@ -105,6 +109,27 @@ public class PlayMusic : MonoBehaviour
             FadeUp(resetTime);
             audioSource.mute = false;
         } 
+    }
+
+    public void MenuToggleSound()
+    {
+        if(menuSoundValue)
+        {
+            menuSoundValue = false;
+            // mute sound
+            ToggleMusic(false);
+
+            //mute sound icon
+            GameObject.Find("Sound").GetComponent<Image>().sprite = SoundOff;
+        }
+        else
+        {
+            menuSoundValue = true;
+            ToggleMusic(true);
+
+            //mute sound icon
+            GameObject.Find("Sound").GetComponent<Image>().sprite = SoundOn;
+        }
     }
 
     /// <summary>

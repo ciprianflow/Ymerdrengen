@@ -66,7 +66,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Boy Anim\AnimationYmerdreng.cs" />
+    <Compile Include="Assets\Boy Anim\AnimYmerdreng.cs" />
     <Compile Include="Assets\Girl Anim\AnimationPigen.cs" />
     <Compile Include="Assets\Prefabs\calibrationscript.cs" />
     <Compile Include="Assets\Scripts\AudioScript.cs" />
@@ -84,7 +84,6 @@
     <Compile Include="Assets\Scripts\MovieManager_TestScript.cs" />
     <Compile Include="Assets\Scripts\ParticleGenerator.cs" />
     <Compile Include="Assets\Scripts\SpawnYoghurt.cs" />
-    <Compile Include="Assets\Scripts\UI\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\UI\Pause.cs" />
     <Compile Include="Assets\Scripts\UI\PlayMusic.cs" />
     <Compile Include="Assets\Scripts\UI\QuitApplication.cs" />
@@ -99,6 +98,7 @@
     <Compile Include="Assets\SplineSystem\BezierSpline.cs" />
     <Compile Include="Assets\SplineSystem\TEST_SCRIPT.cs" />
     <Compile Include="Assets\SplineSystem\pathSystem.cs" />
+    <Compile Include="Assets\WinScript.cs" />
     <Compile Include="Assets\Wwise\Deployment\API\Generated\Android\AkAudioOutputType_Android.cs" />
     <Compile Include="Assets\Wwise\Deployment\API\Generated\Android\AkMemPoolAttributes_Android.cs" />
     <Compile Include="Assets\Wwise\Deployment\API\Generated\Android\AkPlatformInitSettings_Android.cs" />
@@ -206,10 +206,20 @@
     <Compile Include="Assets\Wwise\Deployment\Components\AkUnityEventHandler.cs" />
     <Compile Include="Assets\Wwise\Deployment\Components\AkUtilities.cs" />
     <Compile Include="Assets\asdawdcaw.cs" />
+    <Compile Include="Assets\noteSystem\NoteBehavior.cs" />
+    <Compile Include="Assets\noteSystem\NoteSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mini Profiler\CHANGELOG.txt" />
     <None Include="Assets\Mini Profiler\README.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\Init.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\New_SoundBank.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\PluginInfo.xml" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\SoundbanksInfo.xml" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\Init.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\New_SoundBank.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\PluginInfo.xml" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\SoundbanksInfo.xml" />
     <None Include="Assets\StreamingAssets\README.txt" />
     <None Include="Assets\StreamingAssets\desc.txt" />
     <None Include="Assets\Wwise\Readme.txt" />

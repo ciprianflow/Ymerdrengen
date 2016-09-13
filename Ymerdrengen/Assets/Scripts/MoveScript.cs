@@ -2,6 +2,7 @@
 // Company copyright tag.
 // </copyright>
 
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ using UnityEngine;
 
 public enum States
 {
+    StartLevel,
     MovingForward,
     MovingBack,
     Turning,
@@ -29,7 +31,11 @@ public class MoveScript : MonoBehaviour
 
     public float RotationSpeed = 0.5f;
 
+
     public Animator BoyAnim;
+
+    private AnimYmerdreng animScript;
+
 
     /// <summary>
     /// The path for the player
@@ -91,7 +97,8 @@ public class MoveScript : MonoBehaviour
 
     private Vector3 nextDirection;
 
-    private WwiseAudioScript girlAudio;
+    //private WwiseAudioScript girlAudio;
+    private AudioScript girlAudio;
 
     private float pauseStart;
 
@@ -99,20 +106,39 @@ public class MoveScript : MonoBehaviour
 
     private bool pauseStarted = false;
 
+
+    private float startTime = 0;
+
+
+    private float footstepDelay = 0.5f;
+
+    private bool playStep = false;
+
+    private float t;
+
+    public float getT()
+    {
+        return t;
+    }
+
+
     /// <summary>
     /// Getting the components and initialize start and end positions
     /// </summary>
     void Start()
     {
-        BoyAnim = GetComponent<Animator>();
 
-        if (GameObject.Find("GravityManager") == null)
+        if(GameObject.Find("GravityManager") == null)
         {
             characterState = States.MovingForward;
         }
 
         girl = GameObject.FindGameObjectWithTag("Girl");
-        girlAudio = girl.GetComponent<WwiseAudioScript>();
+
+        BoyAnim = GetComponent<Animator>();
+        animScript = GetComponent<AnimYmerdreng>();
+        //girlAudio = girl.GetComponent<WwiseAudioScript>();
+        girlAudio = girl.GetComponent<AudioScript>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
         BFS bfs = new BFS();
         Path = new Stack<BezierSpline>();
@@ -122,8 +148,15 @@ public class MoveScript : MonoBehaviour
         transform.position = currentSpline.GetPoint(0);
         transform.root.LookAt(transform.position + currentSpline.GetDirection(0));
 
-        characterState = States.Idle;
+        GetComponent<NoteSpawner>().Init();
+
+        characterState = States.StartLevel;
         PlayerTracking();
+    }
+
+    public BezierSpline getCurrentBezierSpline()
+    {
+        return currentSpline;
     }
 
     /// <summary>
@@ -134,25 +167,37 @@ public class MoveScript : MonoBehaviour
     {
         switch (characterState)
         {
+            case States.StartLevel:
+                Debug.Log("StartLevel");
+                StartLevel();
+                break;
             case States.MovingForward:
-                Debug.Log("moving forward");
+                //Debug.Log("moving forward");
                 MoveForward();
                 break;
             case States.Turning:
-                Debug.Log("turning");
+                //Debug.Log("turning");
                 Rotate(nextDirection, wasBlocked);
                 break;
             case States.MovingBack:
-                Debug.Log("moving back");
+                //Debug.Log("moving back");
                 MoveBack();
+                animScript.setWalking();
                 break;
             case States.StandingStill:
-                Debug.Log("standing still");
+                //Debug.Log("standing still");
                 StandStill();
+                animScript.setNoYmer();
                 break;
             default:
                 break;
         }
+    }
+
+    void Update()
+    {
+        if (characterState == States.Idle && GameObject.Find("GravityManager").transform.GetComponent<GyroScript>().isCalibrated)
+            characterState = States.MovingForward;
     }
 
     /// <summary>
@@ -167,16 +212,37 @@ public class MoveScript : MonoBehaviour
         //trackLength = ((actualEndPos - actualStartPos).magnitude);
         trackLength = currentSpline.GetSplineLength();
     }
-    
+
+    private void StartLevel()
+    {
+        if (BoyAnim.GetCurrentAnimatorStateInfo(0).IsName("IdleBase"))
+        {
+            Debug.Log("DUN DIDDLY DID");
+            characterState = States.Idle;
+        }
+
+        //    startTime += Time.deltaTime;
+        //    if(startTime > 5)
+        //    {
+        //        characterState = States.StandingStill;
+        //        Debug.Log("WAITED 5 SECS");
+        //    }
+    }
+
     private void MoveForward()
     {
+
+        Debug.Log("DOES THIS HAPPEN WHEN IT SHOULDNT?!");
+
         wasBlocked = false;
-        BoyAnim.SetTrigger("isMoving"); // start walking animation when moving
+
         lastMovementDirection = States.MovingForward;
-        if (girlAudio.isPlaying && yoghurtDetection.CanMove)
+        if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
         {
+            animScript.setWalking();
+
             timeTravelled += Time.deltaTime;
-            float t = (timeTravelled * Speed) / trackLength;
+            t = (timeTravelled * Speed) / trackLength;
             nextDirection = currentSpline.GetDirection(t);
 
             if (ShouldITurn(nextDirection))
@@ -201,7 +267,7 @@ public class MoveScript : MonoBehaviour
                 currentSpline = Path.Pop();
             }
         }
-        else if (girlAudio.isPlaying && !yoghurtDetection.CanMove)
+        else if (girlAudio.audio.isPlaying && !yoghurtDetection.CanMove)
         {
             //Debug.Log("MOVING BACK NOW");
             characterState = States.StandingStill;
@@ -213,12 +279,12 @@ public class MoveScript : MonoBehaviour
     private void MoveBack()
     {
         wasBlocked = false;
-        BoyAnim.SetTrigger("isMoving"); // start walking animation when moving
+
         lastMovementDirection = States.MovingBack;
-        if (girlAudio.isPlaying && yoghurtDetection.CanMove)
+        if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
         {
             timeTravelled -= Time.deltaTime;
-            float t = (timeTravelled * Speed) / trackLength;
+            t = (timeTravelled * Speed) / trackLength;
             nextDirection = -currentSpline.GetDirection(t);
 
             if (ShouldITurn(nextDirection))
@@ -237,7 +303,7 @@ public class MoveScript : MonoBehaviour
                 characterState = States.StandingStill;
             }
         }
-        else if (girlAudio.isPlaying && !yoghurtDetection.CanMove)
+        else if (girlAudio.audio.isPlaying && !yoghurtDetection.CanMove)
         {
             characterState = States.StandingStill;
         }
@@ -245,6 +311,7 @@ public class MoveScript : MonoBehaviour
 
     private void StandStill()
     {
+
         if (endOfPath)
         {
             Debug.Log("DEAD");
@@ -252,7 +319,6 @@ public class MoveScript : MonoBehaviour
         }
         if (pauseStarted)
         {
-            Debug.Log("pause");
             if (pauseStart + pauseDuration < Time.time)
             {
                 Debug.Log("switching to moving");
@@ -262,11 +328,12 @@ public class MoveScript : MonoBehaviour
         }
         else
         {
-            wasBlocked = true;
-            BoyAnim.SetTrigger("isNotMoving"); // stop walking animation when not moving
-            float t = (timeTravelled * Speed) / trackLength;
-            nextDirection = -currentSpline.GetDirection(t);
-            characterState = States.Turning;
+
+        wasBlocked = true;
+        float t = (timeTravelled * Speed) / trackLength;
+        nextDirection = -currentSpline.GetDirection(t);
+        characterState = States.Turning;
+
         }
     }
 

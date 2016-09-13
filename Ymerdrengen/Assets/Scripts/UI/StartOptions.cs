@@ -180,4 +180,16 @@ public class StartOptions : MonoBehaviour
         showPanels.ToggleLevelTitle(false);
         TextLevel.text = "";
     }
+
+    /// <summary>
+    /// Exit application
+    /// </summary>
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        { 
+            Application.Quit();
+        }
+    }
+
 }
