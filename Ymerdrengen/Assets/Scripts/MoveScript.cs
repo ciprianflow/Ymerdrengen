@@ -135,6 +135,8 @@ public class MoveScript : MonoBehaviour
 
         girl = GameObject.FindGameObjectWithTag("Girl");
 
+        BoyAnim = GetComponent<Animator>();
+        animScript = GetComponent<AnimYmerdreng>();
         //girlAudio = girl.GetComponent<WwiseAudioScript>();
         girlAudio = girl.GetComponent<AudioScript>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();

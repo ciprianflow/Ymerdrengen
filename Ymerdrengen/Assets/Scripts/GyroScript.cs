@@ -80,7 +80,7 @@ public class GyroScript : MonoBehaviour
 
         Input.gyro.enabled = true;
         // force landscape view
-        Screen.orientation = ScreenOrientation.LandscapeRight;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
         // prevent tablet from going to sleep while playing
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         xCalib = 0;

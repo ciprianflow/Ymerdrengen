@@ -18,7 +18,7 @@ public class LoadnewLevel : MonoBehaviour {
         // distance until the girl
         if (Vector3.Distance(Boy.transform.position, this.transform.position) < EndLevelDistance)
         {
-            Application.LoadLevel(Application.loadedLevel + 1);
+            Application.LoadLevel(Application.loadedLevel +1);
         }
 
 	}

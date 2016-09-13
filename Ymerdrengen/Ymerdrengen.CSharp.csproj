@@ -98,6 +98,7 @@
     <Compile Include="Assets\SplineSystem\BezierSpline.cs" />
     <Compile Include="Assets\SplineSystem\TEST_SCRIPT.cs" />
     <Compile Include="Assets\SplineSystem\pathSystem.cs" />
+    <Compile Include="Assets\WinScript.cs" />
     <Compile Include="Assets\Wwise\Deployment\API\Generated\Android\AkAudioOutputType_Android.cs" />
     <Compile Include="Assets\Wwise\Deployment\API\Generated\Android\AkMemPoolAttributes_Android.cs" />
     <Compile Include="Assets\Wwise\Deployment\API\Generated\Android\AkPlatformInitSettings_Android.cs" />
