@@ -84,7 +84,6 @@
     <Compile Include="Assets\Scripts\MovieManager_TestScript.cs" />
     <Compile Include="Assets\Scripts\ParticleGenerator.cs" />
     <Compile Include="Assets\Scripts\SpawnYoghurt.cs" />
-    <Compile Include="Assets\Scripts\UI\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\UI\Pause.cs" />
     <Compile Include="Assets\Scripts\UI\PlayMusic.cs" />
     <Compile Include="Assets\Scripts\UI\QuitApplication.cs" />
