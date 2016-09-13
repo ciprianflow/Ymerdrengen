@@ -3,7 +3,7 @@
 // </copyright>
 
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.Audio;
 
 /// <summary>
@@ -53,7 +53,6 @@ public class PlayMusic : MonoBehaviour
     /// </summary>
     public void Start()
     {
-        
         audioSource.clip = TitleMusic;
         FadeUp(resetTime);
         audioSource.Play();
@@ -88,7 +87,6 @@ public class PlayMusic : MonoBehaviour
         //fade
         FadeUp(resetTime);
         audioSource.Play();
-
     }
 
     public void StopPlayMusic()
@@ -117,13 +115,12 @@ public class PlayMusic : MonoBehaviour
     {
         if(menuSoundValue)
         {
-
             menuSoundValue = false;
             // mute sound
             ToggleMusic(false);
 
             //mute sound icon
-            GameObject.Find("Sound").GetComponent<SpriteRenderer>().sprite = SoundOff;
+            GameObject.Find("Sound").GetComponent<Image>().sprite = SoundOff;
         }
         else
         {
@@ -131,8 +128,7 @@ public class PlayMusic : MonoBehaviour
             ToggleMusic(true);
 
             //mute sound icon
-            GameObject.Find("Sound").GetComponent<SpriteRenderer>().sprite = SoundOn;
-
+            GameObject.Find("Sound").GetComponent<Image>().sprite = SoundOn;
         }
     }
 
