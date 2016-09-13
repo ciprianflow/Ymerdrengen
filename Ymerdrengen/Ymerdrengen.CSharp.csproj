@@ -64,6 +64,12 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Boy Anim\AnimationYmerdreng.cs" />
@@ -84,7 +90,6 @@
     <Compile Include="Assets\Scripts\MovieManager_TestScript.cs" />
     <Compile Include="Assets\Scripts\ParticleGenerator.cs" />
     <Compile Include="Assets\Scripts\SpawnYoghurt.cs" />
-    <Compile Include="Assets\Scripts\UI\DontDestroy.cs" />
     <Compile Include="Assets\Scripts\UI\Pause.cs" />
     <Compile Include="Assets\Scripts\UI\PlayMusic.cs" />
     <Compile Include="Assets\Scripts\UI\QuitApplication.cs" />
@@ -210,6 +215,18 @@
   <ItemGroup>
     <None Include="Assets\Mini Profiler\CHANGELOG.txt" />
     <None Include="Assets\Mini Profiler\README.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\Init.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\New_SoundBank.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\PluginInfo.xml" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Android\SoundbanksInfo.xml" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\Init.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\New_SoundBank.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\PluginInfo.xml" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Mac\SoundbanksInfo.xml" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\Init.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\New_SoundBank.txt" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\PluginInfo.xml" />
+    <None Include="Assets\StreamingAssets\Audio\GeneratedSoundBanks\Windows\SoundbanksInfo.xml" />
     <None Include="Assets\StreamingAssets\README.txt" />
     <None Include="Assets\StreamingAssets\desc.txt" />
     <None Include="Assets\Wwise\Readme.txt" />
