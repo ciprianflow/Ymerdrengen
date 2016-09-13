@@ -46,6 +46,13 @@
 								</Element>
 							</ElementList>
 						</Action>
+						<Action Name="Play" ID="{B999D7A0-B47C-414B-AC89-A9D5F5FE9C67}" ShortID="555094650" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{F1825A89-EB26-4172-A438-DD9BFD8922B9}" Global="false">
+									<ObjectRef Name="ambientChords" ID="{4F34E6E3-A326-40F6-8AC1-83D64DDE8088}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="footstep" ID="{9D108E6A-9A3D-44EB-AE85-DEA491AEC9B0}">
@@ -122,7 +129,21 @@
 				</Event>
 				<Event Name="pause" ID="{9F217B6C-ECCD-4A6D-AC22-8BCBE8A3E168}">
 					<ChildrenList>
+						<Action Name="Play" ID="{0B526A03-E8E3-44BA-A817-5CBC7A1C07B9}" ShortID="724143906" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{78E01F43-2C5D-42BB-AB6F-4181665DA1D8}" Global="false">
+									<ObjectRef Name="ymer bliver hældt op" ID="{5857EB52-7CE2-43DD-9EE3-8341659D6FE8}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
 						<Action Name="Pause All" ID="{E189DCA7-9499-406C-A5E7-E81A6EEC5714}" ShortID="689850686" Type="Pause" Scope="All" Global="false"/>
+						<Action Name="Play" ID="{05A351A0-B352-463F-8C74-8FBA74269724}" ShortID="534262833" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{F72EE9E5-7ED9-4B81-9DAC-1DC8B713FFD3}" Global="false">
+									<ObjectRef Name="reverse ymer" ID="{02866060-041A-4DDD-83FD-69330BC0531D}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="ymer" ID="{32D24638-F02E-4D73-85D6-5AE63A63F893}">
@@ -343,6 +364,28 @@
 							<ElementList>
 								<Element ID="{51F5AD95-DC52-4678-9327-894A6FD6DCC4}" Global="false">
 									<ObjectRef Name="win sound w_ rvb" ID="{4C1BD3AD-08FA-4FF1-BB58-9D02F7411A68}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="startButton" ID="{B2E986AC-CCD4-4AB3-91F7-F98F36D0D3CC}">
+					<ChildrenList>
+						<Action Name="Play" ID="{6692BC4F-179B-47AD-8457-74525FB6F17C}" ShortID="96191866" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{EA8D3F14-1516-4ED2-9661-73B8719AB764}" Global="false">
+									<ObjectRef Name="ymer plask dråbe1" ID="{E3B692FB-316C-4579-8F2D-B9DCD5E7A87B}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
+								</Element>
+							</ElementList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menuButton" ID="{08D73E65-B5EC-4128-8672-9B6C6530063C}">
+					<ChildrenList>
+						<Action Name="Play" ID="{48BA74C5-42EE-4D5A-85BE-C3E9C247776D}" ShortID="899597684" Type="Play" Scope="One" Global="false">
+							<ElementList>
+								<Element ID="{0650F212-F6AB-4D52-857C-9B0539E7CB31}" Global="false">
+									<ObjectRef Name="ymer plask dråbe2" ID="{00E072E3-2186-4F73-AE5B-3E79120988B8}" WorkUnitID="{E5BA1C43-FACD-49FD-86C2-DDED1E556DDE}"/>
 								</Element>
 							</ElementList>
 						</Action>

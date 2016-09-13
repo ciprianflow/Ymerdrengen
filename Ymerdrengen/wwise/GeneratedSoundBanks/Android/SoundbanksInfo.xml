@@ -23,35 +23,46 @@
 			<IncludedEvents>
 				<Event Id="1355334996" Name="bvadr" ObjectPath="\Events\Default Work Unit\bvadr"/>
 				<Event Id="1866025847" Name="footstep" ObjectPath="\Events\Default Work Unit\footstep"/>
-				<Event Id="1333414505" Name="Jublen" ObjectPath="\Events\Default Work Unit\Jublen"/>
+				<Event Id="1333414505" Name="jublen" ObjectPath="\Events\Default Work Unit\jublen"/>
+				<Event Id="2192397196" Name="menuButton" ObjectPath="\Events\Default Work Unit\menuButton"/>
 				<Event Id="3092587493" Name="pause" ObjectPath="\Events\Default Work Unit\pause"/>
 				<Event Id="3354233250" Name="pigeSangCue" ObjectPath="\Events\Default Work Unit\pigeSangCue"/>
 				<Event Id="3011307715" Name="pigeSangStart" ObjectPath="\Events\Default Work Unit\pigeSangStart"/>
-				<Event Id="2465565761" Name="pigeSangStop" ObjectPath="\Events\Default Work Unit\pigeSangStop"/>
+				<Event Id="2465565761" Name="pigeSangStop" ObjectPath="\Events\Default Work Unit\pigeSangStop" MaxAttenuation="0.000000"/>
 				<Event Id="1281810935" Name="start" ObjectPath="\Events\Default Work Unit\start"/>
+				<Event Id="1651515387" Name="startButton" ObjectPath="\Events\Default Work Unit\startButton"/>
+				<Event Id="979765101" Name="win" ObjectPath="\Events\Default Work Unit\win"/>
 				<Event Id="2275356394" Name="ymer" ObjectPath="\Events\Default Work Unit\ymer"/>
-				<Event Id="4172093234" Name="ymerStop" ObjectPath="\Events\Default Work Unit\ymerStop"/>
+				<Event Id="4172093234" Name="ymerStop" ObjectPath="\Events\Default Work Unit\ymerStop" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="17149364" Language="SFX">
+					<ShortName>win sound w. rvb.wav</ShortName>
+					<Path>SFX/win sound w. rvb_106250C2.wem</Path>
+				</File>
 				<File Id="24393306" Language="SFX">
 					<ShortName>pige rømmen3.wav</ShortName>
 					<Path>SFX/pige rømmen3_ABB1111A.wem</Path>
 				</File>
 				<File Id="74475403" Language="SFX">
 					<ShortName>pige sang2.wav</ShortName>
-					<Path>SFX/pige sang2_3918DC77.wem</Path>
+					<Path>SFX/pige sang2_75C91A76.wem</Path>
+				</File>
+				<File Id="105113618" Language="SFX">
+					<ShortName>ymer plask dråbe2.wav</ShortName>
+					<Path>SFX/ymer plask dråbe2_99F8F28D.wem</Path>
 				</File>
 				<File Id="128134872" Language="SFX">
 					<ShortName>pige tudse i halsen6.wav</ShortName>
-					<Path>SFX/pige tudse i halsen6_2C99C9DF.wem</Path>
+					<Path>SFX/pige tudse i halsen6_797961B9.wem</Path>
 				</File>
 				<File Id="140437786" Language="SFX">
 					<ShortName>ymer plask3.wav</ShortName>
-					<Path>SFX/ymer plask3_128992D9.wem</Path>
+					<Path>SFX/ymer plask3_CCA016E3.wem</Path>
 				</File>
 				<File Id="143273572" Language="SFX">
 					<ShortName>ymerskvulp9.wav</ShortName>
-					<Path>SFX/ymerskvulp9_C9CA9B92.wem</Path>
+					<Path>SFX/ymerskvulp9_8DE390D3.wem</Path>
 				</File>
 				<File Id="145305433" Language="SFX">
 					<ShortName>dreng ymer ad8.wav</ShortName>
@@ -63,7 +74,7 @@
 				</File>
 				<File Id="193980638" Language="SFX">
 					<ShortName>ymer plask dråbe3.wav</ShortName>
-					<Path>SFX/ymer plask dråbe3_B9ABC57C.wem</Path>
+					<Path>SFX/ymer plask dråbe3_C0597CD8.wem</Path>
 				</File>
 				<File Id="196018585" Language="SFX">
 					<ShortName>dreng startlyd2.wav</ShortName>
@@ -73,13 +84,13 @@
 					<ShortName>dreng startlyd3.wav</ShortName>
 					<Path>SFX/dreng startlyd3_9AD33426.wem</Path>
 				</File>
-				<File Id="212920129" Language="SFX">
-					<ShortName>footstep_4.wav</ShortName>
-					<Path>SFX/footstep_4_FDA8CC6E.wem</Path>
-				</File>
 				<File Id="219312287" Language="SFX">
 					<ShortName>ymerskvulp2.wav</ShortName>
-					<Path>SFX/ymerskvulp2_0331A6D1.wem</Path>
+					<Path>SFX/ymerskvulp2_23F9ED5F.wem</Path>
+				</File>
+				<File Id="222526706" Language="SFX">
+					<ShortName>ymer plask dråbe3.wav</ShortName>
+					<Path>SFX/ymer plask dråbe3_8AEFD6C3.wem</Path>
 				</File>
 				<File Id="223363171" Language="SFX">
 					<ShortName>supermarked_1.wav</ShortName>
@@ -95,23 +106,31 @@
 				</File>
 				<File Id="275075370" Language="SFX">
 					<ShortName>ymer plask dråbe2.wav</ShortName>
-					<Path>SFX/ymer plask dråbe2_A15D8E3D.wem</Path>
+					<Path>SFX/ymer plask dråbe2_FA4E6F5D.wem</Path>
 				</File>
 				<File Id="288818242" Language="SFX">
 					<ShortName>ymer plask dråbe4.wav</ShortName>
-					<Path>SFX/ymer plask dråbe4_70AF3583.wem</Path>
+					<Path>SFX/ymer plask dråbe4_EB0F735E.wem</Path>
 				</File>
 				<File Id="325491423" Language="SFX">
 					<ShortName>ymerskvulp5.wav</ShortName>
-					<Path>SFX/ymerskvulp5_E180920F.wem</Path>
+					<Path>SFX/ymerskvulp5_01C02073.wem</Path>
 				</File>
 				<File Id="331865315" Language="SFX">
 					<ShortName>ymerskvulp1.wav</ShortName>
-					<Path>SFX/ymerskvulp1_FA05EDF7.wem</Path>
+					<Path>SFX/ymerskvulp1_7E29B742.wem</Path>
 				</File>
 				<File Id="334962905" Language="SFX">
 					<ShortName>ymerskvulp13 anderledes støj anderledes resonans.wav</ShortName>
-					<Path>SFX/ymerskvulp13 anderledes støj anderledes resonans_17F7E663.wem</Path>
+					<Path>SFX/ymerskvulp13 anderledes støj anderledes resonans_4AA3F71C.wem</Path>
+				</File>
+				<File Id="339680976" Language="SFX">
+					<ShortName> ambienceloop 2.wav</ShortName>
+					<Path>SFX/ ambienceloop 2_4B8CC0C5.wem</Path>
+				</File>
+				<File Id="349746374" Language="SFX">
+					<ShortName>reverse ymer.wav</ShortName>
+					<Path>SFX/reverse ymer_9E69E797.wem</Path>
 				</File>
 				<File Id="351530559" Language="SFX">
 					<ShortName>dreng ymer ad1.wav</ShortName>
@@ -127,11 +146,11 @@
 				</File>
 				<File Id="402368179" Language="SFX">
 					<ShortName>ymerskvulp14 anderledes støj anderledes resonans.wav</ShortName>
-					<Path>SFX/ymerskvulp14 anderledes støj anderledes resonans_93BCD7AC.wem</Path>
+					<Path>SFX/ymerskvulp14 anderledes støj anderledes resonans_5B6D381E.wem</Path>
 				</File>
 				<File Id="407101066" Language="SFX">
 					<ShortName>pige tudse i halsen5.wav</ShortName>
-					<Path>SFX/pige tudse i halsen5_5AD5676E.wem</Path>
+					<Path>SFX/pige tudse i halsen5_B4B4EF0F.wem</Path>
 				</File>
 				<File Id="410662667" Language="SFX">
 					<ShortName>dreng ymer ad7.wav</ShortName>
@@ -147,7 +166,7 @@
 				</File>
 				<File Id="467679042" Language="SFX">
 					<ShortName>ymerskvulp4.wav</ShortName>
-					<Path>SFX/ymerskvulp4_5919229F.wem</Path>
+					<Path>SFX/ymerskvulp4_A0624199.wem</Path>
 				</File>
 				<File Id="478365640" Language="SFX">
 					<ShortName>dreng ymer ad9.wav</ShortName>
@@ -155,23 +174,23 @@
 				</File>
 				<File Id="483396281" Language="SFX">
 					<ShortName>ymer bliver hældt op.wav</ShortName>
-					<Path>SFX/ymer bliver hældt op_3EBA59C0.wem</Path>
+					<Path>SFX/ymer bliver hældt op_9C20AB4B.wem</Path>
 				</File>
 				<File Id="512918711" Language="SFX">
 					<ShortName>ymerskvulp6.wav</ShortName>
-					<Path>SFX/ymerskvulp6_9F6AC381.wem</Path>
+					<Path>SFX/ymerskvulp6_224ABD87.wem</Path>
 				</File>
 				<File Id="538390941" Language="SFX">
 					<ShortName>ymerskvulp11 anderledes støj.wav</ShortName>
-					<Path>SFX/ymerskvulp11 anderledes støj_D8384487.wem</Path>
+					<Path>SFX/ymerskvulp11 anderledes støj_0E925CDF.wem</Path>
 				</File>
 				<File Id="539329039" Language="SFX">
 					<ShortName>ymerskvulp3.wav</ShortName>
-					<Path>SFX/ymerskvulp3_654ADB9C.wem</Path>
+					<Path>SFX/ymerskvulp3_A86C74AC.wem</Path>
 				</File>
 				<File Id="545566373" Language="SFX">
 					<ShortName>ymerskvulp15 anderledes støj anderledes resonans.wav</ShortName>
-					<Path>SFX/ymerskvulp15 anderledes støj anderledes resonans_A839BFB6.wem</Path>
+					<Path>SFX/ymerskvulp15 anderledes støj anderledes resonans_C0F88248.wem</Path>
 				</File>
 				<File Id="569940089" Language="SFX">
 					<ShortName>dreng jublen1.wav</ShortName>
@@ -179,15 +198,15 @@
 				</File>
 				<File Id="575305897" Language="SFX">
 					<ShortName>pige tudse i halsen1.wav</ShortName>
-					<Path>SFX/pige tudse i halsen1_2D6ED5A5.wem</Path>
+					<Path>SFX/pige tudse i halsen1_20511DEB.wem</Path>
 				</File>
 				<File Id="580026357" Language="SFX">
 					<ShortName>pige tudse i halsen2.wav</ShortName>
-					<Path>SFX/pige tudse i halsen2_4C73BD0F.wem</Path>
+					<Path>SFX/pige tudse i halsen2_B9C4DB2C.wem</Path>
 				</File>
 				<File Id="581494060" Language="SFX">
 					<ShortName>ymer plask.wav</ShortName>
-					<Path>SFX/ymer plask_F4489CD8.wem</Path>
+					<Path>SFX/ymer plask_EC2949BA.wem</Path>
 				</File>
 				<File Id="581869100" Language="SFX">
 					<ShortName>dreng ymer ad3.wav</ShortName>
@@ -195,27 +214,35 @@
 				</File>
 				<File Id="592308638" Language="SFX">
 					<ShortName>ymer plask4.wav</ShortName>
-					<Path>SFX/ymer plask4_31EBFD2A.wem</Path>
+					<Path>SFX/ymer plask4_70FAE326.wem</Path>
 				</File>
 				<File Id="594727261" Language="SFX">
 					<ShortName>ymerskvulp voldsom.wav</ShortName>
-					<Path>SFX/ymerskvulp voldsom_32D31D9B.wem</Path>
+					<Path>SFX/ymerskvulp voldsom_C9B219D5.wem</Path>
+				</File>
+				<File Id="609127283" Language="SFX">
+					<ShortName>ymer plask dråbe4.wav</ShortName>
+					<Path>SFX/ymer plask dråbe4_6E449C29.wem</Path>
 				</File>
 				<File Id="612208742" Language="SFX">
 					<ShortName>pige tudse i halsen7.wav</ShortName>
-					<Path>SFX/pige tudse i halsen7_0877A950.wem</Path>
+					<Path>SFX/pige tudse i halsen7_27AFDF1B.wem</Path>
 				</File>
 				<File Id="644231504" Language="SFX">
 					<ShortName>ymerskvulp8.wav</ShortName>
-					<Path>SFX/ymerskvulp8_56E92720.wem</Path>
+					<Path>SFX/ymerskvulp8_5005369F.wem</Path>
 				</File>
 				<File Id="652786697" Language="SFX">
 					<ShortName>pige jublen3.wav</ShortName>
 					<Path>SFX/pige jublen3_DD8452ED.wem</Path>
 				</File>
+				<File Id="663353180" Language="SFX">
+					<ShortName>ymer plask dråbe1.wav</ShortName>
+					<Path>SFX/ymer plask dråbe1_D07CFD03.wem</Path>
+				</File>
 				<File Id="679671193" Language="SFX">
 					<ShortName>ymerskvulp7.wav</ShortName>
-					<Path>SFX/ymerskvulp7_3C8ABC4F.wem</Path>
+					<Path>SFX/ymerskvulp7_D915A478.wem</Path>
 				</File>
 				<File Id="695885446" Language="SFX">
 					<ShortName>pige rømmen6.wav</ShortName>
@@ -231,7 +258,7 @@
 				</File>
 				<File Id="747513450" Language="SFX">
 					<ShortName>ymer plask2.wav</ShortName>
-					<Path>SFX/ymer plask2_C7F309F6.wem</Path>
+					<Path>SFX/ymer plask2_08DEC58B.wem</Path>
 				</File>
 				<File Id="759583078" Language="SFX">
 					<ShortName>dreng ymer ad4.wav</ShortName>
@@ -239,11 +266,19 @@
 				</File>
 				<File Id="768628151" Language="SFX">
 					<ShortName>pige tudse i halsen4.wav</ShortName>
-					<Path>SFX/pige tudse i halsen4_B638C34E.wem</Path>
+					<Path>SFX/pige tudse i halsen4_82F83B79.wem</Path>
 				</File>
-				<File Id="780200417" Language="SFX">
-					<ShortName>footstep_1.wav</ShortName>
-					<Path>SFX/footstep_1_A608E5EB.wem</Path>
+				<File Id="773006416" Language="SFX">
+					<ShortName>reverse ymer.wav</ShortName>
+					<Path>SFX/reverse ymer_F0EFA10B.wem</Path>
+				</File>
+				<File Id="812743554" Language="SFX">
+					<ShortName>ymer plask dråbe2.wav</ShortName>
+					<Path>SFX/ymer plask dråbe2_D6521BD2.wem</Path>
+				</File>
+				<File Id="814851806" Language="SFX">
+					<ShortName> ambienceloop 1.wav</ShortName>
+					<Path>SFX/ ambienceloop 1_4B8CC0C5.wem</Path>
 				</File>
 				<File Id="841455779" Language="SFX">
 					<ShortName>pige sang1.wav</ShortName>
@@ -251,15 +286,11 @@
 				</File>
 				<File Id="846919586" Language="SFX">
 					<ShortName>ymerskvulp12 anderledes støj anderledes resonans.wav</ShortName>
-					<Path>SFX/ymerskvulp12 anderledes støj anderledes resonans_FA90731E.wem</Path>
-				</File>
-				<File Id="848562486" Language="SFX">
-					<ShortName>footstep_3.wav</ShortName>
-					<Path>SFX/footstep_3_137F6223.wem</Path>
+					<Path>SFX/ymerskvulp12 anderledes støj anderledes resonans_9DBA61A8.wem</Path>
 				</File>
 				<File Id="882379106" Language="SFX">
 					<ShortName>ymerskvulp10 anderledes støj.wav</ShortName>
-					<Path>SFX/ymerskvulp10 anderledes støj_2742ED9E.wem</Path>
+					<Path>SFX/ymerskvulp10 anderledes støj_A5BFF9A3.wem</Path>
 				</File>
 				<File Id="890136231" Language="SFX">
 					<ShortName>pige jublen1.wav</ShortName>
@@ -275,19 +306,15 @@
 				</File>
 				<File Id="977034157" Language="SFX">
 					<ShortName>ymer plask dråbe1.wav</ShortName>
-					<Path>SFX/ymer plask dråbe1_2E90D758.wem</Path>
-				</File>
-				<File Id="1016662856" Language="SFX">
-					<ShortName>footstep_5.wav</ShortName>
-					<Path>SFX/footstep_5_2E94E511.wem</Path>
+					<Path>SFX/ymer plask dråbe1_70EC77EC.wem</Path>
 				</File>
 				<File Id="1028139790" Language="SFX">
 					<ShortName>pige tudse i halsen3.wav</ShortName>
-					<Path>SFX/pige tudse i halsen3_99FA949E.wem</Path>
+					<Path>SFX/pige tudse i halsen3_18393464.wem</Path>
 				</File>
 				<File Id="1073433980" Language="SFX">
 					<ShortName>ymerskvulp lang.wav</ShortName>
-					<Path>SFX/ymerskvulp lang_147AA0CE.wem</Path>
+					<Path>SFX/ymerskvulp lang_1793407D.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
