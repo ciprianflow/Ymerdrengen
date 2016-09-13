@@ -6,6 +6,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEditor;
 
 /// <summary>
 /// Gyro script
@@ -57,8 +58,22 @@ public class GyroScript : MonoBehaviour
     /// <summary>
     /// Initialization function
     /// </summary>
+    public static GyroScript Instance;
+
+    void Awake()
+    {
+        if (Instance)
+        {
+            DestroyImmediate(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+    }
     void Start () {
-        DontDestroyOnLoad(transform.gameObject);
+        
         //Only for Philip's Scene
         text = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Text>();
         moveScript = GameObject.FindWithTag("Ymerdrengen").GetComponent<MoveScript>();
@@ -169,7 +184,13 @@ public class GyroScript : MonoBehaviour
                 {
                     isCalibrating = false;
                     isCalibrated = true;
-                    text.text = "";
+
+                    // wierd error when going to scene 0 the object doesn't get destoryed
+                    if (text != null)
+                    {
+                        text.text = "";
+                    }
+                    
                     calibTimer = 0;
                     moveScript.CharacterState = States.MovingForward;
                 }
@@ -179,13 +200,13 @@ public class GyroScript : MonoBehaviour
                 xCalib = Input.gyro.attitude.x;
                 zCalib = Input.gyro.attitude.y;
                 calibTimer = 0;
-                moveScript.CharacterState = States.MovingForward;
+                //moveScript.CharacterState = States.MovingForward;
             }
 
         }
         if (isCalibrated)
         {
-            moveScript.CharacterState = States.MovingForward;
+            //moveScript.CharacterState = States.MovingForward;
         }
     }
 

@@ -49,10 +49,12 @@ public class ShowPanels : MonoBehaviour
     /// </summary>
     public GameObject LevelTitle;
 
+    public GameObject Background;
+
     /// <summary>
     /// Hide Title 
     /// </summary>
-    public void HideMenutitle()
+    public void HideMenuTitle()
     {
         MenuTitle.SetActive(false);
     }
@@ -131,6 +133,10 @@ public class ShowPanels : MonoBehaviour
     {
         LevelTitle.SetActive(value);
     }
-
+    
+    public void ToggleBackground(bool value)
+    {
+        Background.SetActive(value);
+    }
 
 }

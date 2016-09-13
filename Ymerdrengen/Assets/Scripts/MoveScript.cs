@@ -29,6 +29,8 @@ public class MoveScript : MonoBehaviour
 
     public float RotationSpeed = 0.5f;
 
+    public Animator BoyAnim;
+
     /// <summary>
     /// The path for the player
     /// </summary>
@@ -102,7 +104,9 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     void Start()
     {
-        if(GameObject.Find("GravityManager") == null)
+        BoyAnim = GetComponent<Animator>();
+
+        if (GameObject.Find("GravityManager") == null)
         {
             characterState = States.MovingForward;
         }
@@ -131,19 +135,19 @@ public class MoveScript : MonoBehaviour
         switch (characterState)
         {
             case States.MovingForward:
-                //Debug.Log("moving forward");
+                Debug.Log("moving forward");
                 MoveForward();
                 break;
             case States.Turning:
-                //Debug.Log("turning");
+                Debug.Log("turning");
                 Rotate(nextDirection, wasBlocked);
                 break;
             case States.MovingBack:
-                //Debug.Log("moving back");
+                Debug.Log("moving back");
                 MoveBack();
                 break;
             case States.StandingStill:
-                //Debug.Log("standing still");
+                Debug.Log("standing still");
                 StandStill();
                 break;
             default:
@@ -167,6 +171,7 @@ public class MoveScript : MonoBehaviour
     private void MoveForward()
     {
         wasBlocked = false;
+        BoyAnim.SetTrigger("isMoving"); // start walking animation when moving
         lastMovementDirection = States.MovingForward;
         if (girlAudio.isPlaying && yoghurtDetection.CanMove)
         {
@@ -208,6 +213,7 @@ public class MoveScript : MonoBehaviour
     private void MoveBack()
     {
         wasBlocked = false;
+        BoyAnim.SetTrigger("isMoving"); // start walking animation when moving
         lastMovementDirection = States.MovingBack;
         if (girlAudio.isPlaying && yoghurtDetection.CanMove)
         {
@@ -256,10 +262,11 @@ public class MoveScript : MonoBehaviour
         }
         else
         {
-        wasBlocked = true;
-        float t = (timeTravelled * Speed) / trackLength;
-        nextDirection = -currentSpline.GetDirection(t);
-        characterState = States.Turning;
+            wasBlocked = true;
+            BoyAnim.SetTrigger("isNotMoving"); // stop walking animation when not moving
+            float t = (timeTravelled * Speed) / trackLength;
+            nextDirection = -currentSpline.GetDirection(t);
+            characterState = States.Turning;
         }
     }
 

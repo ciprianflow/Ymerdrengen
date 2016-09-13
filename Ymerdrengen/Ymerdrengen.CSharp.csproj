@@ -64,12 +64,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Boy Anim\AnimationYmerdreng.cs" />
@@ -211,6 +205,7 @@
     <Compile Include="Assets\Wwise\Deployment\Components\AkTriggerMouseUp.cs" />
     <Compile Include="Assets\Wwise\Deployment\Components\AkUnityEventHandler.cs" />
     <Compile Include="Assets\Wwise\Deployment\Components\AkUtilities.cs" />
+    <Compile Include="Assets\asdawdcaw.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mini Profiler\CHANGELOG.txt" />
