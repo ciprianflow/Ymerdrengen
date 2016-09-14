@@ -34,7 +34,7 @@ public class MoveScript : MonoBehaviour
 
     public Animator BoyAnim;
 
-    private AnimYmerdreng animScript;
+    public AnimYmerdreng animScript;
 
 
     /// <summary>
@@ -57,7 +57,7 @@ public class MoveScript : MonoBehaviour
     /// <summary>
     /// GameObject girl component
     /// </summary>
-    private GameObject girl;
+    public GameObject girl;
 
     /// <summary>
     /// Length of the track
@@ -130,11 +130,11 @@ public class MoveScript : MonoBehaviour
         {
             characterState = States.MovingForward;
         }
-        GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setIdle();
-        girl = GameObject.FindGameObjectWithTag("Girl");
+        girl.transform.GetComponent<AnimPigen>().setIdle();
+        //girl = GameObject.FindGameObjectWithTag("Girl");
 
-        BoyAnim = GetComponent<Animator>();
-        animScript = GetComponent<AnimYmerdreng>();
+        //BoyAnim = GetComponent<Animator>();
+        //animScript = GetComponent<AnimYmerdreng>();
         //girlAudio = girl.GetComponent<WwiseAudioScript>();
         girlAudio = girl.GetComponent<AudioScript>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
@@ -199,11 +199,11 @@ public class MoveScript : MonoBehaviour
 
         if (girlAudio.audio.isPlaying)
         {
-            GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setSinging();
+            girl.transform.GetComponent<AnimPigen>().setSinging();
         }
         else
         {
-            GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setIdle();
+            girl.transform.GetComponent<AnimPigen>().setIdle();
         }
     }
 
