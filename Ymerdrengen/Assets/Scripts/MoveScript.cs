@@ -130,7 +130,7 @@ public class MoveScript : MonoBehaviour
         {
             characterState = States.MovingForward;
         }
-        GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setIdle();
+        girl.transform.GetComponent<AnimPigen>().setIdle();
         //girl = GameObject.FindGameObjectWithTag("Girl");
 
         //BoyAnim = GetComponent<Animator>();
@@ -199,11 +199,11 @@ public class MoveScript : MonoBehaviour
 
         if (girlAudio.audio.isPlaying)
         {
-            GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setSinging();
+            girl.transform.GetComponent<AnimPigen>().setSinging();
         }
         else
         {
-            GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setIdle();
+            girl.transform.GetComponent<AnimPigen>().setIdle();
         }
     }
 
