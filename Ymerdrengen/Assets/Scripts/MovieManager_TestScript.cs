@@ -28,7 +28,7 @@ public class MovieManager_TestScript : MonoBehaviour
     /// </summary>
     public void Start() 
     {
-        this.StartCoroutine(this.PlayStreamingVideo("Video__0004_Layer-Comp-5.mp4"));
+        this.StartCoroutine(this.PlayStreamingVideo("Video_IntroSlideshow.mp4"));
     }
 
     /// <summary>
@@ -39,7 +39,7 @@ public class MovieManager_TestScript : MonoBehaviour
     private IEnumerator PlayStreamingVideo(string url) 
     {
         Debug.Log("Starting Movie");
-        //Handheld.PlayFullScreenMovie(url, Color.black, FullScreenMovieControlMode.Full, FullScreenMovieScalingMode.AspectFit);
+        Handheld.PlayFullScreenMovie(url, Color.black, FullScreenMovieControlMode.Full, FullScreenMovieScalingMode.AspectFit);
         yield return new WaitForEndOfFrame();
         yield return new WaitForEndOfFrame();
         Debug.Log("Movie stopped");

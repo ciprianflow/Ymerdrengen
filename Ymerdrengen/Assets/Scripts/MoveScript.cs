@@ -74,8 +74,6 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     private YoghurtDetection yoghurtDetection;
 
-
-
     private States characterState;
     public States CharacterState
     {
@@ -132,9 +130,11 @@ public class MoveScript : MonoBehaviour
         {
             characterState = States.MovingForward;
         }
-
-
+        GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setIdle();
         girl = GameObject.FindGameObjectWithTag("Girl");
+
+        BoyAnim = GetComponent<Animator>();
+        animScript = GetComponent<AnimYmerdreng>();
         //girlAudio = girl.GetComponent<WwiseAudioScript>();
         girlAudio = girl.GetComponent<AudioScript>();
         yoghurtDetection = transform.FindChild("YoghurtDetection").GetComponent<YoghurtDetection>();
@@ -145,6 +145,8 @@ public class MoveScript : MonoBehaviour
 
         transform.position = currentSpline.GetPoint(0);
         transform.root.LookAt(transform.position + currentSpline.GetDirection(0));
+
+        GetComponent<NoteSpawner>().Init();
 
         characterState = States.StartLevel;
         PlayerTracking();
@@ -169,7 +171,6 @@ public class MoveScript : MonoBehaviour
                 break;
             case States.MovingForward:
                 //Debug.Log("moving forward");
-                if (playStep)
                 MoveForward();
                 break;
             case States.Turning:
@@ -195,6 +196,15 @@ public class MoveScript : MonoBehaviour
     {
         if (characterState == States.Idle && GameObject.Find("GravityManager").transform.GetComponent<GyroScript>().isCalibrated)
             characterState = States.MovingForward;
+
+        if (girlAudio.audio.isPlaying)
+        {
+            GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setSinging();
+        }
+        else
+        {
+            GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setIdle();
+        }
     }
 
     /// <summary>
@@ -234,6 +244,7 @@ public class MoveScript : MonoBehaviour
         wasBlocked = false;
 
         lastMovementDirection = States.MovingForward;
+
         if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
         {
             animScript.setWalking();
@@ -270,6 +281,12 @@ public class MoveScript : MonoBehaviour
             characterState = States.StandingStill;
             pauseStart = Time.time;
             pauseStarted = true;
+        }
+        else if(!girlAudio.audio.isPlaying)
+        {
+            characterState = States.Idle;
+            BoyAnim.SetBool("isIdle", true);
+            BoyAnim.SetBool("isWalking", false);
         }
     }
 
@@ -316,7 +333,6 @@ public class MoveScript : MonoBehaviour
         }
         if (pauseStarted)
         {
-            Debug.Log("pause");
             if (pauseStart + pauseDuration < Time.time)
             {
                 Debug.Log("switching to moving");

@@ -62,7 +62,7 @@ public class Pause : MonoBehaviour
     {
         isPaused = true;
 
-        AudioListener.pause = true;
+        //AudioListener.pause = true;
 
         Time.timeScale = 0;
 

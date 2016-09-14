@@ -61,6 +61,8 @@ public class GyroScript : MonoBehaviour
 
     void Awake()
     {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+
         if (Instance)
         {
             DestroyImmediate(gameObject);
@@ -80,7 +82,6 @@ public class GyroScript : MonoBehaviour
 
         Input.gyro.enabled = true;
         // force landscape view
-        Screen.orientation = ScreenOrientation.LandscapeRight;
         // prevent tablet from going to sleep while playing
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         xCalib = 0;
@@ -88,7 +89,7 @@ public class GyroScript : MonoBehaviour
         tiltThreshold = 1.5f;
         Xdir = 0;
         Zdir = 0;
-        GravityForce = 200f;
+        GravityForce = 40f;
         calibrationTime = 2;
         timer = 0;
         calibTimer = 0;
@@ -125,8 +126,8 @@ public class GyroScript : MonoBehaviour
         movement = direction * movement;
 
         
-        Xdir = -(movement.x - xCalib) * GravityForce;
-        Zdir = -(movement.z - zCalib) * GravityForce;
+        Xdir = (Input.acceleration.x) * GravityForce;
+        Zdir = (Input.acceleration.y) * GravityForce;
 
         // text.text = "x: " + Input.gyro.attitude.x + "z: " + Input.gyro.attitude.y;
 
@@ -159,8 +160,8 @@ public class GyroScript : MonoBehaviour
 
     public void calibrate()
     {
-        xCalib = Input.gyro.attitude.x;
-        zCalib = Input.gyro.attitude.y;
+        xCalib = Input.acceleration.x;
+        zCalib = Input.acceleration.y;
         isCalibrated = false;
         isCalibrating = true;
 
@@ -174,8 +175,8 @@ public class GyroScript : MonoBehaviour
         if(isCalibrating)
         {
             text.text = "Please hold the tablet still. It is Calibrating";
-            float tempxCal = Input.gyro.attitude.x;
-            float tempzCal = Input.gyro.attitude.y;
+            float tempxCal = Input.acceleration.x;
+            float tempzCal = Input.acceleration.y;
             if(checkCalib(tempxCal, xCalib) && checkCalib(tempzCal,zCalib))
             {
                 calibTimer += Time.deltaTime;
@@ -195,8 +196,8 @@ public class GyroScript : MonoBehaviour
             }
             else
             {
-                xCalib = Input.gyro.attitude.x;
-                zCalib = Input.gyro.attitude.y;
+                xCalib = Input.acceleration.x;
+                zCalib = Input.acceleration.y;
                 calibTimer = 0;
                 //moveScript.CharacterState = States.MovingForward;
             }
