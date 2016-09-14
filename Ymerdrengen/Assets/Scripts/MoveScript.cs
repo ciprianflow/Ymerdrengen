@@ -130,7 +130,7 @@ public class MoveScript : MonoBehaviour
         {
             characterState = States.MovingForward;
         }
-
+        GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setIdle();
         girl = GameObject.FindGameObjectWithTag("Girl");
 
         BoyAnim = GetComponent<Animator>();
@@ -196,6 +196,15 @@ public class MoveScript : MonoBehaviour
     {
         if (characterState == States.Idle && GameObject.Find("GravityManager").transform.GetComponent<GyroScript>().isCalibrated)
             characterState = States.MovingForward;
+
+        if (girlAudio.audio.isPlaying)
+        {
+            GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setSinging();
+        }
+        else
+        {
+            GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setIdle();
+        }
     }
 
     /// <summary>
@@ -278,8 +287,6 @@ public class MoveScript : MonoBehaviour
             characterState = States.Idle;
             BoyAnim.SetBool("isIdle", true);
             BoyAnim.SetBool("isWalking", false);
-
-
         }
     }
 
