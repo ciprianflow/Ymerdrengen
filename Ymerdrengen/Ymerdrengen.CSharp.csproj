@@ -205,6 +205,8 @@
     <Compile Include="Assets\Wwise\Deployment\Components\AkUnityEventHandler.cs" />
     <Compile Include="Assets\Wwise\Deployment\Components\AkUtilities.cs" />
     <Compile Include="Assets\asdawdcaw.cs" />
+    <Compile Include="Assets\noteSystem\NoteBehavior.cs" />
+    <Compile Include="Assets\noteSystem\NoteSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mini Profiler\CHANGELOG.txt" />
