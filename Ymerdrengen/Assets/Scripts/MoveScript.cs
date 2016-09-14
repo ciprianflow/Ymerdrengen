@@ -34,7 +34,7 @@ public class MoveScript : MonoBehaviour
 
     public Animator BoyAnim;
 
-    public AnimYmerdreng animScript;
+    private AnimYmerdreng animScript;
 
 
     /// <summary>
@@ -57,7 +57,7 @@ public class MoveScript : MonoBehaviour
     /// <summary>
     /// GameObject girl component
     /// </summary>
-    public GameObject girl;
+    private GameObject girl;
 
     /// <summary>
     /// Length of the track
@@ -73,8 +73,6 @@ public class MoveScript : MonoBehaviour
     /// Yoghurt detection script
     /// </summary>
     private YoghurtDetection yoghurtDetection;
-
-
 
     private States characterState;
     public States CharacterState
@@ -121,16 +119,6 @@ public class MoveScript : MonoBehaviour
         return t;
     }
 
-
-    //void Awake()
-    //{
-    //    girl = GameObject.FindGameObjectWithTag("Girl");
-    //    girlAudio = girl.GetComponent<AudioScript>();
-
-    //    //girlAudio = girl.GetComponent<AudioScript>();
-    //    BoyAnim = GetComponent<Animator>();
-
-    //}
 
     /// <summary>
     /// Getting the components and initialize start and end positions
@@ -202,17 +190,14 @@ public class MoveScript : MonoBehaviour
             default:
                 break;
         }
-        if (characterState == States.Idle && GameObject.Find("GravityManager").transform.GetComponent<GyroScript>().isCalibrated)
-            characterState = States.MovingForward;
-
-
     }
 
     void Update()
     {
-        if (girlAudio.audio.isPlaying)
-        //if (GameObject.Find("Girl").transform.GetComponent<AudioScript>().audio.isPlaying)
+        if (characterState == States.Idle && GameObject.Find("GravityManager").transform.GetComponent<GyroScript>().isCalibrated)
+            characterState = States.MovingForward;
 
+        if (girlAudio.audio.isPlaying)
         {
             GameObject.Find("Girl").transform.GetComponent<AnimPigen>().setSinging();
         }
@@ -237,8 +222,6 @@ public class MoveScript : MonoBehaviour
 
     private void StartLevel()
     {
-        BoyAnim = GetComponent<Animator>();
-
         if (BoyAnim.GetCurrentAnimatorStateInfo(0).IsName("IdleBase"))
         {
             Debug.Log("DUN DIDDLY DID");
@@ -261,8 +244,8 @@ public class MoveScript : MonoBehaviour
         wasBlocked = false;
 
         lastMovementDirection = States.MovingForward;
+
         if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
-        //if (GameObject.Find("Girl").transform.GetComponent<AudioScript>().audio.isPlaying && yoghurtDetection.CanMove)
         {
             animScript.setWalking();
 
@@ -293,17 +276,13 @@ public class MoveScript : MonoBehaviour
             }
         }
         else if (girlAudio.audio.isPlaying && !yoghurtDetection.CanMove)
-        //else if (GameObject.Find("Girl").transform.GetComponent<AudioScript>().audio.isPlaying && !yoghurtDetection.CanMove)
-
-           
         {
             //Debug.Log("MOVING BACK NOW");
             characterState = States.StandingStill;
             pauseStart = Time.time;
             pauseStarted = true;
         }
-        else if (!girlAudio.audio.isPlaying)
-        //else if (!GameObject.Find("Girl").transform.GetComponent<AudioScript>().audio.isPlaying)
+        else if(!girlAudio.audio.isPlaying)
         {
             characterState = States.Idle;
             BoyAnim.SetBool("isIdle", true);
@@ -317,8 +296,6 @@ public class MoveScript : MonoBehaviour
 
         lastMovementDirection = States.MovingBack;
         if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
-            //if (GameObject.Find("Girl").transform.GetComponent<AudioScript>().audio.isPlaying && yoghurtDetection.CanMove)
-
         {
             timeTravelled -= Time.deltaTime;
             t = (timeTravelled * Speed) / trackLength;
@@ -341,7 +318,6 @@ public class MoveScript : MonoBehaviour
             }
         }
         else if (girlAudio.audio.isPlaying && !yoghurtDetection.CanMove)
-        //else if (GameObject.Find("Girl").transform.GetComponent<AudioScript>().audio.isPlaying && !yoghurtDetection.CanMove)
         {
             characterState = States.StandingStill;
         }
