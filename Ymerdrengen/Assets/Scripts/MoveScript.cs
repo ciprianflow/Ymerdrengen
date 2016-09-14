@@ -74,8 +74,6 @@ public class MoveScript : MonoBehaviour
     /// </summary>
     private YoghurtDetection yoghurtDetection;
 
-
-
     private States characterState;
     public States CharacterState
     {
@@ -237,6 +235,7 @@ public class MoveScript : MonoBehaviour
         wasBlocked = false;
 
         lastMovementDirection = States.MovingForward;
+
         if (girlAudio.audio.isPlaying && yoghurtDetection.CanMove)
         {
             animScript.setWalking();
@@ -273,6 +272,14 @@ public class MoveScript : MonoBehaviour
             characterState = States.StandingStill;
             pauseStart = Time.time;
             pauseStarted = true;
+        }
+        else if(!girlAudio.audio.isPlaying)
+        {
+            characterState = States.Idle;
+            BoyAnim.SetBool("isIdle", true);
+            BoyAnim.SetBool("isWalking", false);
+
+
         }
     }
 
